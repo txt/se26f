@@ -9,6 +9,8 @@ https://www.linkedin.com/pulse/under-claude-code-hood-generative-grammars-doing-
 
 ### Herdr Coding Agent
 
+https://www.youtube.com/watch?v=GYDh2tALWpA
+
 https://pyshine.com/herdr-Agent-Multiplexer-for-AI-Agents/
 
 Overview: Herdr is an open-source, terminal-native agent multiplexer designed specifically for managing multiple coding agents side-by-side. It aims to provide a lightweight, responsive UI/TUI that works over SSH/VPS, making it suitable for various development environments.
