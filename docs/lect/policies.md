@@ -14,266 +14,162 @@
 <h1 align="center">:cyclone: CSC510: Software Engineering <br>NC State, Fall '26</h1>
 <img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
-# Syllabus
+# Course Policies
 
-| About| Notes|
+| About | Notes |
 |------:|-----|
-|What   | csc510-001  |
-| When |Wed 4:30PM - 7:15PM    
-|Where | 01021 Engineering Building 2 |
-|Consult hours| Tuesday 2:45 to 4:45: [Booking required](https://calendar.app.google/2bPJr5kecX4QYSm56)   |
-|Disord server| [https://discord.gg/zrsW8F2V9](https://discord.gg/zrsW8F2V9) |
-|Who | Lecturer:  [Prof Tim Menzies](http://timm.fyi),  <timm@ieee.org>, "Tim Menzes" at our discord server.   <br> Tutor: Mr Srinath Srinivasan,  <ssrini27@ncsu.edu>, "Srinath" at our discord|
-
-
-**Preferred method of communication and Response Times:**
-
-
-- For private queries, use the above  emails
-- But or most queries, use our [discord](https://discord.gg/zrsW8F2V9)
-- IMPORTANT: If you receive a subject-related message outside of   office hours (e.g. 2am Saturday morning), do
-  not feel required to answer this till the next working day (e.g. Monday morning). Exception: just before deadlines.
-
-
-**Asking questions about the course:**
-
-
-- It is each student's responsibility to join the class Discord group "gurus".
-  - Join [here](https://discord.gg/zrsW8F2V9)
-- Use the Discord server
-- All class communication from staff to students will be via this Discord group.
-- Students are strongly encouraged to contribute their questions and answers to that shared resource. 
-  - You should expect to receive a response within two business days (i.e. not over the weekend). 
-  - If I email/message you directly, please strive to respond within two business days.
-- Remember, all your public here are public.  These may be viewed and reviewed by future employees (or government services). Always be professional and polite. 
-
-
-**Communication guidelines:**
-
-
-- Always include a descriptive, specific but concise subject. 
-- Include your course number and section in your email, and provide adequate context for your question in order to ensure full understanding of your email. 
-- Be sure to use your NC State email account, and sign in with your name and Student ID number.
-
-
-## Details
-
-Lectures will be recorded.
-
-|What               | Notes |
-|:------------------|:------|
-|Course Credit Hours| 3     |
-|Course website     | [https://github.com/txt/se26f](https://github.com/txt/se26f) |
-|Catalog Description| Other classes teach you all about advanced topics within CS, from operating systems to machine learning, but there’s one missed subject: proficiency with their tools. Our motto: “be quiet or I will replace you with one tiny shell script”. |
+|What   | Software Engineering |
+|Term   | 2026 Fall Term |
+|Subject / Catalog Nbr / Section | CSC 510, Section 001 |
+| When  | Wed 4:30PM - 7:15PM |
+|Where  | 01021 Engineering Building 2 |
+|Discord server| [https://discord.gg/zrsW8F2V9](https://discord.gg/zrsW8F2V9) |
+|Who    | Lecturer: [Prof Tim Menzies](http://timm.fyi), <timm@ieee.org> |
+|Course website | [https://github.com/txt/se26f](https://github.com/txt/se26f) |
+|Credit hours | 3 |
 |Textbook | None |
-|Structure          | The majority of this course is synchronous, delivered through real-time, face-to-face class sessions. |
-|Instructions       | Learning activities in this course will include  homework and in-class quizzes|
-|Tool used          | All grades will be recorded in Moodle.<br> All student work will be in Github (public GH, not the NCSU version).|
-|Auditing           | not permitted |
-|Attendance         | Mandatory but there are in-class quizzes. Also, all homework are handed in, on paper, by all members of a group. Anyone missing gets a cross. First TWO crosses cost nothing. After that, each cross is -1 mark. |
-|Technical requirements | A laptop computer is required in each lecture for students taking this course.  NC State’s Online and Distance Education provides technology requirements and recommendations for computer hardware, and NC State’s Office of Information Technology provides recommendations for your computer . |
-
-
- Tools:
-
-- Prgramming heuristics: YAGNI, KISS, DRY,  SOC, etc etc
-- The shell (e.g. bash, pipes,etc,)
-- Shell Tools and Scripting (e,g, grep, sed,gawk, lua, etc)
-- Editors (e.g. Micro, Vim, etc)
-- AI assistants (gemini, claude, etc)
-- Data Wrangling (regular expressions, julia)
-- Command-line Environment  (tmux, zellij, etc)
-- Version Control (Git)
-- Debugging and Profiling
-- Metaprogramming (make)
-- Tiny databases
-- Documentation (Latex,Pandoc, etc)
-
-
-Tasks:
-
-- After some initialize exercises involving low-level tools, students will rewrite a small AI tool to multiple languages (LUA, Julia, Python) each time in a minimal way (extreme backpacking, lightweight as possible)
-and then in a maximal way (go crazy on every advanced feature and package).
-
-
-
-
- 
-
-
-### Learning Outcomes
-
-- Students will achieve a high level of expertise in  SE , mastery of the knowledge in that fields and the ability to apply this knowledge and graduate school experiences to critical research problems
-- Students will apply SE  methods/tools to problems in SE  and describe the methods/tools effectively
-- Graduate students will show advanced proficiency in these tools.
-
-
-
-
-## Assessment
- 
-- Ugrad students: teams of three: 6 homeworks 
-  - For ugrads, bonus marks in homeworks are optional (there for fun, no marks)
-- Grad students: teams of two: 6  homeworks
-  - For grads, bonus marks in homeworks are required
-- Homeworks: submit something one week, review someone else's next week.
-- Weekly in-class quizzes (2 marks each). If you miss any quizzes then for the first two misses, you get the mean
-  mark scored by the rest of the class. After that, you score zero.
-- Classes are in person. To ensure that, all submissions are in-person, by the whole group.
-  Anyone missing gets a cross. First two crosses cost nothing. After that, each cross is -1 mark.
- 
-
-## Grades
-
-Homeworks projects are printed submissions. 
-
-
-Quizzes are on-line.
-
-
-- In class quiz: 2 marks each (11 of those)
-- 6 homeworks  (13 marks each)
-  - 10 marks for an initial submission
-  - 3 marks to review someone else's submission
-- Total: 100 marks
-
-End of term there will be a optional exam for students who want to make up lost marks:
-
-- Students can identify up to 24 marks of prior submissions they want to replace.
-- The Exam will be out 24 marks.
-- The students' grades for the prior submissions will be replaced with the exam result **even if the exam grade is lower**.
-
-
-
-With the final grades, the following grade scale will be used: 
-
-
-     A+ (97-110),  A (93-97),   A-(90-92)
-     B+ (87-89),   B (83-87),   B-(80-82)
-     C+ (77-79),   C (73-77),   C-(70-72)
-     D+ (67-69),   D (63-67),   D-(60-62)
-     F (below 60).
-
-### Late Marks
-
-
-Submissions score one late mark per day (but only -1 for the weekend).
-
-
-## Expectations for learner participation and interaction
-
-
-- Work in public github (lets us browse and help debug your code).
-
-## Attendance
-
-- Classes are in person. To ensure that, all submissions are in-person, by the whole group.
-  Anyone missing gets a cross. First two crosses cost nothing. After that, each cross is -1 mark.
- 
-
-IF you need more time off than that, for events sanction by the university, contact the lecturer before time and other arrangements will be made.
-Those sanctioned events are:
-
-
-- The student is away from campus representing an official university function, e.g., participating in a professional meeting, as part of a judging team, or athletic team.  These students would typically be accompanied by a University faculty or staff member.
-- Required court attendance as certified by the Clerk of Court.
-- Students will be allowed a minimum of two excused absences per academic year for religious observances as verified by the Division of Academic and Student Affairs (DASA) (go.ncsu.edu/absence). For more information about a variety of religious observances, visit the Diversity Calendar.
-- Required military duty as certified by the student’s commanding officer.
-- Unanticipated Absences.  Excuses for unanticipated absences must be reported to the instructor as soon as possible, but not more than one week after the return to class.  Examples of unanticipated absences are:
-  - Short-term illness or injury affecting the ability to attend or to be productive academically while in class, or that could jeopardize the health of the individual or the health of the classmates attending.  Students must notify instructors prior to the class absence, if possible, that they are temporarily unable to attend class or complete assignments on time.
-  - Death or serious illnesses in the family when documented appropriately.   
-
-
-Absence Verification: The [Absence Verification office](https://dasa.ncsu.edu/support-and-advocacy/find-help/absence-notification/) will provide student absence verification for deaths, legal obligations, military duty, and serious illnesses like surgery and hospitalizations.  
-
-
-Sometimes, the lecturer/tutor will require you to attend  an office hours session.
-There, students may be asked to review code, concepts, or comment on the structure of the course. Those sessions are mandatory and failure to attend will result in marks being deducted.
-
-
-## Use of AI tools
-
-
-Knock yourself out. Go to town. But remember, no AI in the quizzes. So make sure you understand what you did with the AI
-
-
-
-## Other Student Expenses
-
-
-No textbook.
-
-
-Depending on what LLMs you use, this will incur a cost. Project teams should discuss how much they can spend, then plan accordingly. 
-
-
-## Community guidelines 
-
-
-- Use a respectful tone in all forms of communication (email, written, oral, visual).
-- Maintain professionalism (avoid slang, poor grammar, etc.) in your written communication.
-- Respect regional dialects and culturally embedded ways of oral communication.
-- Stay home or in your dorm room if you are exhibiting symptoms of a contagious illness (fever, chills, etc.).
-- Enter our virtual and/or physical classroom community respectfully by refraining from lewd or indecent speech or behavior, helping to maintain a safe physical environment, not using your cell phone for voice or text communication except when explicitly given leave to do so, and not attending class under the influence of any substance.
-- Treat each community member with respect by not recording others without their consent or engaging in any form of hazing, harassment, intimidation, or abuse.
-- Respect cultural differences that may influence communication styles and needs.]
-
-
-## Disabilities
-
-
-Reasonable accommodations will be made for students with verifiable
-disabilities. In order to take advantage of available accommodations,
-students must register with the [Disability Resource Office (DRO)](https://dro.dasa.ncsu.edu/)
-For more information on NC State’s policy on working with students
-with disabilities, please see the 
-[Policies, Rules and Regulations page maintained by the DRO](https://dro.dasa.ncsu.edu/about-us/policies-rules-regulations/)
-and [REG 02.20.01 Academic Accommodations for Students with Disabilities](https://policies.ncsu.edu/regulation/reg-02-20-01/).
-
+|Auditing | Not permitted |
+
+## Course Description
+
+From the NC State course catalog:
+
+> **CSC 510 — Software Engineering.** An introduction to software life cycle
+> models; size estimation; cost and schedule estimation; project management;
+> risk management; formal technical reviews; analysis, design, coding and
+> testing methods; configuration management and change control; and software
+> reliability estimation. Emphasis on large development projects.
+
+Students work in teams of three on three projects spanning the software life
+cycle: requirements engineering + testing, build, and maintenance.
+
+## Student Learning Outcomes
+
+Upon completion of this course, students will be able to:
+
+1. Elicit and document requirements and design tests for a software system.
+2. Build and deliver a working software system using sound engineering
+   practices (version control, reviews, configuration management).
+3. Maintain and evolve an existing software system.
+4. Select, evaluate, and present software engineering tools, and communicate
+   engineering results in a technical talk.
+5. Work effectively in a small development team.
+
+## Student Performance Assessment
+
+Weekly in-class tests reward attendance. Each team (of three) gives two
+in-person talks during the semester -- one *tool* talk, one *task* talk (see
+the schedule on the course
+[README](https://github.com/txt/se26f/blob/main/README.md)).
+The final exam mark is weighted 1.5 times the mid-term mark.
+
+**Total 100 marks:**
+
+| Marks | Component |
+|------:|-----------|
+| 13 | Weekly in-class tests (1 mark each, one per lecture week, none on mid-term night) |
+|  7 | Tool talk (in-class team presentation) |
+|  7 | Task talk (in-class team presentation) |
+| 11 | Proj1: RE + testing (due Wed Sep 16) |
+| 11 | Proj2: build (due Wed Oct 21) |
+| 11 | Proj3: maintain (due Wed Nov 25, submit online -- Thanksgiving break) |
+| 16 | Mid-term exam (Wed Oct 14) |
+| 24 | Final exam (Wed Dec 9, 3:30-6 PM) |
+
+**Attendance and participation:** Classes are in person. The weekly in-class
+tests can only be taken in class; a missed test scores zero unless the absence
+is excused under NCSU REG 02.20.03 (Attendance Regulations), in which case a
+makeup will be arranged. Talks must be delivered in person at the scheduled
+slot. Projects are team submissions; all team members are expected to
+contribute and may be graded individually if contributions are unequal.
+
+**Late work:** Late submissions lose one mark per day late (weekends count as
+one day).
+
+**Grading scale:**
+
+    A+ (97-100),  A (93-96),   A- (90-92)
+    B+ (87-89),   B (83-86),   B- (80-82)
+    C+ (77-79),   C (73-76),   C- (70-72)
+    D+ (67-69),   D (63-66),   D- (60-62)
+    F  (below 60)
+
+## Additional Required Cost-Bearing Course Materials
+
+None. There is no required textbook and there are no course-related fees.
+
+A laptop computer is required in each lecture. NC State University Libraries
+offers Technology Lending, where many devices are available to borrow for a
+7-day period, and computer labs are available in various locations around
+campus for student use.
+
+## Communication
+
+- For private queries, use <timm@ieee.org>.
+- For most queries, use our [Discord](https://discord.gg/zrsW8F2V9). It is
+  each student's responsibility to join the class Discord server; all class
+  communication from staff to students will be via that server.
+- Expect a response within two business days (i.e. not over the weekend).
+  Messages sent outside office hours need not be answered until the next
+  working day.
+- Always include a descriptive, specific but concise subject, your course
+  number and section, and adequate context. Use your NC State email account.
+- Remember: all your posts here are public. Always be professional and polite.
 
 ## Academic Integrity
 
+Students are expected to do their own work on tests and exams. For talks and
+projects, use of AI assistants and other tools is permitted and encouraged,
+but all submitted work must disclose what tools were used and how, and
+students must be able to explain everything they submit.
 
-Students are required to comply with the university policy on academic integrity found in the i
-[What is Academic Misconduct?](https://studentconduct.dasa.ncsu.edu/academic-integrity-overview/).
-Therefore, students are required to uphold the Pack Pledge: 
-" “I have neither given nor received unauthorized aid on this test or assignment,” on all syllabus, assignments, examinations, or other academic evaluations is encouraged."
+Violations of academic integrity will be handled in accordance with the
+Student Discipline Procedures (NCSU REG 11.35.02).
 
+## Accommodations
 
-Cheating will be punished to [the full extent possible](https://studentconduct.dasa.ncsu.edu/academic-misconduct/). 
-Cheating
-includes plagiarism of other people's work. All students will be working
-on public code repositories and **informed reuse** is encouraged where
-someone else's product is:
+Reasonable accommodations will be made for students with verifiable
+disabilities. To take advantage of available accommodations, students must
+register with the NC State University Disability Resource Office. For more
+information on NC State's policy on working with students with disabilities,
+please see the Academic Accommodations for Students with Disabilities
+Regulation (NCSU REG 02.20.01).
 
+## Student Mental Health
 
-+ Imported and clearly acknowledged (as to where it came from);
-+ The imported project is understood, and
-+ The imported project is significantly extended.
+As a student, you may experience a range of personal issues that can impede
+learning. The Counseling Center at NC State offers confidential mental health
+services for full-time NC State students, including same-day emergency
+services. A full overview of campus wellness resources can be found on the
+[WolfPack Wellness website](https://wellness.ncsu.edu). Please do not hesitate
+to get connected early for the support you need to be successful.
 
+## Digital Course Components and Recording
 
-Students are encouraged to read each others code and report **uninformed reuse**
-to the lecturer. The issue will be explored and, if uncovered,
-cheating will be reported to the university
-and marks will be deducted if the person who is doing the reuse:
+Course materials and student work live in public GitHub repositories and the
+class Discord. Students may be required to disclose personally identifiable
+information to other students in the course, via digital tools, where relevant
+to the course. All students are expected to respect the privacy of each other
+by not sharing or using such information outside the scope of the course.
 
+Lectures may be recorded. Unauthorized audio or video recordings and
+photographs of class lectures or discussions are prohibited; unauthorized
+recording and distribution may violate federal privacy laws (FERPA),
+copyright laws, and the university's Code of Student Conduct.
 
-+ Does not acknowledge the source of the product;
-+ Does not exhibit comprehension of the product when asked about it;
-+ Does not significantly extend the product.
+## University Policies
 
+Students are responsible for reviewing the NC State University Policies,
+Rules, and Regulations (PRRs), which pertain to their course rights and
+responsibilities, including, but not limited to:
 
-## Student Privacy
-
-
-- In-class sessions are recorded in such a way that might also record students in this course.
-- These recordings MAY be used beyond the current semester or in any other setting outside of the course.
-- Contact your instructor if you have concerns.
-
-
-## Syllabus Modification Statement
-
-
-Our syllabus represents a flexible agreement. It outlines the topics we will cover and the order in which we will cover them. Dates for assignments represent the earliest possible time they would be due. The pace of the class depends on student mastery and interests. Thus minor changes in the syllabus can occur if we need to slow down or speed up the pace of instruction.
-
-
+- POL 04.25.05 Equal Opportunity and Non-Discrimination Policy Statement
+- REG 02.20.01 Academic Accommodations for Students with Disabilities
+- POL 11.35.01 Student Conduct
+- REG 11.35.05 Code of Student Conduct
+- REG 11.35.02 Student Discipline Procedures
+- REG 02.20.03 Attendance Regulations
+- REG 02.50.03 Grades and Grade Point Average
+- REG 02.20.15 Credit-Only Courses
+- REG 02.20.04 Audits
+- REG 08.00.11 Online Course Material Host Requirements

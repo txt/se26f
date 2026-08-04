@@ -15,6 +15,7 @@
 <img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
 Wednesdays 4:30–7:15 PM, 1021 Engineering Building 2.
+See [policies](docs/lect/policies.md) for grading. Every lecture night (except mid-term) has an in-class test, 1 mark each.
 
 <div align=center>
 

@@ -1,0 +1,130 @@
+NC State Syllabus Template
+NC State faculty, lecturers, and other instructors are required to make available an official course syllabus per REG 02.20.07 Course Syllabus no later than a week before the first day of classes each semester. Official course syllabi will be made available to students and the public via the NC State Class Search tool.
+This template provides guidance to aid you in gathering the information required for inclusion in the official course syllabus made available via the NC State Class search tool.
+Instructions:
+Make a copy of this document for each course > File menu > Make a copy. When the copy is ready for sharing with students, change the sharing settings with the “Share” button.
+Text in [ ] represents placeholders for inserting text. Delete the [ ] and modify any associated text or replace it with your own.
+Words in italics and yellow highlight represent instructions. Remember to delete all instructions. 
+Examples are provided. You can edit/copy or customize for your course.
+Do not change headings or subheadings. These meet accessibility requirements for formatting. 
+If you wish to download it as a PDF, please run the Google Accessibility add-on Grackle and download it as a pdf from within the add-on to maintain accessibility. 
+This template helps to meet the minimum requirements set by The UNC Policy Manual 400.1.6[R], (adopted 12/19/25) and NC State University’s Policies for the Course Syllabus (revised 2/3/26).
+Delete this page from your finished syllabus before distribution. Last update May 2026. 
+[Course Prefix, Number, Name] Course Syllabus
+Course Description
+Instructions: Provide a course description.
+[Official catalog description that matches the information in the Course Inventory Management (CIM) system and the course catalog]
+Learning Outcomes
+Instructions: Provide all goals, objectives, student learning outcomes, and/or student expectations for the course. Student learning outcomes in different sections of the same course should mirror the stated outcomes in CIM. Upon completion of this course, students will be able to:
+Official course outcome 1
+Official course outcome 2
+Add more items as necessary.
+Course Materials
+Instructions: Provide the statement below, as written, and list all course materials that students are required to purchase.
+This course engages diverse scholarly perspectives to develop critical thinking, analysis, and debate and inclusion of a reading does not imply endorsement. [Optional: Provide additional description that supports the intentions of the class and/or the role of course materials.]
+Required Textbook
+[Required textbook(s) including author, title, date or edition, and approximate cost, OR None. If including a textbook, note its purpose and how it will be used for learning activities. ]
+Other Required Materials
+[List any other materials (software, print materials, project supplies, etc.) that students are required to purchase, including the cost of each, using full citations when appropriate.]
+Technology Requirements
+Instructions: List electronic materials that students are required to purchase or possess for the course.
+NC State University Libraries offers Technology Lending, where many devices are available to borrow for a 7-day period. Computer labs are available in various locations around campus for student use. 
+Computer 
+[Example: A laptop computer is [required/recommended] for students taking this course. NC State’s Office of Information Technology provides recommendations for your computer at NC State.]
+Other Devices
+[List any peripheral tools that students are required to purchase  for the course, such as microphones, headsets, etc., their approximate cost, and how they will be used for learning activities.]
+Other Student Expenses
+Instructions: If applicable, list any other purchases that students are required to make for the course.
+[List other costs students will incur in this course, such as museum admission fees, field trip costs, and liability insurance if applicable, including the possible range of costs based on student choice (materials, tickets, etc.). If students must provide their own transportation to a field trip or internship site, please note it. If not applicable, type “None.”] 
+Grading 
+Instructions: Explain how student performance will be assessed, including the grading scale, percentage breakdown of major assignments, and how attendance or participation will affect a student’s final grade.
+Course Assignment Values
+Instructions: Provide the percentage breakdown of the various evaluation components of the course (proportions of the grade derived from each). Modify the example below to fit your course.
+This course uses these values for [list major course components]:
+Percentage of grade
+Component
+20 %
+Discussion Forums
+30 %
+Weekly assignments
+20 %
+Quizzes
+30 %
+Project
+
+
+
+
+
+
+
+
+
+Attendance and Participation
+Instructions: Explain how attendance and/or participation will affect a student’s final grade.
+[Describe course attendance expectations and penalties.]
+[Describe expectations for student participation and how participation affects a student’s grade.]
+Grading Scale
+Instructions: Provide the grading scale for your course. This course uses this grading scale:
+
+Low
+Letter
+High
+97 ≤
+A+
+≤ 100
+93 ≤
+A
+ < 97
+90 ≤
+A-
+ < 93
+87 ≤
+B+
+ < 90
+83 ≤
+B
+ < 87
+80 ≤
+B-
+ < 83
+77 ≤
+C+
+ < 80
+73 ≤
+C
+ < 77
+70 ≤
+C-
+ < 73
+67 ≤
+D+
+ < 70
+63 ≤
+D
+ < 67
+60 ≤
+D-
+ < 63
+0 ≤
+F
+ < 60
+
+ 
+
+
+University Policies
+Instructions: Provide this statement and list of NC State University Policies, Rules, and Regulations (PRRs) as written. This requirement is specific to NC State’s Syllabus Regulation 02.20.07.
+Students are responsible for reviewing the NC State University Policies, Rules, and Regulations (PRRs), which pertain to their course rights and responsibilities, including, but not limited to:
+POL 04.25.05 Equal Opportunity and Non-Discrimination Policy Statement
+REG 02.20.01 Academic Accommodations for Students with Disabilities
+POL 11.35.01 Student Conduct
+REG 11.35.05 Code of Student Conduct
+REG 11.35.02 Student Discipline Procedures
+REG 02.20.03 Attendance Regulations
+REG 02.50.03 Grades and Grade Point Average
+REG 02.20.15 Credit-Only Courses
+REG 02.20.04 Audits
+REG 08.00.11 Online Course Material Host Requirements
+
+
