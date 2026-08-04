@@ -25,7 +25,7 @@
 |Where  | 01021 Engineering Building 2 |
 |Discord server| [https://discord.gg/zrsW8F2V9](https://discord.gg/zrsW8F2V9) |
 |Who    | Lecturer: [Prof Tim Menzies](http://timm.fyi), <timm@ieee.org> |
-|Office hours | TBD — announced on Discord in week one |
+|Office hours | By appointment (office: 3304 Engineering Building 2) |
 |Course website | [https://github.com/txt/se26f](https://github.com/txt/se26f) |
 |Credit hours | 3 |
 |Textbook | None |
@@ -51,13 +51,14 @@ with appropriate notification to students.
 
 Upon completion of this course, students will be able to:
 
-1. Elicit and document requirements and design tests for a software system.
-2. Build and deliver a working software system using sound engineering
-   practices (version control, reviews, configuration management).
-3. Maintain and evolve an existing software system.
-4. Select, evaluate, and present software engineering tools, and communicate
-   engineering results in a technical talk.
-5. Work effectively in a small development team.
+1. Achieve a high level of expertise in SE: mastery of the knowledge in that
+   field and the ability to apply this knowledge and graduate school
+   experiences to critical research problems.
+2. Apply sound development methods/tools to problems in SE and describe the
+   methods/tools effectively.
+3. Analyze, interpret, and implement software requirements.
+4. Communicate their work clearly and professionally in both written and oral
+   forms appropriate to SE.
 
 ## Student Performance Assessment
 
