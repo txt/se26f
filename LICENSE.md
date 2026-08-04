@@ -14,7 +14,21 @@
 <h1 align="center">:cyclone: CSC510: Software Engineering <br>NC State, Fall '26</h1>
 <img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
-MIT License
+MIT License (code) + CC BY 4.0 (teaching materials)
+
+This repository is dual-licensed:
+
+## Teaching materials — CC BY 4.0
+
+All lecture notes, slides, homework descriptions, and other prose/teaching
+content are licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0). You are free to share and adapt this
+material for any purpose, even commercially, provided you give appropriate
+credit. Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+## Code — MIT License
+
+All source code in this repository is licensed under the MIT License:
 
 Copyright (c) 2026 textual stuff
 
