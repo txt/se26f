@@ -25,6 +25,7 @@
 |Where  | 01021 Engineering Building 2 |
 |Discord server| [https://discord.gg/zrsW8F2V9](https://discord.gg/zrsW8F2V9) |
 |Who    | Lecturer: [Prof Tim Menzies](http://timm.fyi), <timm@ieee.org> |
+|Office hours | TBD — announced on Discord in week one |
 |Course website | [https://github.com/txt/se26f](https://github.com/txt/se26f) |
 |Credit hours | 3 |
 |Textbook | None |
@@ -42,6 +43,9 @@ From the NC State course catalog:
 
 Students work in teams of three on three projects spanning the software life
 cycle: requirements engineering + testing, build, and maintenance.
+
+The schedule of activities on the course README is subject to change,
+with appropriate notification to students.
 
 ## Student Learning Outcomes
 
@@ -96,6 +100,10 @@ one day).
 
 ## Additional Required Cost-Bearing Course Materials
 
+This course engages diverse scholarly perspectives to develop critical
+thinking, analysis, and debate; inclusion of a reading does not imply
+endorsement.
+
 None. There is no required textbook and there are no course-related fees.
 
 A laptop computer is required in each lecture. NC State University Libraries
@@ -114,6 +122,8 @@ campus for student use.
   working day.
 - Always include a descriptive, specific but concise subject, your course
   number and section, and adequate context. Use your NC State email account.
+- Any temporary change in course modality due to unforeseen circumstances
+  will be announced via both Moodle and the class Discord.
 - Remember: all your posts here are public. Always be professional and polite.
 
 ## Academic Integrity
@@ -122,6 +132,9 @@ Students are expected to do their own work on tests and exams. For talks and
 projects, use of AI assistants and other tools is permitted and encouraged,
 but all submitted work must disclose what tools were used and how, and
 students must be able to explain everything they submit.
+
+Students are bound by the Pack Pledge: "I have neither given nor received
+unauthorized aid on this test or assignment."
 
 Violations of academic integrity will be handled in accordance with the
 Student Discipline Procedures (NCSU REG 11.35.02).
