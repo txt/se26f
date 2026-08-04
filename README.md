@@ -28,7 +28,7 @@ Wednesdays 4:30–7:15 PM, 1021 Engineering Building 2.
 | Sep 23 | | | |
 | Sep 30 | | | |
 | Oct 07 | | | |
-| Oct 14 | | | |
+| Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ | | |
 | Oct 21 | | | |
 | Oct 28 | | | |
 | Nov 04 | | | |
