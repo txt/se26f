@@ -29,8 +29,8 @@ Wednesdays 4:30–7:15 PM, 1021 Engineering Building 2.
 | Sep 30 | | | toolI–L | |
 | Oct 07 | | | toolM–P | |
 | Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ | | no talks | |
-| Oct 21 | | | toolQ · taskA–C | |
-| Oct 28 | | **Proj2: build** | taskD–G | |
+| Oct 21 | | **Proj2: build** | toolQ · taskA–C | |
+| Oct 28 | | | taskD–G | |
 | Nov 04 | | | taskH–K | |
 | Nov 11 | | | taskL–O | |
 | Nov 18 | | | taskP–Q | |
