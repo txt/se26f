@@ -75,11 +75,11 @@ mid-term.
 |------:|-----------|
 |  8 | Tool talk (in-class team presentation) |
 |  8 | Task talk (in-class team presentation) |
-|  8 | Proj1a: RE + testing (due Wed Sep 2). 3 report + poster, 5 live demo |
-|  8 | Proj1b: requirements (due Wed Sep 16). 8 report + poster, no demo |
-| 23 | Proj2: build (due Wed Oct 21). 18 work, 5 live demo |
-| 25 | Proj3: maintain (due Wed Nov 25, submit online -- Thanksgiving break). 20 work, 5 demo |
-| 20 | Mid-term exam (Wed Oct 14) |
+|  8 | Proj1a: RE + testing. 3 report + poster, 5 live demo |
+|  8 | Proj1b: requirements. 8 report + poster, no demo |
+| 23 | Proj2: build. 18 work, 5 live demo |
+| 25 | Proj3: maintain. 20 work, 5 demo |
+| 20 | Mid-term exam |
 
 **Attendance and participation:** Classes are in person. Absences are handled
 under NCSU REG 02.20.03 (Attendance Regulations). Talks must be delivered in

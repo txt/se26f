@@ -39,8 +39,8 @@ The poster must show:
   - Your repository.
   - Your discussion forum. The forum can be private, but CSC 510 tutors and
     lecturers must have access.
-  - A live demo. How you host the demo is your choice.
-  - A short video of the live demo (less than 5 minutes).
+  - A video of a live demo (less than 5 minutes). How you host the video is
+    your choice.
 - Icons that show your proposed tech stack.
 - Small screen snaps of the system. If your system is a CLI tool, show one call
   to the tool and its printed output.
