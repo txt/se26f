@@ -127,7 +127,7 @@ evidence does not support costs more marks than an honest low score.
 | Docs, the WHAT: point descriptions of each class/function, in isolation | doc pages | |
 | Docs, the HOW: mini-tutorials with worked examples for the common use cases X, Y, Z | doc pages | |
 | Docs, the WHY: the docs tell a story — motivate the whole thing, land a punchline that makes a reader want to use it | doc pages | |
-| Demo video (2–5 min) embedded in README: shows new functions, a clear delta from before | README | |
+| Demo video (2–5 min), prominent at the TOP of README, right by the badges: shows new functions, a clear delta from before | README top | |
 
 **Standard files and bling:**
 
@@ -147,8 +147,8 @@ evidence does not support costs more marks than an honest low score.
 
 - One live demo (5 minutes) with a tutor. Software installed and running
   before the tutor arrives. One operator drives.
-- One demo video (2–5 minutes) embedded in your README and linked by QR
-  from your poster.
+- One demo video (2–5 minutes), prominent at the top of your README, and
+  linked by QR from your poster.
 - Scheduling rules: see the [policies](../lect/policies.md).
 
 ## The poster
