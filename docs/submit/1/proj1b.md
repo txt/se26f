@@ -42,12 +42,15 @@ want.
 
 Use an LLM as your analyst. But you steer. It brainstorms; you decide.
 
-## Eleven starter prompts
+## Twelve starter prompts
 
-Eleven prompts that can give insight. Note the pattern in all of them: give
+Twelve prompts that can give insight. Note the pattern in all of them: give
 the LLM a role, paste real evidence, demand a fixed output format, and forbid
-guessing. **Warning: these are not enough.** They are starters. The higher
-scores go to teams that invent better prompts of their own. Be creative.
+guessing. In every prompt, also state the hard constraint: **we have one
+month to build AND test this new thing.** An LLM that does not know the
+budget will design you a two-year product. **Warning: these are not
+enough.** They are starters. The higher scores go to teams that invent
+better prompts of their own. Be creative.
 
 **1. Map the competition.**
 
@@ -137,7 +140,7 @@ Our product: <one paragraph>.
 Propose three versions: SAFE (obvious next step), BOLD (a real bet), and
 WILD (probably wrong, but instructive). For each:
 - Elevator pitch, two sentences.
-- What four students could ship of it in one month.
+- What four students could build AND test of it in one month.
 - The biggest risk.
 - The kill signal: "we abandon this version if we see ___."
 
@@ -181,8 +184,8 @@ copy-paste. We will pick one and edit it.
 **9. Milestone reality check.**
 
 ```
-The team: four graduate students, one month, roughly ten hours per person
-per week. Skills: <list them honestly>.
+The team: four graduate students, one month to build AND test, roughly ten
+hours per person per week. Skills: <list them honestly>.
 
 Our draft milestones:
 <paste the milestone list>
@@ -227,11 +230,35 @@ and start fresh in a new language">
 
 Given these skills — not the skills we wish we had — what is a good approach?
 Answer:
-- Which direction lets this team ship the most in one month? Why?
+- Which direction lets this team build and test the most in one month? Why?
 - Which direction is a trap for this team (needs a skill nobody has)?
 - Where one needed skill is missing: is it learnable in a weekend, or should
   we redesign around it?
 - Who should own what, so nobody is a bottleneck?
+```
+
+**12. The pivot question.**
+
+```
+Forget our current plan for a moment. Here are the facts, nothing else:
+- The team: four graduate students, skills below, ten hours each per week.
+- The budget: one month to build AND test a working product.
+- What we learned in Project 1a: <one paragraph — the domain, the code, the
+  bugs we found>
+
+Team skills, stated honestly:
+<paste the skills list>
+
+Question: is there a DIFFERENT kind of project we should be exploring — one
+we have not considered because we anchored on the Project 1a product?
+
+Propose three genuinely different project kinds (different domain, different
+user, or different form: CLI vs web vs library vs bot). For each:
+- Why THIS team, specifically, would be unusually good at it.
+- What one-month build-and-test slice looks like.
+- What we lose by walking away from our current plan.
+
+Then answer plainly: stay the course, or pivot? One paragraph. No hedging.
 ```
 
 ## The poster, in short
