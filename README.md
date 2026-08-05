@@ -25,7 +25,7 @@ See [policies](docs/lect/policies.md) for grading.
 |:-------------:|:----------:|:---------------------------:|:---------:|:---------:|
 | Aug 19 | [basics](docs/lect/n01.md) <br> 🚀 **[project](docs/submit/project.md)** | | | |
 | Aug 26 | [useCaseTesting](docs/lect/n02.md) | | | |
-| Sep 02 | | **Proj1a: [testing](docs/submit/1/proj1a.md)** | | |
+| Sep 02 | [requirements](docs/lect/n03.md) | **Proj1a: [testing](docs/submit/1/proj1a.md)** | | |
 | Sep 09 | | | | |
 | Sep 16 | | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | |
 | Sep 23 | | | toolE–H | |
