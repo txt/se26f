@@ -140,10 +140,12 @@ N11 Oct 28 (90m, task talks D-G): DEBUGGING AS SCIENCE
   SWEBOK: Testing (advanced), Models+Methods.
 
 N12 Nov 04 (90m, task talks H-K): AI FOR SE
-  90m RAG properly (semantic paging), agentic coding loops, model
-      choice + cost, SBSE in one slide, the vibe-code question
-      revisited with the class's own proj2 evidence
-                                      [lec3-rag + lec7-models + lec8-SBSE]
+  90m RAG vs LLM wikis (compile, don't retrieve -- docs/pdf/llm-wiki.pdf),
+      agentic coding loops (write the loop not the prompt; separate
+      planner/generator/evaluator; state on disk; read the traces --
+      docs/pdf/llm-loops.pdf), model choice + cost, SBSE in one slide,
+      the vibe-code question revisited with the class's own proj2
+      evidence            [lec3-rag + lec7-models + lec8-SBSE + handouts]
   Student asks served: prompting-advanced, scaling AI use.
   CS2023: AI-SE integration (new in CS2023).
 
