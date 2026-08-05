@@ -25,7 +25,7 @@ See [policies](docs/lect/policies.md) for grading. Every lecture night (except m
 | Aug 26 | | | | |
 | Sep 02 | | | | |
 | Sep 09 | | | | |
-| Sep 16 | | **Proj1: RE + testing** | toolA–D | |
+| Sep 16 | | **Proj1: [RE + testing](docs/submit/1/proj1a.md) + [requirements](docs/submit/1/proj1b.md)** | toolA–D | |
 | Sep 23 | | | toolE–H | |
 | Sep 30 | | | toolI–L | |
 | Oct 07 | | | toolM–P | |
