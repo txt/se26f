@@ -40,8 +40,8 @@ N2 Aug 26 (150m): USE CASES + TESTING          [proj1a due next week]
       expected-vs-actual results table, edge cases, traceability,
       failures-as-findings, test naming
                                       [lect11-test essentials half]
-  20m demo craft: pre-installed, one operator, instant start,
-      show a failure honestly (demo = 3 of proj1a's 5 marks)  [NEW]
+  20m demo-video craft: show real runs, passes AND failures, 2-5 min
+      (video = 3 of proj1a's 5 marks; live demos start with proj2)  [NEW]
   SWEBOK: Requirements (lite), Testing. CS2023: SDF-testing.
 
 N3 Sep 02 (150m): REQUIREMENTS + STAKEHOLDERS  [proj1a due tonight]

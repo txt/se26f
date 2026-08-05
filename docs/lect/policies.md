@@ -62,7 +62,7 @@ Upon completion of this course, students will be able to:
 
 ## Student Performance Assessment
 
-Each team (of three) gives two
+Each team (of four) gives two
 in-person talks during the semester -- one *tool* talk, one *task* talk (see
 the schedule on the course
 [README](https://github.com/txt/se26f/blob/main/README.md)).
@@ -77,7 +77,7 @@ Exam dates, rooms, and all due dates: see the schedule on the course
 |------:|-----------|
 |  7 | Tool talk (in-class team presentation) |
 |  7 | Task talk (in-class team presentation) |
-|  5 | Proj1a: testing. 2 report, 3 live demo |
+|  5 | Proj1a: testing. 2 report, 3 demo video |
 |  7 | Proj1b: requirements. 7 report + poster, no demo |
 | 19 | Proj2: build. 14 work, 5 live demo |
 | 21 | Proj3: maintain. 16 work, 5 demo |

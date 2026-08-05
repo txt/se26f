@@ -30,11 +30,11 @@ See [policies](docs/lect/policies.md) for grading.
 | Sep 30 | | | toolI–L | |
 | Oct 07 | | | toolM–P | |
 | Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ | | no talks | |
-| Oct 21 | | **Proj2: build** | toolQ · taskA–C | |
+| Oct 21 | | **Proj2: [build](docs/submit/2/proj2.md)** | toolQ · taskA–C | |
 | Oct 28 | | | taskD–G | |
 | Nov 04 | | | taskH–K | |
 | Nov 11 | | | taskL–O | |
 | Nov 18 | | | taskP–Q | |
-| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: maintain** (submit online; no late marks till Dec 1) | | |
+| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: [maintain](docs/submit/3/proj3.md)** (submit online; no late marks till Dec 1) | | |
 | 🟥 ${\color{#ff9999}\textsf{Dec 07 (Mon) — Final exam, 3:30–6:00 PM, 1021 EB2}}$ | | | | |
 </div>

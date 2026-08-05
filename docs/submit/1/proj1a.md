@@ -274,11 +274,12 @@ Then, for each change you made:
 | D4 | Traceability table: your tests ↔ use cases. Plus your comment on the project's own tests: do they cover the use cases? Where are they blind? |
 | D5 | Prompt notes. A very simple document — a half-page bullet list is fine: "most useful prompts", "least useful prompts", one line of why each. |
 
-## The demo
+## The demo video
 
-The live demo is 3 of the 5 marks. Software installed and running before the
-tutor arrives; one operator drives. Scheduling rules: see the
-[policies](../lect/policies.md).
+There is no live demo for Project 1a. Instead, make a short video (2–5
+minutes) of the software running. Show real runs: your tests executing,
+passes and failures both. Put the video link in your report. The video is
+3 of the 5 marks.
 
 ## Report format
 
