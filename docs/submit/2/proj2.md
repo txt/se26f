@@ -61,6 +61,25 @@ contribution is visible in one history. Tutors mark `main`, and only
 Tests must exist, covering expected cases and failure cases. 50 tests is
 good. 100 is better.
 
+## The bling
+
+The top of your README boasts, with badges. Each badge is live: it comes
+from a real service, it shows a real number, and a click leads to the
+proof. A dead badge is worse than no badge.
+
+Wanted at the top of README.md:
+
+- Build badge: the build passes.
+- Test badge: N tests, passing (e.g. "78% tests passing").
+- Coverage badge: the coverage tool's number.
+- Style checker badge, code formatter badge, syntax checker badge — one
+  each, with the config files for each tool visible in the repo.
+- Any other automated analysis tool you run: badge it.
+- DOI badge: register the repo at
+  [Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
+  It looks like this:
+  ![Zenodo DOI badge](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.1234567-blue.svg)
+
 ## The repo rubric (self-assessed)
 
 Score each row yourself: 0 (none), 1 (a little), 2 (somewhat), 3 (a lot).
@@ -69,30 +88,59 @@ Give evidence (a link) for each score. Sum the scores at the bottom.
 During the demo, the tutor spot-checks five random rows. A self-score the
 evidence does not support costs more marks than an honest low score.
 
+**Teamwork, visible in GitHub:**
+
 | Item | Evidence | Score 0-3 |
 |---|---|---|
-| Workload is spread over the whole team: everyone commits, a lot | GH insights | |
-| Many commits, by different people | GH | |
-| Many issue reports | GH | |
-| Issues are discussed, then closed | GH | |
-| Failing tests become issues, then fixes | GH | |
-| Docs: point descriptions of each class/function | doc pages | |
-| Docs: mini-tutorials for the common use cases | doc pages | |
-| Docs: tell a story — motivate, explain, land a punchline | doc pages | |
-| Demo video (2–5 min) embedded in README | README | |
-| Tests exist: 50 is good, 100 is better | repo | |
-| Tests run automatically on every change (CI, e.g. GitHub Actions) | badge | |
-| Coverage tool runs; badge shows the number | badge | |
-| Style checker, code formatter, syntax checker: configured, badged | badges | |
-| DOI badge (register the repo at Zenodo) | badge | |
-| README.md with all badges working (click each one) | README | |
-| .gitignore, INSTALL.md, LICENSE.md | repo | |
-| CODE-OF-CONDUCT.md | repo | |
-| CONTRIBUTING.md: coding standards, how to extend without breaking | repo | |
-| Discussion forum is active; poster QR points at it | forum | |
-| Whole team uses the same tools; anyone can demo on their machine | demo | |
+| Many commits | GH insights | |
+| Commits come from different people | GH insights | |
+| Workload is spread over the whole team. One member is often 3x more productive than the rest — fine, but show a track record that everyone contributes a lot | GH insights | |
 | Team members work across many parts of the code, not one silo each | GH | |
-| Short release cycles: frequent small commits to main | GH | |
+| Short release cycles: frequent small commits to main, so everyone can get everyone's work | GH | |
+| Whole team uses the same tools: config files in the repo, updated by many different people | repo | |
+| Whole team can run the system: the tutor can ask anyone to share a screen and demo on their machine | demo | |
+
+**Issues and discussion:**
+
+| Item | Evidence | Score 0-3 |
+|---|---|---|
+| Issue reports: there are many | GH | |
+| Issues are being closed | GH | |
+| Issues are discussed before they are closed (if the talk happened in chat, add a summary to the issue) | GH | |
+| A large share of issues relate to handling failing cases: a test fails, an issue opens, a fix closes it | GH | |
+| Chat channel / discussion forum exists and is active; the poster QR points at it | link or screenshots | |
+
+**Tests:**
+
+| Item | Evidence | Score 0-3 |
+|---|---|---|
+| Tests exist: 50 is good, 100 is better; expected cases and failure cases both | repo | |
+| Tests are a serious share of the code base (30 percent is common) | repo | |
+| Tests run automatically on every commit (CI: GitHub Actions or similar) | badge | |
+| Coverage is measured; the badge shows the number | badge | |
+
+**Docs:**
+
+| Item | Evidence | Score 0-3 |
+|---|---|---|
+| Docs are generated, and the format is not ugly | doc pages | |
+| Docs, the WHAT: point descriptions of each class/function, in isolation | doc pages | |
+| Docs, the HOW: mini-tutorials with worked examples for the common use cases X, Y, Z | doc pages | |
+| Docs, the WHY: the docs tell a story — motivate the whole thing, land a punchline that makes a reader want to use it | doc pages | |
+| Demo video (2–5 min) embedded in README: shows new functions, a clear delta from before | README | |
+
+**Standard files and bling:**
+
+| Item | Evidence | Score 0-3 |
+|---|---|---|
+| README.md: all the badges above, all working when clicked | README | |
+| .gitignore: lists what must not enter the repo ([examples](https://github.com/github/gitignore)) | repo | |
+| INSTALL.md: how to install | repo | |
+| LICENSE.md: rules of use | repo | |
+| CODE-OF-CONDUCT.md: rules of behavior ([example](https://github.com/probot/template/blob/master/CODE_OF_CONDUCT.md)) | repo | |
+| CONTRIBUTING.md: coding standards, plus tips on how to extend the system without breaking it ([example](https://github.com/probot/template/blob/master/CONTRIBUTING.md)) | repo | |
+| Style checker, formatter, syntax checker: config files in repo, badges in README | repo + badges | |
+| DOI badge from Zenodo | badge | |
 | **Sum** | | |
 
 ## The demo
