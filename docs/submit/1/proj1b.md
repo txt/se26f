@@ -4,7 +4,7 @@
 [Poster rules](poster.md) · [Use case format](usecases0.md) ·
 [Prior projects](https://drive.google.com/drive/u/2/folders/1dGGQNCWC3BakD-nUZn5vPecPdm0KAhXA)
 
-**Due:** Wednesday, Sep 16, start of class.
+**Due:** see the [schedule](../../../README.md).
 **Hand in:** two PDFs, uploaded to Moodle: one report, one poster.
 
 ## Goal
