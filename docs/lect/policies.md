@@ -75,7 +75,8 @@ The final exam mark is weighted 1.5 times the mid-term mark.
 | 13 | Weekly in-class tests (1 mark each, one per lecture week, none on mid-term night) |
 |  7 | Tool talk (in-class team presentation) |
 |  7 | Task talk (in-class team presentation) |
-| 11 | Proj1: RE + testing (due Wed Sep 16) |
+|  5 | Proj1a: RE + testing (due Wed Sep 2) |
+|  6 | Proj1b: requirements (due Wed Sep 16) |
 | 11 | Proj2: build (due Wed Oct 21) |
 | 11 | Proj3: maintain (due Wed Nov 25, submit online -- Thanksgiving break) |
 | 16 | Mid-term exam (Wed Oct 14) |

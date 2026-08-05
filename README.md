@@ -19,22 +19,22 @@ See [policies](docs/lect/policies.md) for grading. Every lecture night (except m
 
 <div align=center>
 
-| 📅 Date | 🎓 Lecture | 🛠️ Submission <br>(due start of class) | 🎤 Talks: teams A–Q <br>(15 min each, ≤4/night) | 📝 Review |
-|:-------------:|:----------:|:---------------------------:|:---------:|:---------:|
-| Aug 19 | | | | |
-| Aug 26 | | | | |
-| Sep 02 | | **Proj1a: [RE + testing](docs/submit/1/proj1a.md)** | | |
-| Sep 09 | | | | |
-| Sep 16 | | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | |
-| Sep 23 | | | toolE–H | |
-| Sep 30 | | | toolI–L | |
-| Oct 07 | | | toolM–P | |
-| Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ | | no talks | |
-| Oct 21 | | **Proj2: build** | toolQ · taskA–C | |
-| Oct 28 | | | taskD–G | |
-| Nov 04 | | | taskH–K | |
-| Nov 11 | | | taskL–O | |
-| Nov 18 | | | taskP–Q | |
-| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: maintain** (submit online) | | |
-| 🟥 ${\color{#ff9999}\textsf{Dec 09 — Final exam, 3:30–6 PM}}$ | | | | |
+| 📅 Date | 🎓 Lecture | 🛠️ Submission <br>(due start of class) | 🎤 Talks: teams A–Q <br>(15 min each, ≤4/night) | 📝 Review | 🏆 Marks <br>(max this week) |
+|:-------------:|:----------:|:---------------------------:|:---------:|:---------:|:---------:|
+| Aug 19 | | | | | 1 <br><sub>test 1</sub> |
+| Aug 26 | | | | | 1 <br><sub>test 1</sub> |
+| Sep 02 | | **Proj1a: [RE + testing](docs/submit/1/proj1a.md)** | | | 6 <br><sub>test 1 + proj1a 5</sub> |
+| Sep 09 | | | | | 1 <br><sub>test 1</sub> |
+| Sep 16 | | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | | 14 <br><sub>test 1 + proj1b 6 + talk 7</sub> |
+| Sep 23 | | | toolE–H | | 8 <br><sub>test 1 + talk 7</sub> |
+| Sep 30 | | | toolI–L | | 8 <br><sub>test 1 + talk 7</sub> |
+| Oct 07 | | | toolM–P | | 8 <br><sub>test 1 + talk 7</sub> |
+| Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ | | no talks | | 16 <br><sub>mid-term</sub> |
+| Oct 21 | | **Proj2: build** | toolQ · taskA–C | | 19 <br><sub>test 1 + proj2 11 + talk 7</sub> |
+| Oct 28 | | | taskD–G | | 8 <br><sub>test 1 + talk 7</sub> |
+| Nov 04 | | | taskH–K | | 8 <br><sub>test 1 + talk 7</sub> |
+| Nov 11 | | | taskL–O | | 8 <br><sub>test 1 + talk 7</sub> |
+| Nov 18 | | | taskP–Q | | 8 <br><sub>test 1 + talk 7</sub> |
+| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: maintain** (submit online) | | | 11 <br><sub>proj3</sub> |
+| 🟥 ${\color{#ff9999}\textsf{Dec 09 — Final exam, 3:30–6 PM}}$ | | | | | 24 <br><sub>final</sub> |
 </div>
