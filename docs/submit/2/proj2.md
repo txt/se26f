@@ -81,6 +81,11 @@ Wanted at the top of README.md:
   It looks like this:
   ![Zenodo DOI badge](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.1234567-blue.svg)
 
+**Exemplar:** [Epicourier-Web](https://github.com/sdxshuai/Epicourier-Web),
+from Fall '25. Four badges, all informative. Demo video right at the top.
+467 commits, 93 test files, and it was so inheritable that the next team
+built their Project 3 on it. Make your repo look like that by week one.
+
 ## The repo rubric (self-assessed)
 
 Score each row yourself: 0 (none), 1 (a little), 2 (somewhat), 3 (a lot).
@@ -93,7 +98,7 @@ evidence does not support costs more marks than an honest low score.
 
 | Item | Evidence | Score 0-3 |
 |---|---|---|
-| Many commits | GH insights | |
+| Many commits: hundreds by the end is normal for teams that commit small (the exemplar has 467) | GH insights | |
 | Commits come from different people | GH insights | |
 | Workload is spread over the whole team. One member is often 3x more productive than the rest — fine, but show a track record that everyone contributes a lot | GH insights | |
 | Team members work across many parts of the code, not one silo each | GH | |
@@ -143,6 +148,8 @@ evidence does not support costs more marks than an honest low score.
 | CONTRIBUTING.md: coding standards, plus tips on how to extend the system without breaking it ([example](https://github.com/probot/template/blob/master/CONTRIBUTING.md)) | repo | |
 | Style checker, formatter, syntax checker: config files in repo, badges in README | repo + badges | |
 | DOI badge from Zenodo | badge | |
+| THIRD_PARTY_LIBRARIES.md (or similar): every dependency, with its license | repo | |
+| AI use is visible and disclosed: agent plans, bot configs (e.g. .coderabbit.yaml) live in the repo, plus evidence a human checked the AI's output | repo | |
 | **Sum** | | |
 
 ## The two videos
