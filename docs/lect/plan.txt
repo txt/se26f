@@ -68,11 +68,15 @@ N4 Sep 09 (150m): PRODUCT WORKSHOP             [proj1b due next week]
   Prep: pick demo product; pull 4 posters from Drive folder.
   SWEBOK: Requirements, Management (lite). CS2023: SEP-economics (lite).
 
-N5 Sep 16 (90m, tool talks A-D): TESTING, DEEPER    [proj1b due tonight]
-  90m V-model and test levels; black-box vs white-box;
+N5 Sep 16 (90m, tool talks A-D): TESTING, DEEPER    [proj1b due tonight;
+                                                     proj2 starts]
+  75m V-model and test levels; black-box vs white-box;
       coverage and its limits; regression testing; flaky tests;
       how proj1a tests become proj2's safety net
                                       [lect11-test deeper half]
+  15m proj2 launch: walk the repo rubric and the bling on screen;
+      how self-assessment + spot-checks work; the warning: the rubric
+      marks HISTORY -- CI green from day one beats a last-week rush
   SWEBOK: Testing, Quality. CS2023: SE-verification.
 
 =====================================================================
