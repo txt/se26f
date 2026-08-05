@@ -1,5 +1,5 @@
 PROJ1 TEACHING PLAN: 5 x 2hr lectures (Aug 19 - Sep 16)
-Glossary of concepts needed for proj1a (RE + testing) and proj1b (requirements).
+Glossary of concepts needed for proj1a (testing) and proj1b (requirements).
 Scope: no repo hygiene basics, no advanced material (that comes with proj2/proj3).
 Per term: [se25fall source, or NEW] + one-line note.
 
