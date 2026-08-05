@@ -23,7 +23,7 @@ See [policies](docs/lect/policies.md) for grading.
 
 | 📅 Date | 🎓 Lecture | 🛠️ Submission <br>(due start of class) | 🎤 Talks: teams A–Q <br>(15 min each, ≤4/night) | 📝 Review |
 |:-------------:|:----------:|:---------------------------:|:---------:|:---------:|
-| Aug 19 | [N1: Survival Kit](docs/lect/n01.md) | | | |
+| Aug 19 | [N1: Survival Kit](docs/lect/n01.md) · [The project](docs/submit/project.md) | | | |
 | Aug 26 | | | | |
 | Sep 02 | | **Proj1a: [testing](docs/submit/1/proj1a.md)** | | |
 | Sep 09 | | | | |
