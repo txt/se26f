@@ -1,7 +1,9 @@
 CSC510 FALL'26 LECTURE PLAN: 14 nights, Aug 19 - Nov 18
 Inputs: se26f project specs (docs/submit/1/), se25fall lectures (reuse map
 below), SWEBOK v4 (swebok-v4.pdf), CS2023 (Version-Beta-v2.pdf), student
-topic requests (all.md).
+topic requests (all.md), productivity evidence (productive.md), AI-slop
+study (aislop.pdf), Karpathy 1-pagers (docs/pdf/llm-wiki.pdf,
+docs/pdf/llm-loops.pdf).
 
 RULES
 - Just-in-time: teach nothing later than the week before students need it.
