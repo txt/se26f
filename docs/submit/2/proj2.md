@@ -79,7 +79,7 @@ evidence does not support costs more marks than an honest low score.
 
 ## The demo
 
-- One live demo (15 minutes) with a tutor. Software installed and running
+- One live demo (5 minutes) with a tutor. Software installed and running
   before the tutor arrives. One operator drives.
 - One demo video (2–5 minutes) embedded in your README and linked by QR
   from your poster.

@@ -42,7 +42,7 @@ things, without breaking the old things. Project 3 is that skill, marked.
 
 ## The demo
 
-- One live demo (15 minutes) with a tutor. The tutor asks: what did you
+- One live demo (5 minutes) with a tutor. The tutor asks: what did you
   inherit, what did you add, and does it all still run? Software installed
   and running before the tutor arrives. One operator drives.
 - One demo video (2–5 minutes) embedded in your README, showing the delta:
