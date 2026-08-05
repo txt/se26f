@@ -71,6 +71,8 @@ work. The link comes via Discord.
 
 ## Ways to lose marks
 
+- An unimpressive extension: Project 2 plus a few small touches. The new
+  milestones must matter.
 - Not enough tests.
 - Old tests that no longer pass.
 - New work tangled into old code, so nobody can tell what you added.
