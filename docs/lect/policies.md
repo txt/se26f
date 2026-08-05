@@ -41,9 +41,9 @@ From the NC State course catalog:
 > testing methods; configuration management and change control; and software
 > reliability estimation. Emphasis on large development projects.
 
-Students work in teams of three on four project submissions spanning the
-software life cycle: reverse engineering + testing (1a), requirements (1b),
-build (2), and maintenance (3).
+Students work in teams of four on three projects spanning the software life
+cycle: reverse engineering + testing + requirements (1a, 1b), build (2), and
+maintenance (3).
 
 The schedule of activities on the course README is subject to change,
 with appropriate notification to students.
