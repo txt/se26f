@@ -128,7 +128,7 @@ evidence does not support costs more marks than an honest low score.
 | Docs, the WHAT: point descriptions of each class/function, in isolation | doc pages | |
 | Docs, the HOW: mini-tutorials with worked examples for the common use cases X, Y, Z | doc pages | |
 | Docs, the WHY: the docs tell a story — motivate the whole thing, land a punchline that makes a reader want to use it | doc pages | |
-| Teaser video (12–30 s) at the TOP of README, beside the badges | README top | |
+| Teaser video (12–30 s), prominent at the TOP of README beside the badges, showing the features at a glance | README top | |
 | Feature walk-through video (2–5 min), linked in README: every major feature, working | README | |
 
 **Standard files and bling:**
@@ -147,9 +147,10 @@ evidence does not support costs more marks than an honest low score.
 
 ## The two videos
 
-1. **Teaser** (12 to 30 seconds): the quick guide. It sits at the TOP of
-   the README, beside the badges. One glance tells a stranger what the
-   product is. Good repos everywhere carry one — copy that pattern.
+1. **Teaser** (12 to 30 seconds): the quick guide to your features. It
+   sits prominently at the TOP of the README, beside the badges — the
+   first thing a visitor sees. One glance shows what the product does.
+   Good repos everywhere carry one — copy that pattern.
 2. **Feature walk-through** (2 to 5 minutes): every major feature, shown
    working. Linked in the README, and by QR from the poster.
 
