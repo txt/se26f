@@ -19,7 +19,8 @@
 [Prior projects](https://drive.google.com/drive/u/2/folders/1dGGQNCWC3BakD-nUZn5vPecPdm0KAhXA)
 
 **Due:** see the [schedule](../../../README.md).
-**Hand in:** two PDFs, uploaded to Moodle: one report, one poster.
+**Hand in:** one PDF report, uploaded to Moodle. No poster for Project 1a.
+Keep it short: say what you did, show the evidence, stop.
 
 ## How to start
 
@@ -263,9 +264,7 @@ Then, for each change you made:
 <paste our current test list>
 ```
 
-## What to hand in (two PDFs to Moodle)
-
-**PDF 1 — the report**, containing:
+## What to hand in (one PDF to Moodle)
 
 | # | Deliverable |
 |---|---|
@@ -273,13 +272,13 @@ Then, for each change you made:
 | D2 | 20 use cases, in the [usecases0.md](usecases0.md) format. |
 | D3 | Tests: code link, samples of raw test output, and a results table (test / why we tried it / expected / what happened). Failures are fine — explain them. |
 | D4 | Traceability table: your tests ↔ use cases. Plus your comment on the project's own tests: do they cover the use cases? Where are they blind? |
-| D5 | Prompt report: "the most useful prompts were..." and "the least useful prompts were..." — with the why, for both. |
+| D5 | Prompt notes. A very simple document — a half-page bullet list is fine: "most useful prompts", "least useful prompts", one line of why each. |
 
-**PDF 2 — the poster** ([requirements](poster.md)):
+## The demo
 
-| # | Deliverable |
-|---|---|
-| D6 | Poster: sells the product as it is. Boast your use cases and tests. |
+The live demo is 3 of the 5 marks. Software installed and running before the
+tutor arrives; one operator drives. Scheduling rules: see the
+[policies](../lect/policies.md).
 
 ## Report format
 
@@ -290,12 +289,12 @@ Then, for each change you made:
 \documentclass[sigconf]{acmart}
 ```
 
-- The report must be more than four pages.
+- No minimum length. Short and dense beats long and padded.
 - Compile to PDF. Submit to Moodle.
 
 ## Rubric
 
-Score each deliverable D1–D6:
+Score each deliverable D1–D5:
 
 | Score | Meaning |
 |---|---|
@@ -312,5 +311,4 @@ Fast checks for the marker:
 - D4: does every use case have at least one test? Gaps explained? Honest
   verdict on the project's own tests?
 - D5: prompts beyond the ten starters? Real reflection, or padding?
-- D6: does the poster sell the product in 15 seconds? All required parts present?
-- Format: ACM two-column LaTeX? More than four pages? If not, cap all scores at 1.
+- Format: ACM two-column LaTeX? If not, cap all scores at 1.

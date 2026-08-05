@@ -18,11 +18,10 @@
 [Project 1b](proj1b.md) · [Use case format](usecases0.md) ·
 [Prior projects](https://drive.google.com/drive/u/2/folders/1dGGQNCWC3BakD-nUZn5vPecPdm0KAhXA)
 
-Each part of Project 1 hands in one poster (as a PDF, to Moodle):
-
-- The [Project 1a](proj1a.md) poster sells the product **as it is** — its use
-  cases, and your tests of it.
-- The [Project 1b](proj1b.md) poster sells the **better product** you propose.
+Only [Project 1b](proj1b.md) hands in a poster (as a PDF, to Moodle).
+[Project 1a](proj1a.md) has no poster. The poster sells the **better
+product** you propose — with the [Project 1a](proj1a.md) findings (use
+cases, tests) as its "before" evidence.
 
 ## Format
 
