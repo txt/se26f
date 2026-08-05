@@ -23,17 +23,17 @@ See [policies](docs/lect/policies.md) for grading. Each project includes a live 
 |:-------------:|:----------:|:---------------------------:|:---------:|:---------:|:---------:|
 | Aug 19 | | | | | |
 | Aug 26 | | | | | |
-| Sep 02 | | **Proj1a: [RE + testing](docs/submit/1/proj1a.md)** | | | 8 <br><sub>proj1a</sub> |
+| Sep 02 | | **Proj1a: [RE + testing](docs/submit/1/proj1a.md)** | | | 7 <br><sub>proj1a</sub> |
 | Sep 09 | | | | | |
-| Sep 16 | | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | | 8 <br><sub>proj1b</sub> |
+| Sep 16 | | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | | 7 <br><sub>proj1b</sub> |
 | Sep 23 | | | toolE–H | | |
 | Sep 30 | | | toolI–L | | |
 | Oct 07 | | | toolM–P | | |
 | Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ | | no talks | | 15 <br><sub>mid-term</sub> |
-| Oct 21 | | **Proj2: build** | toolQ · taskA–C | | 20 <br><sub>proj2</sub> |
+| Oct 21 | | **Proj2: build** | toolQ · taskA–C | | 23 <br><sub>proj2</sub> |
 | Oct 28 | | | taskD–G | | |
 | Nov 04 | | | taskH–K | | |
 | Nov 11 | | | taskL–O | | |
 | Nov 18 | | | taskP–Q | | |
-| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: maintain** (submit online) | | | 33 <br><sub>proj3</sub> |
+| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: maintain** (submit online) | | | 32 <br><sub>proj3</sub> |
 </div>
