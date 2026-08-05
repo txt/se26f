@@ -13,7 +13,8 @@ TIME BUDGET (night = 4:30-7:15 = 165 min; minus ~15 min break/admin)
   no talks     : ~150 min teaching
   4-talk night : ~90 min teaching  (4 x 15 min talks)
   2-talk night : ~120 min teaching
-  mid-term     : 0 (exam takes the night)
+  mid-term     : ~60 min teaching, AFTER the exam (fresh students sit the
+                 exam; the lecture absorbs any exam overrun)
 
 =====================================================================
 PROJ1 ERA: five nights, all full 150 min
@@ -96,17 +97,23 @@ N8 Oct 07 (90m, tool talks M-P): PATTERNS + CODE QUALITY
   30m mid-term review: what is examinable, sample questions
   SWEBOK: Design, Construction, Quality. CS2023: SE-construction.
 
-N9 Oct 14: MID-TERM EXAM. No lecture, no talks.
+N9 Oct 14 (60m after exam, no talks): EXAM + PROJ3 PREVIEW
+  Exam first (fresh minds; lecture absorbs overrun). Then, light and
+  forward-looking for drained brains:
+  60m proj3 preview: maintenance economics (most of SE life is
+      maintenance), the 30 percent rule, "you will inherit another
+      team's proj2" -- what to look for when it lands
+                                      [lec5-cobol + lec7-30percent]
+  SWEBOK: Maintenance (opener).
 
 =====================================================================
 PROJ3 ERA (maintain month, due Nov 25): five nights
 =====================================================================
 
 N10 Oct 21 (90m, toolQ + task talks A-C): MAINTENANCE   [proj2 due tonight]
-  90m maintenance economics (most of SE life is maintenance),
-      comprehension at scale, technical debt deep, the 30 percent
-      rule, proj3 launch: how to inherit another team's proj2
-                                      [lec5-cobol + lec7-30percent]
+  90m comprehension at scale, technical debt deep, refactoring under
+      test, proj3 launch mechanics: the handover, first-week triage
+      of an inherited codebase       [lec5-cobol deep; economics done N9]
   SWEBOK: Maintenance. CS2023: SE-evolution.
 
 N11 Oct 28 (90m, task talks D-G): DEBUGGING AS SCIENCE
