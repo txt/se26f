@@ -62,30 +62,30 @@ Upon completion of this course, students will be able to:
 
 ## Student Performance Assessment
 
-Weekly in-class tests reward attendance. Each team (of three) gives two
+Each team (of three) gives two
 in-person talks during the semester -- one *tool* talk, one *task* talk (see
 the schedule on the course
 [README](https://github.com/txt/se26f/blob/main/README.md)).
-The final exam mark is weighted 1.5 times the mid-term mark.
+There is no final exam: the course is graded on projects, talks, peer
+reviews, and one mid-term. After each project, every team peer-reviews
+assigned submissions from other teams (via a form, one form per team).
 
 **Total 100 marks:**
 
 | Marks | Component |
 |------:|-----------|
-| 13 | Weekly in-class tests (1 mark each, one per lecture week, none on mid-term night) |
-|  7 | Tool talk (in-class team presentation) |
-|  7 | Task talk (in-class team presentation) |
-|  5 | Proj1a: RE + testing (due Wed Sep 2) |
-|  6 | Proj1b: requirements (due Wed Sep 16) |
-| 11 | Proj2: build (due Wed Oct 21) |
-| 11 | Proj3: maintain (due Wed Nov 25, submit online -- Thanksgiving break) |
-| 16 | Mid-term exam (Wed Oct 14) |
-| 24 | Final exam (Wed Dec 9, 3:30-6 PM) |
+|  8 | Tool talk (in-class team presentation) |
+|  8 | Task talk (in-class team presentation) |
+| 10 | Proj1a: RE + testing (due Wed Sep 2) |
+| 10 | Proj1b: requirements (due Wed Sep 16) |
+| 20 | Proj2: build (due Wed Oct 21) |
+| 20 | Proj3: maintain (due Wed Nov 25, submit online -- Thanksgiving break) |
+|  4 | Peer reviews (1 mark each: proj1a, proj1b, proj2, proj3; one form per team, due one week after each project) |
+| 20 | Mid-term exam (Wed Oct 14) |
 
-**Attendance and participation:** Classes are in person. The weekly in-class
-tests can only be taken in class; a missed test scores zero unless the absence
-is excused under NCSU REG 02.20.03 (Attendance Regulations), in which case a
-makeup will be arranged. Talks must be delivered in person at the scheduled
+**Attendance and participation:** Classes are in person. Absences are handled
+under NCSU REG 02.20.03 (Attendance Regulations). Talks must be delivered in
+person at the scheduled
 slot. Projects are team submissions; all team members are expected to
 contribute and may be graded individually if contributions are unequal.
 
