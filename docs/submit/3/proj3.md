@@ -49,6 +49,16 @@ things, without breaking the old things. Project 3 is that skill, marked.
 - Old tests keep passing. Add new tests for the new work: 50 is good,
   100 is better.
 
+## Warning: trust nothing
+
+We anticipate that half of the Project 2 projects will not work as
+advertised. Posters oversell. Demo videos show the one path that works.
+
+So assess your chosen Project 2 code as soon as possible: build it, run
+it, run its tests, poke its dark corners. If it cannot carry your
+milestones, decide fast — pick another Project 2, now, not in week three.
+An early switch costs one afternoon. A late switch kills the project.
+
 ## First week
 
 1. Pick a Project 2 repo. Shop in the
