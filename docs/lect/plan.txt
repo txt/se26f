@@ -24,7 +24,7 @@ N1 Aug 19 (150m): SURVIVAL KIT                 [proj1a starts tonight]
   30m git three ways: stage 1 shared-drive (dir ownership, commit to
       main), stage 2 review-before-merge (branch, diff, PR, non-author
       review), stage 3 agent herding (worktrees, local diff+merge) [NEW]
-  40m LLM as tool: prompt pattern (role+evidence+format+no-guess),
+  30m LLM as tool: prompt pattern (role+evidence+format+no-guess),
       zero-shot vs careful, context window, hallucination,
       LLM-as-librarian; LLM repo wikis (DeepWiki-style): auto-generate
       a wiki over an alien repo, then verify it against the code --
@@ -32,7 +32,7 @@ N1 Aug 19 (150m): SURVIVAL KIT                 [proj1a starts tonight]
       1-pager (docs/pdf/llm-wiki.pdf): 9 rules, immutable raw/,
       compile-don't-retrieve, lint the knowledge
                                         [rewrite lec4-prompting + proj1b1]
-  60m reading alien code: reverse engineering, comprehension,
+  50m reading alien code: reverse engineering, comprehension,
       code rot, day-one build rule, tech debt, churn mining
                                       [NEW + lec5-cobol war stories]
   15m tool/task talk briefing: what talks are, how judged (7 marks)
