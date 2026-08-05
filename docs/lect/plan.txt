@@ -26,7 +26,10 @@ N1 Aug 19 (150m): SURVIVAL KIT                 [proj1a starts tonight]
       zero-shot vs careful, context window, hallucination,
       LLM-as-librarian; LLM repo wikis (DeepWiki-style): auto-generate
       a wiki over an alien repo, then verify it against the code --
-      generated docs hallucinate too    [rewrite lec4-prompting + proj1b1]
+      generated docs hallucinate too. Handout: Karpathy's llm-wiki
+      1-pager (docs/pdf/llm-wiki.pdf): 9 rules, immutable raw/,
+      compile-don't-retrieve, lint the knowledge
+                                        [rewrite lec4-prompting + proj1b1]
   60m reading alien code: reverse engineering, comprehension,
       code rot, day-one build rule, tech debt, churn mining
                                       [NEW + lec5-cobol war stories]
