@@ -66,9 +66,8 @@ Each team (of three) gives two
 in-person talks during the semester -- one *tool* talk, one *task* talk (see
 the schedule on the course
 [README](https://github.com/txt/se26f/blob/main/README.md)).
-There is no final exam: the course is graded on projects, talks, peer
-reviews, and one mid-term. After each project, every team peer-reviews
-assigned submissions from other teams (via a form, one form per team).
+There is no final exam: the course is graded on projects, talks, and one
+mid-term.
 
 **Total 100 marks:**
 
@@ -79,8 +78,7 @@ assigned submissions from other teams (via a form, one form per team).
 |  8 | Proj1a: RE + testing (due Wed Sep 2). 3 report + poster, 5 live demo |
 |  8 | Proj1b: requirements (due Wed Sep 16). 3 report + poster, 5 live demo |
 | 20 | Proj2: build (due Wed Oct 21). 15 work, 5 live demo |
-| 29 | Proj3: maintain (due Wed Nov 25, submit online -- Thanksgiving break). 24 work, 5 demo |
-|  4 | Peer reviews (1 mark each: proj1a, proj1b, proj2, proj3; one form per team, due one week after each project) |
+| 33 | Proj3: maintain (due Wed Nov 25, submit online -- Thanksgiving break). 28 work, 5 demo |
 | 15 | Mid-term exam (Wed Oct 14) |
 
 **Attendance and participation:** Classes are in person. Absences are handled
