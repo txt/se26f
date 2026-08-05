@@ -67,8 +67,6 @@ Each team (of three) gives two
 in-person talks during the semester -- one *tool* talk, one *task* talk (see
 the schedule on the course
 [README](https://github.com/txt/se26f/blob/main/README.md)).
-There is no final exam: the course is graded on projects, talks, and one
-mid-term.
 
 **Total 100 marks:**
 
