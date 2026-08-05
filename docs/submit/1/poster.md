@@ -69,6 +69,8 @@ demo the running system when asked. For that demo:
   on the cloud). The demo must start straight away. No setup time.
 - Provide one operator for the demo. The tutor watches the operator run the
   code.
+- Demo scheduling rules (working hours, and optional after-hours slots):
+  see the [policies](../lect/policies.md).
 
 ## Sample posters
 

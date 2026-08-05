@@ -92,7 +92,17 @@ slot. Projects are team submissions; all team members are expected to
 contribute and may be graded individually if contributions are unequal.
 
 **Late work:** Late submissions lose one mark per day late (weekends count as
-one day).
+one day). Exception: Proj3 has a seven-day grace period — no late marks are
+lost until Dec 1.
+
+**Demo scheduling:** Demos are scheduled with your tutor. You are entitled to
+have your demos run during normal working hours (9 AM to 5 PM, Monday to
+Friday). If that is what you want, just say so — we will, of course,
+accommodate you. That said, please remember that tutors are students too, and
+demo season often collides with their own assignment deadlines. So if a tutor
+asks for an after-hours demo slot, we ask that you consider accommodating
+them. This is entirely optional: you may decline, without penalty, and a
+working-hours slot will be arranged.
 
 **Grading scale:**
 

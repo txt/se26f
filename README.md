@@ -35,6 +35,6 @@ See [policies](docs/lect/policies.md) for grading.
 | Nov 04 | | | taskH–K | |
 | Nov 11 | | | taskL–O | |
 | Nov 18 | | | taskP–Q | |
-| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: maintain** (submit online) | | |
+| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: maintain** (submit online; no late marks till Dec 1) | | |
 | 🟥 ${\color{#ff9999}\textsf{Dec 07 (Mon) — Final exam, 3:30–6:00 PM, 1021 EB2}}$ | | | | |
 </div>
