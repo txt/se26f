@@ -1,5 +1,9 @@
 https://www.linkedin.com/pulse/under-claude-code-hood-generative-grammars-doing-heavy-lextrait-j0f7c/
 
+## TODO
+
+- weekly paper on architecture (for N4? recurring reading?)
+
 
 <img width="720" height="393" alt="image" src="https://github.com/user-attachments/assets/f4d614c3-c10a-4c08-98f1-4573af3099b4" />
 
