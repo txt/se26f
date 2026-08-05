@@ -75,6 +75,7 @@ Wanted at the top of README.md:
 - Style checker badge, code formatter badge, syntax checker badge — one
   each, with the config files for each tool visible in the repo.
 - Any other automated analysis tool you run: badge it.
+- The teaser video (see "The two videos"), right under the badges.
 - DOI badge: register the repo at
   [Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
   It looks like this:
@@ -127,7 +128,8 @@ evidence does not support costs more marks than an honest low score.
 | Docs, the WHAT: point descriptions of each class/function, in isolation | doc pages | |
 | Docs, the HOW: mini-tutorials with worked examples for the common use cases X, Y, Z | doc pages | |
 | Docs, the WHY: the docs tell a story — motivate the whole thing, land a punchline that makes a reader want to use it | doc pages | |
-| Demo video (2–5 min), prominent at the TOP of README, right by the badges: shows new functions, a clear delta from before | README top | |
+| Teaser video (12–30 s) at the TOP of README, beside the badges | README top | |
+| Feature walk-through video (2–5 min), linked in README: every major feature, working | README | |
 
 **Standard files and bling:**
 
@@ -143,12 +145,21 @@ evidence does not support costs more marks than an honest low score.
 | DOI badge from Zenodo | badge | |
 | **Sum** | | |
 
+## The two videos
+
+1. **Teaser** (12 to 30 seconds): the quick guide. It sits at the TOP of
+   the README, beside the badges. One glance tells a stranger what the
+   product is. Good repos everywhere carry one — copy that pattern.
+2. **Feature walk-through** (2 to 5 minutes): every major feature, shown
+   working. Linked in the README, and by QR from the poster.
+
 ## The demo
 
-- One live demo (5 minutes) with a tutor. Software installed and running
-  before the tutor arrives. One operator drives.
-- One demo video (2–5 minutes), prominent at the top of your README, and
-  linked by QR from your poster.
+- One live demo (5 minutes) with a tutor. The operator plays the feature
+  walk-through video and narrates it, live. The tutor asks questions as
+  it plays.
+- Keep the software installed and running anyway. If the tutor says
+  "show me that for real" — you run it, straight away.
 - Scheduling rules: see the [policies](../lect/policies.md).
 
 ## The poster

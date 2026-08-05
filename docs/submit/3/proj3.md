@@ -68,13 +68,21 @@ An early switch costs one afternoon. A late switch kills the project.
 3. Triage: what is solid, what is fragile, what do their tests miss?
 4. Then plan your four milestones.
 
+## The two videos
+
+1. **Teaser** (12 to 30 seconds) at the TOP of the README: one glance
+   tells a stranger what the product is now.
+2. **Feature walk-through** (2 to 5 minutes), linked in the README: the
+   delta since the fork — what works now that did not work before.
+
 ## The demo
 
-- One live demo (5 minutes) with a tutor. The tutor asks: what did you
-  inherit, what did you add, and does it all still run? Software installed
-  and running before the tutor arrives. One operator drives.
-- One demo video (2–5 minutes) embedded in your README, showing the delta:
-  what works now that did not work before.
+- One live demo (5 minutes) with a tutor. The operator plays the
+  walk-through video and narrates it, live: what we inherited, what we
+  added, how we know the old parts still work. The tutor asks questions
+  as it plays.
+- Keep the software installed and running anyway. If the tutor says
+  "show me that for real" — you run it, straight away.
 - Scheduling rules: see the [policies](../lect/policies.md).
 
 ## The poster
