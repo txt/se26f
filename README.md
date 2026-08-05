@@ -26,17 +26,17 @@ See [policies](docs/lect/policies.md) for grading.
 | Aug 19 | [basics](docs/lect/n01.md) <br> 🚀 **[project](docs/submit/project.md)** | | | |
 | Aug 26 | [useCaseTesting](docs/lect/n02.md) | | | |
 | Sep 02 | [requirements](docs/lect/n03.md) | **Proj1a: [testing](docs/submit/1/proj1a.md)** | | |
-| Sep 09 | | | | |
-| Sep 16 | | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | |
-| Sep 23 | | | toolE–H | |
-| Sep 30 | | | toolI–L | |
-| Oct 07 | | | toolM–P | |
-| Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ | | no talks | |
-| Oct 21 | | **Proj2: [build](docs/submit/2/proj2.md)** | toolQ · taskA–C | |
-| Oct 28 | | | taskD–G | |
-| Nov 04 | | | taskH–K | |
-| Nov 11 | | | taskL–O | |
-| Nov 18 | | | taskP–Q | |
+| Sep 09 | productWorkshop | | | |
+| Sep 16 | testingDeeper | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | |
+| Sep 23 | architecture | | toolE–H | |
+| Sep 30 | processConfig | | toolI–L | |
+| Oct 07 | patternsQuality | | toolM–P | |
+| Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ · proj3preview | | no talks | |
+| Oct 21 | maintenance | **Proj2: [build](docs/submit/2/proj2.md)** | toolQ · taskA–C | |
+| Oct 28 | debugging | | taskD–G | |
+| Nov 04 | aiForSE | | taskH–K | |
+| Nov 11 | securityLawEthics | | taskL–O | |
+| Nov 18 | nonFunctionalsWrap | | taskP–Q | |
 | 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: [maintain](docs/submit/3/proj3.md)** (submit online; no late marks till Dec 1) | | |
 | 🟥 ${\color{#ff9999}\textsf{Dec 07 (Mon) — Final exam, 3:30–6:00 PM, 1021 EB2}}$ | | | | |
 </div>
