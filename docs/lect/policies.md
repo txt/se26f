@@ -76,12 +76,12 @@ assigned submissions from other teams (via a form, one form per team).
 |------:|-----------|
 |  8 | Tool talk (in-class team presentation) |
 |  8 | Task talk (in-class team presentation) |
-| 10 | Proj1a: RE + testing (due Wed Sep 2). 5 report + poster, 5 live demo |
-| 10 | Proj1b: requirements (due Wed Sep 16). 5 report + poster, 5 live demo |
+|  8 | Proj1a: RE + testing (due Wed Sep 2). 3 report + poster, 5 live demo |
+|  8 | Proj1b: requirements (due Wed Sep 16). 3 report + poster, 5 live demo |
 | 20 | Proj2: build (due Wed Oct 21). 15 work, 5 live demo |
-| 20 | Proj3: maintain (due Wed Nov 25, submit online -- Thanksgiving break). 15 work, 5 demo |
+| 29 | Proj3: maintain (due Wed Nov 25, submit online -- Thanksgiving break). 24 work, 5 demo |
 |  4 | Peer reviews (1 mark each: proj1a, proj1b, proj2, proj3; one form per team, due one week after each project) |
-| 20 | Mid-term exam (Wed Oct 14) |
+| 15 | Mid-term exam (Wed Oct 14) |
 
 **Attendance and participation:** Classes are in person. Absences are handled
 under NCSU REG 02.20.03 (Attendance Regulations). Talks must be delivered in
