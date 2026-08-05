@@ -1,113 +1,134 @@
 PROJ1 TEACHING PLAN: 5 x 2hr lectures (Aug 19 - Sep 16)
-Glossary of concepts needed for proj1a (testing) and proj1b (requirements).
-Scope: no repo hygiene basics, no advanced material (that comes with proj2/proj3).
+Glossary of concepts needed for proj1a (testing, due Sep 2) and proj1b
+(requirements, due Sep 16).
+Scope: minimal github basics only (survival, not craft); no advanced
+material (comes with proj2/proj3).
 Per term: [se25fall source, or NEW] + one-line note.
 
-=====================================================================
-LECTURE 1 (Aug 19): READING ALIEN CODE            (proj1a starts here)
-=====================================================================
-reverse engineering        [NEW]           recover design from code; the proj1a core act
-program comprehension      [NEW]           top-down (guess architecture) vs bottom-up (read code) strategies
-software archaeology       [part: lec5-cobol.md]  COBOL war stories give motivation; needs a method slide
-code rot / bit rot         [NEW]           why old code stops building; world moves, code does not
-technical debt             [NEW]           shortcuts that tax every later change; how to spot from git log
-churn / hotspot mining     [part: lec5-process.md]  git log --stat as evidence; process lecture touches git flow only
-dead code                  [NEW]           functions no use case needs; a smell and a finding
-hidden feature             [NEW]           code the README never mentions; where use cases hide
-build reproducibility      [NEW]           "runs on my machine"; day-one build rule; two-day switch rule
-fork                       [skip]          assumed known; one sentence max
+RULE: just-in-time. Teach nothing later than the week before students
+need it. Proj1a needs git + LLM + use cases + testing by Aug 26.
 
 =====================================================================
-LECTURE 2 (Aug 26): USE CASES + STAKEHOLDERS
+LECTURE 1 (Aug 19): SURVIVAL KIT                (proj1a starts tonight)
 =====================================================================
-use case                   [se25fall: pdf/re.pdf slides 53-73]  the whole format; core lecture, reuse directly
-actor / primary actor      [re.pdf]        who wants the goal; name cases from actor goals
-precondition / trigger     [re.pdf]        what must hold; what kicks it off
-main success scenario      [re.pdf]        numbered happy path; no ifs allowed
-extension                  [re.pdf]        where branching and the real requirements live
-postcondition              [re.pdf]        what is guaranteed true on success
-goal-level naming          [re.pdf]        "Track delivery" not "Display status screen"
-stakeholder                [lec3-re.md]    who matters section; reuse
-stakeholder interests/bias [lec3-re.md]    clashing needs; reuse, tie to proj1b prompt 5
-power-interest grid        [lec3-re.md]    reuse as-is
-elicitation                [lec3-re.md]    interviews, observation, CRC cards; trim repertory grids (too deep here)
-requirements failures      [lec3-re.md]    Ariane 5, London Ambulance etc; keep as motivation opener
+-- github basics (20 min, no more) --
+fork / clone / commit / push [NEW]        just enough to start proj1a tonight
+README / .gitignore        [NEW]          one slide; where the tutor looks first
+
+-- LLM as tool (worked in from night one) --
+prompt pattern             [NEW]          role + pasted evidence + fixed output format + forbid guessing
+zero-shot vs careful       [se25fall: proj1b1 spec]  the compare-both exercise; promote to lecture
+context window             [part: proj1b1 spec]      why paste beats vague reference
+hallucination / grounding  [NEW]          "no invented facts; write unknown"; verify habit
+LLM as librarian           [NEW]          proj1a "How to start": LLM runs around the repo for you
+
+-- reading alien code --
+reverse engineering        [NEW]          recover design from code; the proj1a core act
+program comprehension      [NEW]          top-down vs bottom-up reading strategies
+code rot / bit rot         [NEW]          why old code stops building; world moves, code does not
+software archaeology       [part: lec5-cobol.md]  COBOL war stories as motivation
+build reproducibility      [NEW]          day-one build rule; two-day switch rule
+technical debt / churn     [NEW + part: lec5-process.md]  git log --stat as evidence
+
+-- admin (10 min) --
+ACM LaTeX quickstart       [NEW]          hand out a working acmart repo to clone; sigconf 2-col
 
 =====================================================================
-LECTURE 3 (Sep 02): TESTING FUNDAMENTALS          (proj1a due tonight)
+LECTURE 2 (Aug 26): USE CASES + TESTING        (proj1a due next week)
 =====================================================================
-fault vs failure vs error  [lect11-test.md]  Fenton & Neil distinction; reuse
-test case / test suite     [lect11-test.md]  reuse
-test oracle                [lect11-test.md]  oracle problem section; simplify, cut delta-debug context
-expected vs actual         [NEW]           the proj1a results table (test / why / expected / happened)
-happy path / edge case     [part: lect11-test.md]  add boundary-value analysis; slides thin here
-black-box vs white-box     [lect11-test.md]  reuse; cut grammar-based generation (advanced)
-test levels / V-model      [lect11-test.md]  unit, integration, system, acceptance; reuse
-coverage + its limits      [lect11-test.md]  statement/branch; "problems with coverage" slide is gold, reuse
-regression testing         [lect11-test.md]  reuse; ties to "130+ tests let them change code safely"
-traceability matrix        [part: lec3-re.md]  requirements-traceability section exists; adapt to tests<->use-cases
-failures as findings       [NEW]           failing test on rotten code = result, not shame; proj1a note
-test naming                [NEW]           test_rejects_empty_cart; names as sentences
-flaky test                 [NEW]           one slide; expect them in old code
+-- use cases (first hour) --
+use case                   [se25fall: pdf/re.pdf slides 53-73]  the format; reuse directly
+actor / trigger / precondition [re.pdf]   who wants the goal; what kicks it off
+main success scenario      [re.pdf]       numbered happy path; no ifs allowed
+extension                  [re.pdf]       where branching and the real requirements live
+postcondition              [re.pdf]       guaranteed true on success
+goal-level naming          [re.pdf]       "Track delivery" not "Display status screen"
+worked example             [se26f: usecases0.md]  food delivery; map slides to this table format
 
-CUT from lect11-test.md for proj1 (save for proj2/proj3 lectures):
-mutation testing, delta debugging, fault localization (Tarantula/Ochiai),
-GenProg/program repair, symbolic execution, formal methods, TERMINATOR,
-metamorphic testing, all-pairs.
+-- testing essentials (second hour; deep theory waits for L5) --
+fault vs failure           [lect11-test.md]  Fenton & Neil distinction; reuse
+test case / test oracle    [lect11-test.md]  simplify; cut delta-debug context
+expected vs actual         [NEW]          the proj1a results table (test / why / expected / happened)
+happy path / edge case     [part: lect11-test.md]  add boundary values; slides thin here
+traceability matrix        [part: lec3-re.md]  adapt requirements-traceability to tests<->use-cases
+failures as findings       [NEW]          failing test on rotten code = result, not shame
+test naming                [NEW]          test_rejects_empty_cart; names as sentences
 
-=====================================================================
-LECTURE 4 (Sep 09): LLMs AS ENGINEERING TOOLS     (serves 1a and 1b)
-=====================================================================
-prompt / prompting         [part: lec4-prompting.md]  file is an AIPCC context-file example, not a lecture; rewrite
-zero-shot vs careful       [se25fall: proj1b1 spec]   the compare-both exercise; promote to lecture material
-role prompting             [NEW]           "you are a senior engineer..."; why personas focus output
-evidence-first prompting   [NEW]           paste tree/log/error; forbid guessing; demand citations
-output-format contracts    [NEW]           fixed tables/word limits; makes LLM output checkable
-few-shot / worked example  [part: proj1b1 appendix]  training an LLM on the use-case format; reuse idea
-context window             [part: proj1b1 spec]      why paste beats vague reference; limits
-hallucination / grounding  [NEW]           "no invented products; write unknown"; verification habit
-self-critique / red team   [NEW]           attack-your-own-proposal prompt; antidote to sycophancy
-paste vs search vs RAG     [part: lec3-rag.md]  ONE slide only; full RAG build is proj2 material
-LLM cost awareness         [part: proj1b1 spec]  the $80/team budget discussion; update prices
-prompt reflection          [NEW]           most/least useful prompts (D5); metacognition as a deliverable
+-- demo craft (10 min; demo = 3 of proj1a's 5 marks) --
+the 10-minute demo         [NEW]          pre-installed, one operator, start instantly, show a failure honestly
 
 =====================================================================
-LECTURE 5 (Sep 16): FROM CODE TO PRODUCT          (proj1b due tonight)
+LECTURE 3 (Sep 02): REQUIREMENTS + STAKEHOLDERS   (proj1a due tonight;
+                                                   proj1b starts)
 =====================================================================
-requirements engineering   [lec3-re.md]    the discipline; reuse framing
-functional vs non-func     [lec3-re.md]    reuse; NFRs lead into constraints
-constraints as requirements[part: lec3-re.md]  contracts/procurement section nearest; mostly NEW:
-                                           regulations, standards (WCAG/OWASP), licenses, human factors
-market / competitor scan   [NEW]           rivals table; strengths, weaknesses, evidence URLs
-gap analysis               [NEW]           the gap with receipts; confirm/refute evidence
-differentiation            [NEW]           table stakes vs differentiators
-mission statement          [NEW]           why / what / so-what; banned-buzzword exercise
-MVP / scoping              [NEW]           largest realistic slice; safe/bold/wild futures
-milestone / estimation     [part: lect13-est.pdf]  estimation slides exist; trim to team-capacity realism
-risk / kill signal         [NEW]           "we abandon this if ___"; cheap failure beats poster-day failure
-pitch / poster craft       [NEW]           15-second rule; sell the stack; poster.md as the spec
+requirements engineering   [lec3-re.md]   the discipline; reuse framing
+requirements failures      [lec3-re.md]   Ariane 5, London Ambulance etc; motivation opener
+functional vs non-func     [lec3-re.md]   reuse; NFRs lead into constraints
+constraints as requirements[part: lec3-re.md + NEW]  regulations, standards (WCAG/OWASP), licenses, human factors
+stakeholder                [lec3-re.md]   who matters; reuse
+stakeholder interests/bias [lec3-re.md]   clashing needs; ties to proj1b prompt 5
+power-interest grid        [lec3-re.md]   reuse as-is
+elicitation                [lec3-re.md]   interviews, observation, CRC cards; repertory grids preview only
+
+=====================================================================
+LECTURE 4 (Sep 09): PRODUCT WORKSHOP           (proj1b due next week)
+=====================================================================
+Format: workshop, not lecture. The proj1b prompt set IS the deck.
+Teams work on THEIR 1b in class. Prep: pick one demo product; pick
+2 strong + 2 weak posters from the Drive folder.
+
+ 20 min  mission statement anatomy   [NEW]  why/what/so-what; Sentiment
+         Analyzer example from poster.md; iPod "1,000 songs" beats specs
+ 30 min  live prompting on screen    [NEW]  run proj1b prompts 1, 2, 7
+         (market scan, complaint mining, mission drafts) on real product;
+         class hunts hallucinated rivals and buzzwords
+ 20 min  finding differentiators     [part: lec3-re.md repgrids]  repertory-
+         grid-lite: 3 rivals, elicit constructs, table stakes vs differentiators
+ 20 min  milestone realism           [part: lect13-est.pdf]  capacity math:
+         4 x 10hr x 4wk = 160 hrs; safe/bold/wild; kill signals; prompt 9 live
+ 20 min  poster craft                [NEW]  2 good + 2 bad past posters;
+         15-second votes; extract the rules from reactions
+ 10 min  red team finale             [NEW]  prompt 10 vs a volunteer team's idea
+
+Glossary landed by this workshop:
+market/competitor scan, gap analysis, differentiation, table stakes,
+mission statement, MVP/scoping, milestone, capacity estimation,
+risk / kill signal, red teaming, pitch / 15-second rule.
+
+=====================================================================
+LECTURE 5 (Sep 16): TESTING, DEEPER            (proj1b due tonight;
+                                                bridge to proj2 build month)
+=====================================================================
+V-model / test levels      [lect11-test.md]  unit, integration, system, acceptance
+black-box vs white-box     [lect11-test.md]  reuse; cut grammar-based generation
+coverage + its limits      [lect11-test.md]  statement/branch; "problems with coverage" slide is gold
+regression testing         [lect11-test.md]  ties to "130+ tests let them change code safely"
+flaky test                 [NEW]          one slide; expect them
+test-first for proj2       [NEW]          how proj1a tests become proj2's safety net
+
+STILL CUT (save for proj2/proj3 era):
+mutation testing, delta debugging, fault localization, GenProg,
+symbolic execution, formal methods, metamorphic, all-pairs, deep RAG,
+patterns, architecture, models, SBSE, GreenAI.
 
 =====================================================================
 MATERIAL TO ADD OR UPDATE FROM se25fall
 =====================================================================
-COPY   pdf/re.pdf           -> se26f/docs/pdf/. Core of lecture 2. Add one
-                              slide mapping slide-format to usecases0.md table format.
-REUSE  lec3-re.md (~60%)    -> keep failures, stakeholders, elicitation,
-                              traceability, quality metrics. Trim process models
-                              (waterfall/scrum) and procurement detail.
-REUSE  lect11-test.md (~40%)-> keep fault/failure, V-model, black/white box,
-                              coverage+limits, regression, oracle. Cut the
-                              advanced half (list above) for proj2/proj3.
+COPY   pdf/re.pdf           -> se26f/docs/pdf/. Core of L2 hour one. Add one
+                              slide mapping slide format to usecases0.md table.
+REUSE  lec3-re.md (~60%)    -> L3: failures, stakeholders, elicitation,
+                              traceability. Trim process models + procurement.
+REUSE  lect11-test.md       -> split: essentials to L2 (fault/failure, oracle),
+                              deeper half to L5 (V-model, coverage, regression).
+                              Advanced third stays cut for proj2/3.
 REWRITE lec4-prompting.md   -> currently a pasted AIPCC context file. Rebuild
-                              as a prompting lecture; use the proj1a/proj1b
-                              starter prompts as the worked examples.
-MINE   lec3-rag.md          -> extract one paste-vs-search-vs-RAG slide for
-                              lecture 4. Keep the rest for proj2.
-MINE   lec5-cobol.md        -> maintenance war stories open lecture 1.
-MINE   lect13-est.pdf       -> a few estimation-realism slides for lecture 5.
-WRITE NEW lecture 1         -> code archaeology + code rot + comprehension.
-                              Biggest gap in se25fall; nothing covers it.
-WRITE NEW lecture 5 half    -> market scan, differentiation, mission statement,
-                              poster/pitch craft. se25fall has none of this.
-SKIP   lec3-rag.md deep RAG, lect12-patterns, lec6-arch, lec7-models,
-       lec8-SBSE, lec9-GreenAI, lect14-17 -> proj2/proj3 era, not proj1.
+                              as L1's LLM segment; use proj1a/proj1b starter
+                              prompts as the worked examples.
+MINE   lec5-cobol.md        -> maintenance war stories open L1's alien-code arc.
+MINE   lect13-est.pdf       -> estimation-realism slides for L4 milestone slot.
+MINE   lec3-rag.md          -> nothing for proj1; keep whole for proj2.
+WRITE NEW L1                -> survival kit: git-minimal + prompt pattern +
+                              code rot. Biggest gap; nothing in se25fall.
+WRITE NEW L4 prep           -> not slides: pick demo product, pick 4 posters
+                              from Drive folder, print capacity-math sheet.
+WRITE NEW acmart starter    -> tiny repo students clone; compiles day one.
