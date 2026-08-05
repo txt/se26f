@@ -14,6 +14,8 @@
 <h1 align="center">:cyclone: CSC510: Software Engineering <br>NC State, Fall '26</h1>
 <img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
+# Lecture Topics
+
 what they want is a taste of everything
 
 programming languges

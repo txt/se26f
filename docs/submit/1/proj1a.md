@@ -14,6 +14,8 @@
 <h1 align="center">:cyclone: CSC510: Software Engineering <br>NC State, Fall '26</h1>
 <img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
+# Project 1a: Testing
+
 **Links:** [Home](../../../README.md) · [Project 1b](proj1b.md) ·
 [Poster rules](poster.md) · [Use case format](usecases0.md) ·
 [Prior projects](https://drive.google.com/drive/u/2/folders/1dGGQNCWC3BakD-nUZn5vPecPdm0KAhXA)

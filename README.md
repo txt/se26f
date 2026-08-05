@@ -14,6 +14,8 @@
 <h1 align="center">:cyclone: CSC510: Software Engineering <br>NC State, Fall '26</h1>
 <img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
+# Schedule
+
 Wednesdays 4:30–7:15 PM, 1021 Engineering Building 2.
 See [policies](docs/lect/policies.md) for grading.
 
