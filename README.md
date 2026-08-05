@@ -15,25 +15,26 @@
 <img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
 Wednesdays 4:30–7:15 PM, 1021 Engineering Building 2.
-See [policies](docs/lect/policies.md) for grading. Projects 1a, 2, and 3 each include a live demo worth 5 of their marks.
+See [policies](docs/lect/policies.md) for grading.
 
 <div align=center>
 
-| 📅 Date | 🎓 Lecture | 🛠️ Submission <br>(due start of class) | 🎤 Talks: teams A–Q <br>(15 min each, ≤4/night) | 📝 Review | 🏆 Marks <br>(max this week) |
-|:-------------:|:----------:|:---------------------------:|:---------:|:---------:|:---------:|
-| Aug 19 | | | | | |
-| Aug 26 | | | | | |
-| Sep 02 | | **Proj1a: [RE + testing](docs/submit/1/proj1a.md)** | | | 8 <br><sub>proj1a</sub> |
-| Sep 09 | | | | | |
-| Sep 16 | | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | | 8 <br><sub>proj1b</sub> |
-| Sep 23 | | | toolE–H | | |
-| Sep 30 | | | toolI–L | | |
-| Oct 07 | | | toolM–P | | |
-| Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ | | no talks | | 20 <br><sub>mid-term</sub> |
-| Oct 21 | | **Proj2: build** | toolQ · taskA–C | | 23 <br><sub>proj2</sub> |
-| Oct 28 | | | taskD–G | | |
-| Nov 04 | | | taskH–K | | |
-| Nov 11 | | | taskL–O | | |
-| Nov 18 | | | taskP–Q | | |
-| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: maintain** (submit online) | | | 25 <br><sub>proj3</sub> |
+| 📅 Date | 🎓 Lecture | 🛠️ Submission <br>(due start of class) | 🎤 Talks: teams A–Q <br>(15 min each, ≤4/night) | 📝 Review |
+|:-------------:|:----------:|:---------------------------:|:---------:|:---------:|
+| Aug 19 | | | | |
+| Aug 26 | | | | |
+| Sep 02 | | **Proj1a: [RE + testing](docs/submit/1/proj1a.md)** | | |
+| Sep 09 | | | | |
+| Sep 16 | | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | |
+| Sep 23 | | | toolE–H | |
+| Sep 30 | | | toolI–L | |
+| Oct 07 | | | toolM–P | |
+| Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ | | no talks | |
+| Oct 21 | | **Proj2: build** | toolQ · taskA–C | |
+| Oct 28 | | | taskD–G | |
+| Nov 04 | | | taskH–K | |
+| Nov 11 | | | taskL–O | |
+| Nov 18 | | | taskP–Q | |
+| 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: maintain** (submit online) | | |
+| 🟥 ${\color{#ff9999}\textsf{Dec 07 (Mon) — Final exam, 3:30–6:00 PM, 1021 EB2}}$ | | | | |
 </div>
