@@ -97,8 +97,12 @@ N7 Sep 30 (90m, tool talks I-L): PROCESS + CONFIG MGMT
   SWEBOK: Process, Config Mgmt. CS2023: SE-process.
 
 N8 Oct 07 (90m, tool talks M-P): PATTERNS + CODE QUALITY
-  60m patterns that earn their keep (trim to ~6 patterns);
+  50m patterns that earn their keep (trim to ~6 patterns);
       code smells; refactoring basics           [lect12-patterns, cut 2/3]
+  10m live-demo craft (first live demos = proj2, two weeks out):
+      narrate your walk-through video, don't read it; know where
+      "show me that for real" can land; software running before
+      the tutor sits down                                      [NEW]
   30m mid-term review: what is examinable, sample questions
   SWEBOK: Design, Construction, Quality. CS2023: SE-construction.
 
