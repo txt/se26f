@@ -42,10 +42,10 @@ things, without breaking the old things. Project 3 is that skill, marked.
   well you extended *their* work.
 - You are not bound by their roadmap. If you see a better direction, go
   there. But extend — do not rewrite from zero.
-- Build by commit-to-main on your fork: everyone commits straight to
-  `main`, so everyone's contribution is visible in one history. Tutors
-  mark `main`, and only `main`. The fork point separates their work from
-  yours.
+- Commit often, and merge often, on your fork. Branches are fine —
+  worktrees and coding agents make many. Merge that work back promptly:
+  tutors mark the merged history, and unmerged work is invisible work.
+  The fork point separates their work from yours.
 - Old tests keep passing. Add new tests for the new work: 50 is good,
   100 is better.
 

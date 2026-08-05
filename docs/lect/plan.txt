@@ -89,7 +89,8 @@ N6 Sep 23 (90m, tool talks E-H): ARCHITECTURE + DESIGN
   SWEBOK: Architecture (v4 new KA), Design. CS2023: SE-design.
 
 N7 Sep 30 (90m, tool talks I-L): PROCESS + CONFIG MGMT
-  90m waterfall vs agile, release cycles, git flow vs commit-to-main,
+  90m waterfall vs agile, release cycles, branching strategies
+      (incl. worktrees + agent-driven branching),
       team boundaries; CI/CD basics; branch protection; code review
       as process                                [lec5-process + NEW CI/CD]
   Student ask served: "git beyond push/pull" (GODA talk frames deeper).

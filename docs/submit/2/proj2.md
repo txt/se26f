@@ -54,9 +54,10 @@ functions that come later.
 
 Your repo is public (not NCSU-hosted). It holds no keys or passwords.
 
-Build by commit-to-main: everyone commits straight to `main`, so everyone's
-contribution is visible in one history. Tutors mark `main`, and only
-`main`. Work on other branches earns nothing.
+Commit often, and merge often. Branches are fine — tools like worktrees
+and coding agents make many. But merge that work back promptly: tutors
+mark the merged history of the repo, and unmerged work is invisible work.
+The merged history must show everyone's contribution.
 
 Tests must exist, covering expected cases and failure cases. 50 tests is
 good. 100 is better.
@@ -102,7 +103,7 @@ evidence does not support costs more marks than an honest low score.
 | Commits come from different people | GH insights | |
 | Workload is spread over the whole team. One member is often 3x more productive than the rest — fine, but show a track record that everyone contributes a lot | GH insights | |
 | Team members work across many parts of the code, not one silo each | GH | |
-| Short release cycles: frequent small commits to main, so everyone can get everyone's work | GH | |
+| Short release cycles: frequent small commits, merged promptly, so everyone can get everyone's work | GH | |
 | Whole team uses the same tools: config files in the repo, updated by many different people | repo | |
 | Whole team can run the system: the tutor can ask anyone to share a screen and demo on their machine | demo | |
 
