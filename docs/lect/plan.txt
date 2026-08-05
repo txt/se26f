@@ -21,7 +21,9 @@ PROJ1 ERA: five nights, all full 150 min
 =====================================================================
 
 N1 Aug 19 (150m): SURVIVAL KIT                 [proj1a starts tonight]
-  20m github minimal: fork/clone/commit/push, README     [NEW]
+  30m git three ways: stage 1 shared-drive (dir ownership, commit to
+      main), stage 2 review-before-merge (branch, diff, PR, non-author
+      review), stage 3 agent herding (worktrees, local diff+merge) [NEW]
   40m LLM as tool: prompt pattern (role+evidence+format+no-guess),
       zero-shot vs careful, context window, hallucination,
       LLM-as-librarian; LLM repo wikis (DeepWiki-style): auto-generate
