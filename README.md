@@ -5,7 +5,7 @@
       src="https://img.shields.io/badge/Policies-%230055ff?style=flat-square&logo=openai&logoColor=white" /></a>
   <a href="#"><img
       src="https://img.shields.io/badge/Teams-%23ffd700?style=flat-square&logo=users&logoColor=white" /></a>
-  <a href="#"><img 
+  <a href="https://moodle-courses2527.wolfware.ncsu.edu/course/view.php?id=12082&bp=s"><img 
       src="https://img.shields.io/badge/Moodle-%23dc143c?style=flat-square&logo=moodle&logoColor=white" /></a>
   <a href="https://discord.gg/zrsW8F2V9"><img 
       src="https://img.shields.io/badge/Chat-%23008080?style=flat-square&logo=discord&logoColor=white" /></a>
@@ -26,11 +26,11 @@ See [policies](docs/lect/policies.md) for grading.
 | Aug 19 | [basics](docs/lect/n01.md) <br> 🚀 **[project](docs/submit/project.md)** | | | |
 | Aug 26 | [useCaseTesting](docs/lect/n02.md) | | | |
 | Sep 02 | [requirements](docs/lect/n03.md) | **Proj1a: [testing](docs/submit/1/proj1a.md)** | | |
-| Sep 09 | productWorkshop | | | |
+| Sep 09 | [architecture](docs/lect/n04.md) | | | |
 | Sep 16 | testingDeeper | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | toolA–D | |
-| Sep 23 | architecture | | toolE–H | |
+| Sep 23 | patternsQuality | | toolE–H | |
 | Sep 30 | processConfig | | toolI–L | |
-| Oct 07 | patternsQuality | | toolM–P | |
+| Oct 07 | proj2checkpoint | | toolM–P | |
 | Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ · proj3preview | | no talks | |
 | Oct 21 | maintenance | **Proj2: [build](docs/submit/2/proj2.md)** | toolQ · taskA–C | |
 | Oct 28 | debugging | | taskD–G | |

@@ -63,20 +63,26 @@ N3 Sep 02 (150m): REQUIREMENTS + STAKEHOLDERS  [proj1a due tonight]
   30m proj1b launch: walk the twelve prompts, the pivot question
   SWEBOK: Requirements. CS2023: SE-requirements.
 
-N4 Sep 09 (150m): PRODUCT WORKSHOP             [proj1b due next week]
-  Workshop, not lecture. The proj1b prompt set IS the deck.
-  20m mission statement anatomy: why/what/so-what         [NEW]
-  30m live prompting on screen: prompts 1,2,7 on a real product;
-      class hunts hallucinated rivals and buzzwords       [NEW]
-  20m differentiators: repgrid-lite, 3 rivals, table stakes
-      vs differentiators                    [lec3-re repgrids section]
-  20m milestone realism: 4 x 10hr x 4wk = 160 hrs; safe/bold/wild;
-      kill signals                          [lect13-est.pdf slices]
-  20m poster craft: 2 good + 2 bad past posters, 15-second votes
-  10m red team finale: prompt 10 vs a volunteer team
-  30m team work time on their own 1b, staff circulating
-  Prep: pick demo product; pull 4 posters from Drive folder.
-  SWEBOK: Requirements, Management (lite). CS2023: SEP-economics (lite).
+N4 Sep 09 (150m): ARCHITECTURE + DESIGN        [proj1b due next week]
+  (moved up from old N6 slot: teams design their proj2 product in
+   this week's 1b proposals; design advice must land BEFORE that.
+   Old N4 product-workshop killed -- low signal; its two live parts
+   survive as the 30m clinic below. Mission anatomy / poster craft /
+   repgrid-lite already covered by proj1b.md, poster.md, n03.)
+  90m architectural patterns with war stories: layered (13-tier
+      insurance app), event-driven (correlation IDs), microkernel
+      (plugin jungles), microservices (Netflix vs the 47-call loan
+      app), space-based, client-server, pipe-filter, modern web
+      evolution                                          [lec6-arch]
+  30m design essentials: coupling/cohesion, encapsulation +
+      information hiding, interfaces, design-for-test; monolith-first
+      advice for 4-person 1-month teams                       [NEW]
+  30m proj1b clinic: live prompting (prompts 1,2,7; class hunts
+      hallucinated rivals) + milestone realism (4x10hrx4wk=160hrs;
+      safe/bold/wild; kill signals) + quick red team (prompt 10)
+  NOTE: lect12-oo.pdf is MISLABELED -- it is the Xia et al. project
+  health-indicators deck, not OO design. Reassigned to N8 below.
+  SWEBOK: Architecture (v4 new KA), Design. CS2023: SE-design.
 
 N5 Sep 16 (90m, tool talks A-D): TESTING, DEEPER    [proj1b due tonight;
                                                      proj2 starts]
@@ -93,10 +99,12 @@ N5 Sep 16 (90m, tool talks A-D): TESTING, DEEPER    [proj1b due tonight;
 PROJ2 ERA (build month, due Oct 21): four nights
 =====================================================================
 
-N6 Sep 23 (90m, tool talks E-H): ARCHITECTURE + DESIGN
-  90m architecture views, coupling/cohesion, interfaces, OO design
-      essentials, design-for-test                [lec6-arch + lect12-oo]
-  SWEBOK: Architecture (v4 new KA), Design. CS2023: SE-design.
+N6 Sep 23 (90m, tool talks E-H): PATTERNS + CODE QUALITY
+  90m patterns that earn their keep (trim to ~6 patterns);
+      code smells; refactoring basics           [lect12-patterns, cut 2/3]
+  (moved up from old N8 slot; better early in the build month.
+   Architecture already done N4.)
+  SWEBOK: Design, Construction, Quality. CS2023: SE-construction.
 
 N7 Sep 30 (90m, tool talks I-L): PROCESS + CONFIG MGMT
   90m waterfall vs agile, release cycles, branching strategies
@@ -106,15 +114,18 @@ N7 Sep 30 (90m, tool talks I-L): PROCESS + CONFIG MGMT
   Student ask served: "git beyond push/pull" (GODA talk frames deeper).
   SWEBOK: Process, Config Mgmt. CS2023: SE-process.
 
-N8 Oct 07 (90m, tool talks M-P): PATTERNS + CODE QUALITY
-  50m patterns that earn their keep (trim to ~6 patterns);
-      code smells; refactoring basics           [lect12-patterns, cut 2/3]
+N8 Oct 07 (90m, tool talks M-P): PROJ2 CHECKPOINT + MID-TERM REVIEW
+  50m proj2 mid-build triage: repo-rubric self-check live on a
+      volunteer repo; test-suite health; cutting milestones without
+      shame; repo health indicators (commits, PRs, issues,
+      contributors -- and predicting them)
+      [NEW + lect12-oo.pdf = Xia et al. health-indicators deck]
   10m live-demo craft (first live demos = proj2, two weeks out):
       narrate your walk-through video, don't read it; know where
       "show me that for real" can land; software running before
       the tutor sits down                                      [NEW]
   30m mid-term review: what is examinable, sample questions
-  SWEBOK: Design, Construction, Quality. CS2023: SE-construction.
+  SWEBOK: Quality, Management (lite). CS2023: SE-process (lite).
 
 N9 Oct 14 (60m after exam, no talks): EXAM + PROJ3 PREVIEW
   Exam first (fresh minds; lecture absorbs overrun). Then, light and
