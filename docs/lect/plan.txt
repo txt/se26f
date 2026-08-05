@@ -1,134 +1,180 @@
-PROJ1 TEACHING PLAN: 5 x 2hr lectures (Aug 19 - Sep 16)
-Glossary of concepts needed for proj1a (testing, due Sep 2) and proj1b
-(requirements, due Sep 16).
-Scope: minimal github basics only (survival, not craft); no advanced
-material (comes with proj2/proj3).
-Per term: [se25fall source, or NEW] + one-line note.
+CSC510 FALL'26 LECTURE PLAN: 14 nights, Aug 19 - Nov 18
+Inputs: se26f project specs (docs/submit/1/), se25fall lectures (reuse map
+below), SWEBOK v4 (swebok-v4.pdf), CS2023 (Version-Beta-v2.pdf), student
+topic requests (all.md).
 
-RULE: just-in-time. Teach nothing later than the week before students
-need it. Proj1a needs git + LLM + use cases + testing by Aug 26.
+RULES
+- Just-in-time: teach nothing later than the week before students need it.
+- Talks eat lecture time. Budget below is teaching minutes AFTER talks.
+- Student talks cover some demanded topics (all.md); lectures do not
+  duplicate what a scheduled talk covers -- lectures frame, talks detail.
 
-=====================================================================
-LECTURE 1 (Aug 19): SURVIVAL KIT                (proj1a starts tonight)
-=====================================================================
--- github basics (20 min, no more) --
-fork / clone / commit / push [NEW]        just enough to start proj1a tonight
-README / .gitignore        [NEW]          one slide; where the tutor looks first
-
--- LLM as tool (worked in from night one) --
-prompt pattern             [NEW]          role + pasted evidence + fixed output format + forbid guessing
-zero-shot vs careful       [se25fall: proj1b1 spec]  the compare-both exercise; promote to lecture
-context window             [part: proj1b1 spec]      why paste beats vague reference
-hallucination / grounding  [NEW]          "no invented facts; write unknown"; verify habit
-LLM as librarian           [NEW]          proj1a "How to start": LLM runs around the repo for you
-
--- reading alien code --
-reverse engineering        [NEW]          recover design from code; the proj1a core act
-program comprehension      [NEW]          top-down vs bottom-up reading strategies
-code rot / bit rot         [NEW]          why old code stops building; world moves, code does not
-software archaeology       [part: lec5-cobol.md]  COBOL war stories as motivation
-build reproducibility      [NEW]          day-one build rule; two-day switch rule
-technical debt / churn     [NEW + part: lec5-process.md]  git log --stat as evidence
-
--- admin (10 min) --
-ACM LaTeX quickstart       [NEW]          hand out a working acmart repo to clone; sigconf 2-col
+TIME BUDGET (night = 4:30-7:15 = 165 min; minus ~15 min break/admin)
+  no talks     : ~150 min teaching
+  4-talk night : ~90 min teaching  (4 x 15 min talks)
+  2-talk night : ~120 min teaching
+  mid-term     : 0 (exam takes the night)
 
 =====================================================================
-LECTURE 2 (Aug 26): USE CASES + TESTING        (proj1a due next week)
+PROJ1 ERA: five nights, all full 150 min
 =====================================================================
--- use cases (first hour) --
-use case                   [se25fall: pdf/re.pdf slides 53-73]  the format; reuse directly
-actor / trigger / precondition [re.pdf]   who wants the goal; what kicks it off
-main success scenario      [re.pdf]       numbered happy path; no ifs allowed
-extension                  [re.pdf]       where branching and the real requirements live
-postcondition              [re.pdf]       guaranteed true on success
-goal-level naming          [re.pdf]       "Track delivery" not "Display status screen"
-worked example             [se26f: usecases0.md]  food delivery; map slides to this table format
 
--- testing essentials (second hour; deep theory waits for L5) --
-fault vs failure           [lect11-test.md]  Fenton & Neil distinction; reuse
-test case / test oracle    [lect11-test.md]  simplify; cut delta-debug context
-expected vs actual         [NEW]          the proj1a results table (test / why / expected / happened)
-happy path / edge case     [part: lect11-test.md]  add boundary values; slides thin here
-traceability matrix        [part: lec3-re.md]  adapt requirements-traceability to tests<->use-cases
-failures as findings       [NEW]          failing test on rotten code = result, not shame
-test naming                [NEW]          test_rejects_empty_cart; names as sentences
+N1 Aug 19 (150m): SURVIVAL KIT                 [proj1a starts tonight]
+  20m github minimal: fork/clone/commit/push, README     [NEW]
+  40m LLM as tool: prompt pattern (role+evidence+format+no-guess),
+      zero-shot vs careful, context window, hallucination,
+      LLM-as-librarian                [rewrite lec4-prompting + proj1b1]
+  60m reading alien code: reverse engineering, comprehension,
+      code rot, day-one build rule, tech debt, churn mining
+                                      [NEW + lec5-cobol war stories]
+  15m tool/task talk briefing: what talks are, how judged (7 marks)
+  15m ACM LaTeX quickstart: clone the acmart starter     [NEW repo]
+  SWEBOK: Foundations, Config Mgmt (lite). CS2023: SDF, SE-tools.
 
--- demo craft (10 min; demo = 3 of proj1a's 5 marks) --
-the 10-minute demo         [NEW]          pre-installed, one operator, start instantly, show a failure honestly
+N2 Aug 26 (150m): USE CASES + TESTING          [proj1a due next week]
+  60m use cases: actor, trigger, precondition, main scenario,
+      extensions, postcondition, goal naming
+                                      [re.pdf slides 53-73 + usecases0.md]
+  70m testing essentials: fault vs failure, test case, oracle,
+      expected-vs-actual results table, edge cases, traceability,
+      failures-as-findings, test naming
+                                      [lect11-test essentials half]
+  20m demo craft: pre-installed, one operator, instant start,
+      show a failure honestly (demo = 3 of proj1a's 5 marks)  [NEW]
+  SWEBOK: Requirements (lite), Testing. CS2023: SDF-testing.
 
-=====================================================================
-LECTURE 3 (Sep 02): REQUIREMENTS + STAKEHOLDERS   (proj1a due tonight;
-                                                   proj1b starts)
-=====================================================================
-requirements engineering   [lec3-re.md]   the discipline; reuse framing
-requirements failures      [lec3-re.md]   Ariane 5, London Ambulance etc; motivation opener
-functional vs non-func     [lec3-re.md]   reuse; NFRs lead into constraints
-constraints as requirements[part: lec3-re.md + NEW]  regulations, standards (WCAG/OWASP), licenses, human factors
-stakeholder                [lec3-re.md]   who matters; reuse
-stakeholder interests/bias [lec3-re.md]   clashing needs; ties to proj1b prompt 5
-power-interest grid        [lec3-re.md]   reuse as-is
-elicitation                [lec3-re.md]   interviews, observation, CRC cards; repertory grids preview only
+N3 Sep 02 (150m): REQUIREMENTS + STAKEHOLDERS  [proj1a due tonight]
+  30m requirements failures: Ariane 5, London Ambulance   [lec3-re]
+  40m functional vs non-functional; constraints as requirements:
+      regulations, standards (WCAG/OWASP), licenses       [lec3-re + NEW]
+  50m stakeholders: interests, bias, power-interest grid,
+      elicitation (interviews, observation, CRC)          [lec3-re]
+  30m proj1b launch: walk the twelve prompts, the pivot question
+  SWEBOK: Requirements. CS2023: SE-requirements.
 
-=====================================================================
-LECTURE 4 (Sep 09): PRODUCT WORKSHOP           (proj1b due next week)
-=====================================================================
-Format: workshop, not lecture. The proj1b prompt set IS the deck.
-Teams work on THEIR 1b in class. Prep: pick one demo product; pick
-2 strong + 2 weak posters from the Drive folder.
+N4 Sep 09 (150m): PRODUCT WORKSHOP             [proj1b due next week]
+  Workshop, not lecture. The proj1b prompt set IS the deck.
+  20m mission statement anatomy: why/what/so-what         [NEW]
+  30m live prompting on screen: prompts 1,2,7 on a real product;
+      class hunts hallucinated rivals and buzzwords       [NEW]
+  20m differentiators: repgrid-lite, 3 rivals, table stakes
+      vs differentiators                    [lec3-re repgrids section]
+  20m milestone realism: 4 x 10hr x 4wk = 160 hrs; safe/bold/wild;
+      kill signals                          [lect13-est.pdf slices]
+  20m poster craft: 2 good + 2 bad past posters, 15-second votes
+  10m red team finale: prompt 10 vs a volunteer team
+  30m team work time on their own 1b, staff circulating
+  Prep: pick demo product; pull 4 posters from Drive folder.
+  SWEBOK: Requirements, Management (lite). CS2023: SEP-economics (lite).
 
- 20 min  mission statement anatomy   [NEW]  why/what/so-what; Sentiment
-         Analyzer example from poster.md; iPod "1,000 songs" beats specs
- 30 min  live prompting on screen    [NEW]  run proj1b prompts 1, 2, 7
-         (market scan, complaint mining, mission drafts) on real product;
-         class hunts hallucinated rivals and buzzwords
- 20 min  finding differentiators     [part: lec3-re.md repgrids]  repertory-
-         grid-lite: 3 rivals, elicit constructs, table stakes vs differentiators
- 20 min  milestone realism           [part: lect13-est.pdf]  capacity math:
-         4 x 10hr x 4wk = 160 hrs; safe/bold/wild; kill signals; prompt 9 live
- 20 min  poster craft                [NEW]  2 good + 2 bad past posters;
-         15-second votes; extract the rules from reactions
- 10 min  red team finale             [NEW]  prompt 10 vs a volunteer team's idea
-
-Glossary landed by this workshop:
-market/competitor scan, gap analysis, differentiation, table stakes,
-mission statement, MVP/scoping, milestone, capacity estimation,
-risk / kill signal, red teaming, pitch / 15-second rule.
+N5 Sep 16 (90m, tool talks A-D): TESTING, DEEPER    [proj1b due tonight]
+  90m V-model and test levels; black-box vs white-box;
+      coverage and its limits; regression testing; flaky tests;
+      how proj1a tests become proj2's safety net
+                                      [lect11-test deeper half]
+  SWEBOK: Testing, Quality. CS2023: SE-verification.
 
 =====================================================================
-LECTURE 5 (Sep 16): TESTING, DEEPER            (proj1b due tonight;
-                                                bridge to proj2 build month)
+PROJ2 ERA (build month, due Oct 21): four nights
 =====================================================================
-V-model / test levels      [lect11-test.md]  unit, integration, system, acceptance
-black-box vs white-box     [lect11-test.md]  reuse; cut grammar-based generation
-coverage + its limits      [lect11-test.md]  statement/branch; "problems with coverage" slide is gold
-regression testing         [lect11-test.md]  ties to "130+ tests let them change code safely"
-flaky test                 [NEW]          one slide; expect them
-test-first for proj2       [NEW]          how proj1a tests become proj2's safety net
 
-STILL CUT (save for proj2/proj3 era):
-mutation testing, delta debugging, fault localization, GenProg,
-symbolic execution, formal methods, metamorphic, all-pairs, deep RAG,
-patterns, architecture, models, SBSE, GreenAI.
+N6 Sep 23 (90m, tool talks E-H): ARCHITECTURE + DESIGN
+  90m architecture views, coupling/cohesion, interfaces, OO design
+      essentials, design-for-test                [lec6-arch + lect12-oo]
+  SWEBOK: Architecture (v4 new KA), Design. CS2023: SE-design.
+
+N7 Sep 30 (90m, tool talks I-L): PROCESS + CONFIG MGMT
+  90m waterfall vs agile, release cycles, git flow vs commit-to-main,
+      team boundaries; CI/CD basics; branch protection; code review
+      as process                                [lec5-process + NEW CI/CD]
+  Student ask served: "git beyond push/pull" (GODA talk frames deeper).
+  SWEBOK: Process, Config Mgmt. CS2023: SE-process.
+
+N8 Oct 07 (90m, tool talks M-P): PATTERNS + CODE QUALITY
+  60m patterns that earn their keep (trim to ~6 patterns);
+      code smells; refactoring basics           [lect12-patterns, cut 2/3]
+  30m mid-term review: what is examinable, sample questions
+  SWEBOK: Design, Construction, Quality. CS2023: SE-construction.
+
+N9 Oct 14: MID-TERM EXAM. No lecture, no talks.
 
 =====================================================================
-MATERIAL TO ADD OR UPDATE FROM se25fall
+PROJ3 ERA (maintain month, due Nov 25): five nights
 =====================================================================
-COPY   pdf/re.pdf           -> se26f/docs/pdf/. Core of L2 hour one. Add one
-                              slide mapping slide format to usecases0.md table.
-REUSE  lec3-re.md (~60%)    -> L3: failures, stakeholders, elicitation,
-                              traceability. Trim process models + procurement.
-REUSE  lect11-test.md       -> split: essentials to L2 (fault/failure, oracle),
-                              deeper half to L5 (V-model, coverage, regression).
-                              Advanced third stays cut for proj2/3.
-REWRITE lec4-prompting.md   -> currently a pasted AIPCC context file. Rebuild
-                              as L1's LLM segment; use proj1a/proj1b starter
-                              prompts as the worked examples.
-MINE   lec5-cobol.md        -> maintenance war stories open L1's alien-code arc.
-MINE   lect13-est.pdf       -> estimation-realism slides for L4 milestone slot.
-MINE   lec3-rag.md          -> nothing for proj1; keep whole for proj2.
-WRITE NEW L1                -> survival kit: git-minimal + prompt pattern +
-                              code rot. Biggest gap; nothing in se25fall.
-WRITE NEW L4 prep           -> not slides: pick demo product, pick 4 posters
-                              from Drive folder, print capacity-math sheet.
-WRITE NEW acmart starter    -> tiny repo students clone; compiles day one.
+
+N10 Oct 21 (90m, toolQ + task talks A-C): MAINTENANCE   [proj2 due tonight]
+  90m maintenance economics (most of SE life is maintenance),
+      comprehension at scale, technical debt deep, the 30 percent
+      rule, proj3 launch: how to inherit another team's proj2
+                                      [lec5-cobol + lec7-30percent]
+  SWEBOK: Maintenance. CS2023: SE-evolution.
+
+N11 Oct 28 (90m, task talks D-G): DEBUGGING AS SCIENCE
+  90m delta debugging (ddmin), fault localization (Tarantula/Ochiai),
+      mutation testing, automated repair (GenProg) -- the advanced
+      testing held back from proj1              [lect11-test advanced third]
+  SWEBOK: Testing (advanced), Models+Methods.
+
+N12 Nov 04 (90m, task talks H-K): AI FOR SE
+  90m RAG properly (semantic paging), agentic coding loops, model
+      choice + cost, SBSE in one slide, the vibe-code question
+      revisited with the class's own proj2 evidence
+                                      [lec3-rag + lec7-models + lec8-SBSE]
+  Student asks served: prompting-advanced, scaling AI use.
+  CS2023: AI-SE integration (new in CS2023).
+
+N13 Nov 11 (90m, task talks L-O): SECURITY + LAW + ETHICS
+  90m secure coding basics, OWASP top-3 for their proj3 codebases,
+      licenses in practice, software law, professional responsibility
+                                      [lec10-law + NEW security]
+  Student ask served: formal verification gets 1 honest slide
+  (what it buys, what it costs, why we defer it).
+  SWEBOK: Security (v4 new KA), Professional Practice.
+
+N14 Nov 18 (120m, task talks P-Q): NON-FUNCTIONALS + WRAP
+  60m performance and profiling, GreenAI/energy, scaling basics
+                                      [lec9-GreenAI + NEW profiling]
+  Student asks served: profiling/microbenchmarking, how to scale.
+  60m final exam review + course wrap: Q1 (vibe code == pain
+      maintain?) answered with the semester's own project data
+  SWEBOK: Quality, Operations (lite).
+
+[Nov 25: proj3 due online, no class. Dec 07: final exam.]
+
+=====================================================================
+AUDIT TRACE
+=====================================================================
+Every proj deliverable taught before due:
+  proj1a D1-D5 <- N1,N2 (due N3). proj1b D1-D5 <- N3,N4 (due N5).
+  proj2 skills <- N5-N8 (due N10). proj3 skills <- N10-N13 (due Nov 25).
+SWEBOK v4 KAs covered: Requirements N3-N4, Design/Architecture N6,
+  Construction N8, Testing N2/N5/N11, Maintenance N10, Config Mgmt N1/N7,
+  Process N7, Quality N5/N8/N14, Security N13, Prof Practice N13,
+  Management/Economics N4, Foundations N1, Operations N14 (lite).
+  Consciously thin: Models+Methods (one N11 slot), Operations.
+CS2023: SDF N1-N2, SE units N3-N10, AI integration N12.
+Student asks (all.md): prompting N1/N12, git N1/N7, scoping N3/N4,
+  profiling N14, scaling N12/N14, formal verification N13 (1 slide).
+  Left to talks: docker/k8s, cloud platforms, concurrency, paradigms,
+  case studies -- all are on the student talk-topic list already.
+se25fall unused: lect14-17 (language/closures/compare) -- dropped;
+  PL content, weak fit for this project sequence.
+
+=====================================================================
+MATERIAL TO ADD OR UPDATE (from se25fall unless marked NEW)
+=====================================================================
+COPY    pdf/re.pdf          -> docs/pdf/; add slide mapping to usecases0.md
+REUSE   lec3-re.md ~60%     -> N3/N4; trim process models + procurement
+SPLIT   lect11-test.md      -> essentials N2, deeper N5, advanced N11
+REWRITE lec4-prompting.md   -> N1 LLM segment; starter prompts as examples
+REUSE   lec5-process.md     -> N7; add CI/CD + code-review section  [part NEW]
+REUSE   lec6-arch, lect12-oo-> N6; merge, trim
+TRIM    lect12-patterns 1/3 -> N8; six patterns max
+REUSE   lec5-cobol, lec7-30percent -> N10
+REUSE   lec3-rag, lec7-models, lec8-SBSE -> N12; compress hard
+REUSE   lec10-law           -> N13; add security half            [part NEW]
+REUSE   lec9-GreenAI        -> N14; add profiling half           [part NEW]
+MINE    lect13-est.pdf      -> N4 milestone-realism slices
+WRITE NEW: N1 survival kit (git-minimal, code rot); acmart starter repo;
+  demo-craft 20 min; talk-briefing 15 min; CI/CD half of N7;
+  security half of N13; profiling half of N14; mid-term + final reviews.
