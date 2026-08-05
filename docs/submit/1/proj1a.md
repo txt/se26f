@@ -1,4 +1,18 @@
-# Project 1a: Reverse Engineering and Testing
+<p align="center">
+  <a href="https://github.com/txt/se26f/blob/main/README.md"><img 
+     src="https://img.shields.io/badge/Home-%23ff5733?style=flat-square&logo=home&logoColor=white" /></a>
+  <a href="https://github.com/txt/se26f/blob/main/docs/lect/policies.md"><img 
+      src="https://img.shields.io/badge/Policies-%230055ff?style=flat-square&logo=openai&logoColor=white" /></a>
+  <a href="#"><img
+      src="https://img.shields.io/badge/Teams-%23ffd700?style=flat-square&logo=users&logoColor=white" /></a>
+  <a href="#"><img 
+      src="https://img.shields.io/badge/Moodle-%23dc143c?style=flat-square&logo=moodle&logoColor=white" /></a>
+  <a href="https://discord.gg/zrsW8F2V9"><img 
+      src="https://img.shields.io/badge/Chat-%23008080?style=flat-square&logo=discord&logoColor=white" /></a>
+  <a href="https://github.com/txt/se26f/blob/main/LICENSE.md"><img 
+      src="https://img.shields.io/badge/©%20timm%202026-%234b4b4b?style=flat-square&logoColor=white" /></a></p>
+<h1 align="center">:cyclone: CSC510: Software Engineering <br>NC State, Fall '26</h1>
+<img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
 **Links:** [Home](../../../README.md) · [Project 1b](proj1b.md) ·
 [Poster rules](poster.md) · [Use case format](usecases0.md) ·
@@ -6,6 +20,17 @@
 
 **Due:** see the [schedule](../../../README.md).
 **Hand in:** two PDFs, uploaded to Moodle: one report, one poster.
+
+## How to start
+
+1. Check out a repo of prior code: fork one past project, clone your fork.
+2. Give your LLM access to all of it — e.g. fire up Claude Code in that
+   directory.
+
+The point: you now own a large space of artifacts from prior work — code,
+docs, tests, commit history. You cannot read it all. Your LLM can. Use it as
+a librarian that runs around all that material for you: ask it where things
+are, what matters, and what to read next.
 
 ## Goal
 
