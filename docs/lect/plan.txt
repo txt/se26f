@@ -29,7 +29,8 @@ N1 Aug 19 (150m): SURVIVAL KIT                 [proj1a starts tonight]
       code rot, day-one build rule, tech debt, churn mining
                                       [NEW + lec5-cobol war stories]
   15m tool/task talk briefing: what talks are, how judged (7 marks)
-  15m ACM LaTeX quickstart: clone the acmart starter     [NEW repo]
+  15m ACM LaTeX quickstart: Overleaf acmart template + local
+      tectonic recipe; no starter repo, point at examples   [NEW]
   SWEBOK: Foundations, Config Mgmt (lite). CS2023: SDF, SE-tools.
 
 N2 Aug 26 (150m): USE CASES + TESTING          [proj1a due next week]
@@ -191,6 +192,11 @@ REUSE   lec3-rag, lec7-models, lec8-SBSE -> N12; compress hard
 REUSE   lec10-law           -> N13; add security half            [part NEW]
 REUSE   lec9-GreenAI        -> N14; add profiling half           [part NEW]
 MINE    lect13-est.pdf      -> N4 milestone-realism slices
-WRITE NEW: N1 survival kit (git-minimal, code rot); acmart starter repo;
-  demo-craft 20 min; talk-briefing 15 min; CI/CD half of N7;
-  security half of N13; profiling half of N14; mid-term + final reviews.
+WRITE NEW: N1 survival kit (git-minimal, code rot); demo-craft 20 min;
+  talk-briefing 15 min; CI/CD half of N7; security half of N13;
+  profiling half of N14; mid-term + final reviews.
+WEEKLY RHYTHM (post-lecture, per night): from the Panopto transcript +
+  that night's notes, produce (a) "extra notes" -- things said in class
+  that are off the written notes, (b) a review glossary, (c) 10 review
+  questions. Released end of each week. File naming supports this:
+  n01.md (lecture) + n01-review.md (generated weekly).
