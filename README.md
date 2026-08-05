@@ -15,7 +15,7 @@
 <img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
 Wednesdays 4:30–7:15 PM, 1021 Engineering Building 2.
-See [policies](docs/lect/policies.md) for grading.
+See [policies](docs/lect/policies.md) for grading. Each project includes a live demo worth 5 of its marks.
 
 <div align=center>
 

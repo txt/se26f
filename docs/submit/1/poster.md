@@ -47,7 +47,8 @@ The poster must show:
 
 ## The demo
 
-Be prepared to demo the running system if asked. For that demo:
+Each project includes a live demo, worth 5 of that project's marks. Be
+prepared to demo the running system when asked. For that demo:
 
 - Show up with the software already installed and running (on your laptop, or
   on the cloud). The demo must start straight away. No setup time.
