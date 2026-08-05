@@ -103,7 +103,7 @@ This course engages diverse scholarly perspectives to develop critical
 thinking, analysis, and debate; inclusion of a reading does not imply
 endorsement.
 
-None. There is no required textbook and there are no course-related fees.
+There is no required textbook and there are no course-related fees.
 
 A laptop computer is required in each lecture. NC State University Libraries
 offers Technology Lending, where many devices are available to borrow for a
