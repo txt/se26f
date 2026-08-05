@@ -3,8 +3,14 @@
 [Poster rules](../1/poster.md) · [Policies](../lect/policies.md)
 
 **Due:** see the [schedule](../../../README.md).
-**Hand in:** one PDF to Moodle: your poster, your repo URL, and your
-self-assessed repo rubric (below). No report. The repo is the evidence.
+**Hand in:**
+
+1. One PDF to Moodle: your poster, your repo URL, and your self-assessed
+   repo rubric (below). No report. The repo is the evidence.
+2. Also drop your poster PDF into the shared
+   [Project 2 poster folder](https://drive.google.com/drive/folders/1sl6olGqGQmaa9V4D2iFsTbfB2f1lza1Q?usp=drive_link).
+   This folder is the catalog: other teams shop there to pick their
+   Project 3 codebase. No poster in the folder = nobody picks your repo.
 
 ## Goal
 

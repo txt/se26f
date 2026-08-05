@@ -2,8 +2,13 @@
 [Poster rules](../1/poster.md) · [Policies](../lect/policies.md)
 
 **Due:** see the [schedule](../../../README.md).
-**Hand in:** one PDF to Moodle: your poster, plus the URLs of (a) the
-Project 2 repo you extended and (b) your fork with the new work.
+**Hand in:**
+
+1. One PDF to Moodle: your poster, plus the URLs of (a) the Project 2 repo
+   you extended and (b) your fork with the new work.
+2. Also drop your poster PDF into the shared
+   [Project 3 poster folder](https://drive.google.com/drive/folders/14dyoBNX7DY6IIdb8vIo9loqiPqagiBop?usp=drive_link).
+   These posters become the sample library for future classes.
 
 ## Goal
 
@@ -26,7 +31,9 @@ things, without breaking the old things. Project 3 is that skill, marked.
 
 ## First week
 
-1. Pick a Project 2 repo (use the posters and demo videos to shop).
+1. Pick a Project 2 repo. Shop in the
+   [Project 2 poster folder](https://drive.google.com/drive/folders/1sl6olGqGQmaa9V4D2iFsTbfB2f1lza1Q?usp=drive_link)
+   and watch the demo videos.
 2. Fork it. Build it. Run it. Run their tests.
 3. Triage: what is solid, what is fragile, what do their tests miss?
 4. Then plan your four milestones.
