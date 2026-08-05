@@ -68,7 +68,7 @@ in-person talks during the semester -- one *tool* talk, one *task* talk (see
 the schedule on the course
 [README](https://github.com/txt/se26f/blob/main/README.md)).
 The course is graded on projects, talks, a mid-term, and a final exam.
-The final exam mark is weighted 1.5 times the mid-term mark.
+The final exam mark is weighted about 1.5 times the mid-term mark.
 Exam dates, rooms, and all due dates: see the schedule on the course
 [README](https://github.com/txt/se26f/blob/main/README.md).
 
@@ -78,12 +78,12 @@ Exam dates, rooms, and all due dates: see the schedule on the course
 |------:|-----------|
 |  7 | Tool talk (in-class team presentation) |
 |  7 | Task talk (in-class team presentation) |
-|  8 | Proj1a: RE + testing. 3 report + poster, 5 live demo |
-|  8 | Proj1b: requirements. 8 report + poster, no demo |
+|  5 | Proj1a: RE + testing. 2 report + poster, 3 live demo |
+|  7 | Proj1b: requirements. 7 report + poster, no demo |
 | 19 | Proj2: build. 14 work, 5 live demo |
 | 21 | Proj3: maintain. 16 work, 5 demo |
-| 12 | Mid-term exam |
-| 18 | Final exam |
+| 14 | Mid-term exam |
+| 20 | Final exam |
 
 **Attendance and participation:** Classes are in person. Absences are handled
 under NCSU REG 02.20.03 (Attendance Regulations). Talks must be delivered in
