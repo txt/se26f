@@ -24,10 +24,12 @@ things, without breaking the old things. Project 3 is that skill, marked.
   well you extended *their* work.
 - You are not bound by their roadmap. If you see a better direction, go
   there. But extend — do not rewrite from zero.
-- Keep new work in separate branches, merged through pull requests. The
-  tutor must be able to see, at a glance, what is theirs and what is yours.
-- Old tests keep passing. Each team member adds 30 or more new tests for
-  the new work.
+- Build by commit-to-main on your fork: everyone commits straight to
+  `main`, so everyone's contribution is visible in one history. Tutors
+  mark `main`, and only `main`. The fork point separates their work from
+  yours.
+- Old tests keep passing. Add new tests for the new work: 50 is good,
+  100 is better.
 
 ## First week
 
@@ -57,7 +59,7 @@ what you inherited, what you added, what could come next.
 | Marks | For |
 |---|---|
 | 5 | Live demo: does it run, is the delta visible |
-| 10 | Extension quality: old code respected, old tests still pass, new work cleanly separated, their design understood |
+| 10 | Extension quality: old code respected, old tests still pass, the delta since the fork point is clear, their design understood |
 | 4 | Milestones: four or more new ones, major, done |
 | 2 | Poster |
 
@@ -69,7 +71,8 @@ work. The link comes via Discord.
 
 ## Ways to lose marks
 
+- Not enough tests.
 - Old tests that no longer pass.
-- New work tangled into old code, with no clean branch history.
+- New work tangled into old code, so nobody can tell what you added.
 - A rewrite wearing an extension's clothes.
 - A demo that needs setup time.

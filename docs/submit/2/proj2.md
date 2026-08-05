@@ -34,12 +34,14 @@ functions that come later.
 
 ## The repo
 
-Your repo is public (not NCSU-hosted). It holds no keys or passwords. New
-work goes in branches, merged through pull requests. Tutors mark from what
-they can see: commits, issues, docs, badges, tests.
+Your repo is public (not NCSU-hosted). It holds no keys or passwords.
 
-Tests: each team member adds 30 or more new tests. Team total: 120 or more,
-covering expected cases and failure cases.
+Build by commit-to-main: everyone commits straight to `main`, so everyone's
+contribution is visible in one history. Tutors mark `main`, and only
+`main`. Work on other branches earns nothing.
+
+Tests must exist, covering expected cases and failure cases. 50 tests is
+good. 100 is better.
 
 ## The repo rubric (self-assessed)
 
@@ -60,7 +62,7 @@ evidence does not support costs more marks than an honest low score.
 | Docs: mini-tutorials for the common use cases | doc pages | |
 | Docs: tell a story — motivate, explain, land a punchline | doc pages | |
 | Demo video (2–5 min) embedded in README | README | |
-| Tests exist: 120+, and are over 30 percent of the code base | repo | |
+| Tests exist: 50 is good, 100 is better | repo | |
 | Tests run automatically on every change (CI, e.g. GitHub Actions) | badge | |
 | Coverage tool runs; badge shows the number | badge | |
 | Style checker, code formatter, syntax checker: configured, badged | badges | |
@@ -72,7 +74,7 @@ evidence does not support costs more marks than an honest low score.
 | Discussion forum is active; poster QR points at it | forum | |
 | Whole team uses the same tools; anyone can demo on their machine | demo | |
 | Team members work across many parts of the code, not one silo each | GH | |
-| Short release cycles: frequent commits, small merges | GH | |
+| Short release cycles: frequent small commits to main | GH | |
 | **Sum** | | |
 
 ## The demo
@@ -103,6 +105,7 @@ work. The link comes via Discord.
 
 ## Ways to lose marks
 
+- Not enough tests.
 - A badge that does not work when clicked.
 - A self-score the evidence does not support.
 - A demo that needs setup time.
