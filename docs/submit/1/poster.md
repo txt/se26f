@@ -79,8 +79,34 @@ asked. For that demo:
 Samples from past years are here:
 https://drive.google.com/drive/u/2/folders/1dGGQNCWC3BakD-nUZn5vPecPdm0KAhXA
 
-**Warning:** our standard for posters has changed. Use the samples for
-inspiration only. Do not follow them verbatim. This page is the standard.
+**Warning:** our standard for posters has changed for 2026. Use the
+samples for inspiration only. Do not follow them verbatim. This page
+is the standard. In particular, these older posters may lack: URLs
+printed under every QR code; milestones grouped Before / Now /
+Future; and (for Project 1b) selling the PROPOSED product — the
+samples below sell finished work, your 1b poster sells a plan.
+
+Three strong ones from Fall '25, and what to copy from each:
+
+<img alt="Epicourier poster: mission, nutrient command center, gamified wellness, 1130+ tests" src="../../../etc/img/poster-epicourier.png">
+
+**Epicourier** — copy: the mission statement (why/what/so-what in
+one paragraph), stakeholder list with a reason each cares, and a
+test count stated plainly (1,130+ automated tests, CI/CD).
+
+<img alt="Wolfbite WIC scanner poster: clear tagline, test screenshot, three QR codes" src="../../../etc/img/poster-wolfbite.png">
+
+**Wolfbite** — copy: the 15-second sell ("Scan smarter. Shop faster.
+Stress less." — you know the product before reading a paragraph),
+the visible test run (57/57 passing, screenshot not claim), and
+three labeled QR codes.
+
+<img alt="Howl2Go poster: stakeholders, existing versus new features, future improvements, 300+ tests" src="../../../etc/img/poster-howl2go.png">
+
+**Howl2Go** — copy: the past / present / future structure (existing
+features → implementation updates → future improvements — closest of
+the three to our Before/Now/Future rule), and concrete feature lines
+("7 micronutrients across 1,150+ items", not "improved nutrition").
 
 ## Milestones
 
