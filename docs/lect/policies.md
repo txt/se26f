@@ -84,6 +84,18 @@ Exam dates, rooms, and all due dates: see the schedule on the course
 | 14 | Mid-term exam |
 | 20 | Final exam |
 
+**Defining "good":** The course definition of software engineering
+promises products of *required quality*. Part of that standard is set
+by you. In week one, the class elicits its own quality dimensions
+from prior-year posters (N1 exercise: triads, constructs, a shared
+grid). The resulting cohort grid is published beside
+[the project](../submit/project.md) and tutors use it as an
+interpretive rubric when marking posters and demos: where a rubric
+row says "sells the project" or "impressive milestone," the cohort's
+own constructs say what selling and impressive mean this year. The
+marks table above does not change; the yardstick behind its words is
+partly yours.
+
 **Attendance and participation:** Classes are in person. Absences are handled
 under NCSU REG 02.20.03 (Attendance Regulations). Talks must be delivered in
 person at the scheduled
