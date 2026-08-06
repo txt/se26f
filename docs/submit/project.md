@@ -82,10 +82,12 @@ exploration, not feature lists.
 
 ## What a good poster looks like
 
-One of the better posters from a prior cohort — clear mission, staged
-milestones, stakeholders, and real screenshots, readable in fifteen
-seconds:
+One of the better posters from a prior cohort — you know what the
+product is in fifteen seconds, the tests are shown running (57/57,
+screenshot not claim), stakeholders are named, and three QR codes
+take you to repo, forum, and demo:
 
-<img alt="TeamSync poster: mission statement, eight milestone cases, stakeholders, UI screenshots" src="../../etc/img/project-poster.png">
+<img alt="Wolfbite WIC scanner poster: clear tagline, test screenshot, stakeholders, three QR codes" src="../../etc/img/poster-wolfbite.png">
 
-Full poster rules: [poster.md](1/poster.md).
+Two more worked examples, with notes on what to copy from each:
+[poster.md](1/poster.md).
