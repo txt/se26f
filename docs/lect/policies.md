@@ -93,8 +93,7 @@ grid). The resulting cohort grid is published beside
 interpretive rubric when marking posters and demos: where a rubric
 row says "sells the project" or "impressive milestone," the cohort's
 own constructs say what selling and impressive mean this year. The
-marks table above does not change; the yardstick behind its words is
-partly yours.
+marks and components in the table above stay as printed.
 
 **Attendance and participation:** Classes are in person. Absences are handled
 under NCSU REG 02.20.03 (Attendance Regulations). Talks must be delivered in
