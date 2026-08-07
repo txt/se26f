@@ -59,6 +59,11 @@ Upon completion of this course, students will be able to:
 3. Analyze, interpret, and implement software requirements.
 4. Communicate their work clearly and professionally in both written and oral
    forms appropriate to SE.
+5. Work with AI assistants critically: direct LLMs on real engineering
+   tasks, verify their outputs against evidence, and catch and document
+   their errors.
+6. Evaluate a product's central claim with a pre-registered eval: metric,
+   threshold, baseline, and a runnable instrument others can reproduce.
 
 ## Student Performance Assessment
 
