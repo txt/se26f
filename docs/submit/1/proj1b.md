@@ -285,9 +285,9 @@ areas. Exciting, but professional. It must show:
 | # | Deliverable |
 |---|---|
 | D1 | Market survey: 3+ rival products, and the gap none of them fill. |
-| D2 | Mission statement: why / what / so what, plus stakeholders. |
+| D2 | Mission statement: why / what / so what, plus stakeholders. The *so what* must include one measurable claim — metric, threshold, baseline — that Project 2's M0 eval will test. |
 | D3 | Milestones: before / now / future, 3–5 each, clear goals. Plus the support material (regulations, standards, licenses) your design must respect, with sources. |
-| D5 | Prompt report: "the most useful prompts were..." and "the least useful prompts were..." — with the why, for both. |
+| D5 | Prompt report: the LLM outputs that were **wrong**, and how you caught each one; plus "the most useful prompts were..." and "the least useful prompts were..." — with the why. Zero caught errors reads as zero checking. |
 
 **PDF 2 — the poster** ([requirements](poster.md)):
 
@@ -324,5 +324,6 @@ Fast checks for the marker:
 - D3: ambitious but codeable? Dull milestones lose marks. Impossible ones too.
 - D4: after 15 seconds, do you know what the project is? Would the tech stack
   make a student pick this project?
-- D5: prompts beyond the ten starters? Real reflection, or padding?
+- D5: real caught-error stories, with evidence? Prompts beyond the twelve
+  starters? Real reflection, or padding?
 - Format: ACM two-column LaTeX? More than four pages? If not, cap all scores at 1.

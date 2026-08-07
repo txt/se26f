@@ -50,6 +50,30 @@ Milestones need not be user-level. A systems milestone (a pipeline, an API,
 a test harness) can mean nothing to an end user, yet enable the impressive
 functions that come later.
 
+## M0: the risk-killer eval (a required milestone)
+
+[Boehm's spiral model](../../lect/spiral.pdf) asks, every loop: what could
+kill this project, and what is the cheapest evidence that would tell us?
+Your product rides on one hypothesis — the "so what" of your 1b mission
+statement. M0 tests it.
+
+Required, and it earns full marks even if the numbers disappoint:
+
+1. State the hypothesis as a measurable claim: metric, threshold, baseline.
+2. Build the instrument: a runnable eval script in the repo, wired to CI,
+   demonstrated on sample or synthetic data. No users yet? Simulate them,
+   and say how.
+
+**Bonus: real evidence.** Point the instrument at reality — pilot users, a
+questionnaire, collected traces. Any honest sample beats none. Real data is
+how milestone and demo marks reach the top of their range.
+
+**If the eval fails:** that is a spiral review, not a failure. Report the
+number, hold the review, record the decision — persevere, re-plan, or
+descope — in an issue, and continue. Marks are lost only three ways: no
+eval, an eval that cannot possibly fail, or a number the tutor cannot
+reproduce.
+
 ## The repo
 
 Your repo is public (not NCSU-hosted). It holds no keys or passwords.
@@ -183,7 +207,7 @@ next, why this repo is the one to inherit.
 |---|---|
 | 5 | Live demo: how major, how impressive, does it run |
 | 8 | Repo rubric: self-assessment confirmed by spot-checks |
-| 4 | Milestones: four or more, major, done |
+| 4 | Milestones: four or more, major, done. M0 (the eval) must be one of them |
 | 2 | Poster |
 
 Also: each student completes a short individual questionnaire on group
@@ -196,3 +220,5 @@ work. The link comes via Discord.
 - A self-score the evidence does not support.
 - A demo that needs setup time.
 - Milestones that are dull. Milestones that are impossible.
+- No M0 eval; an M0 that cannot possibly fail; an M0 number the tutor
+  cannot reproduce.

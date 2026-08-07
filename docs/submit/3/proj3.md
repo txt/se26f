@@ -48,6 +48,10 @@ things, without breaking the old things. Project 3 is that skill, marked.
   The fork point separates their work from yours.
 - Old tests keep passing. Add new tests for the new work: 50 is good,
   100 is better.
+- Their M0 eval (the business-level acceptance test from
+  [Project 2](../2/proj2.md)) must still run, and its number reported.
+- State one new M0 claim for your delta — same rules as Project 2:
+  instrument required, real data is bonus.
 
 ## Warning: trust nothing
 
@@ -113,4 +117,5 @@ work. The link comes via Discord.
 - Old tests that no longer pass.
 - New work tangled into old code, so nobody can tell what you added.
 - A rewrite wearing an extension's clothes.
+- The inherited M0 eval abandoned, or no M0 claim for the new work.
 - A demo that needs setup time.

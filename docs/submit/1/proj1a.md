@@ -274,7 +274,7 @@ Then, for each change you made:
 | D2 | 20 use cases, in the [usecases0.md](usecases0.md) format. |
 | D3 | Tests: code link, samples of raw test output, and a results table (test / why we tried it / expected / what happened). Failures are fine — explain them. |
 | D4 | Traceability table: your tests ↔ use cases. Plus your comment on the project's own tests: do they cover the use cases? Where are they blind? |
-| D5 | Prompt notes. A very simple document — a half-page bullet list is fine: "most useful prompts", "least useful prompts", one line of why each. |
+| D5 | Prompt notes. A very simple document — a half-page bullet list is fine: the LLM outputs that were **wrong**, and how you caught each one; plus which prompts earned their keep, which did not, one line of why each. Zero caught errors reads as zero checking. |
 
 ## The demo video
 
@@ -313,5 +313,6 @@ Fast checks for the marker:
   with expected-vs-happened? Failures explained, or hidden?
 - D4: does every use case have at least one test? Gaps explained? Honest
   verdict on the project's own tests?
-- D5: prompts beyond the ten starters? Real reflection, or padding?
+- D5: real caught-error stories, with evidence? Prompts beyond the ten
+  starters? Real reflection, or padding?
 - Format: ACM two-column LaTeX? If not, cap all scores at 1.
