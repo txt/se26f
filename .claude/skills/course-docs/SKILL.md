@@ -23,7 +23,10 @@ description: Use when editing any markdown in this course repo (README, docs/lec
 - Dates, due dates, talk slots, marks-per-week: README schedule table.
 - Grade totals (must sum to 100) and NCSU-required sections:
   `docs/lect/policies.md`. Keep it terse — rubric detail lives in
-  project files, not policies. Do not add outcome lists to policies.
+  project files, not policies. Policies lists exactly six learning
+  outcomes (four SE + two AI-facing: LLM error-catching, M0 eval).
+  Add an outcome ONLY if a graded deliverable provably assesses it;
+  long outcome lists are hubris.
 - Per-project rubrics and marks splits: `docs/submit/*/proj*.md`.
   Policies' per-project totals (5/7/19/21) must match those files.
 
