@@ -317,7 +317,8 @@ passes and failures both. Put the video link in your report. The video is
 
 ## Rubric
 
-Score each deliverable D1–D5:
+Score each deliverable D1–D5. Your report mark = the five D-scores
+summed, divided by 3 (so 15/3 = **5 marks max**).
 
 | Score | Meaning |
 |---|---|

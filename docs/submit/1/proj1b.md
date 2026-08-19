@@ -334,7 +334,8 @@ marks on both.)
 
 ## Rubric
 
-Score each deliverable D1–D5:
+Score each deliverable D1–D5. Your mark = the five D-scores summed,
+scaled by 7/15 (so **7 marks max**).
 
 | Score | Meaning |
 |---|---|

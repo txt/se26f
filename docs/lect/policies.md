@@ -68,9 +68,9 @@ Upon completion of this course, students will be able to:
 ## Student Performance Assessment
 
 Each team (of four) gives two
-in-person talks during the semester -- one *tool* talk, one *task* talk (see
-the schedule on the course
-[README](https://github.com/txt/se26f/blob/main/README.md)).
+in-person talks during the semester -- one *tool* talk, one *task* talk.
+Rubrics: [talk.md](talk.md). For your slot, see the schedule on the course
+[README](https://github.com/txt/se26f/blob/main/README.md).
 The course is graded on projects, talks, a mid-term, and a final exam.
 The final exam mark is weighted about 1.5 times the mid-term mark.
 Exam dates, rooms, and all due dates: see the schedule on the course
@@ -80,25 +80,14 @@ Exam dates, rooms, and all due dates: see the schedule on the course
 
 | Marks | Component |
 |------:|-----------|
-|  7 | Tool talk (in-class team presentation) |
-|  7 | Task talk (in-class team presentation) |
+|  7 | [Tool talk](talk.md#the-tool-talk-7-marks) (in-class team presentation) |
+|  7 | [Task talk](talk.md#the-task-talk-7-marks) (in-class team presentation) |
 |  5 | Proj1a: testing. 2 report, 3 demo video |
 |  7 | Proj1b: requirements. 7 report + poster, no demo |
 | 19 | Proj2: build. 14 work, 5 live demo |
 | 21 | Proj3: maintain. 16 work, 5 demo |
 | 14 | Mid-term exam |
 | 20 | Final exam |
-
-**Defining "good":** The course definition of software engineering
-promises products of *required quality*. Part of that standard is set
-by you. In week one, the class elicits its own quality dimensions
-from prior-year posters (N1 exercise: triads, constructs, a shared
-grid). The resulting cohort grid is published beside
-[the project](../submit/project.md) and tutors use it as an
-interpretive rubric when marking posters and demos: where a rubric
-row says "sells the project" or "impressive milestone," the cohort's
-own constructs say what selling and impressive mean this year. The
-marks and components in the table above stay as printed.
 
 **Attendance and participation:** Classes are in person. Absences are handled
 under NCSU REG 02.20.03 (Attendance Regulations). Talks must be delivered in
@@ -107,8 +96,8 @@ slot. Projects are team submissions; all team members are expected to
 contribute and may be graded individually if contributions are unequal.
 
 **Late work:** Late submissions lose one mark per day late (weekends count as
-one day). Exception: Proj3 has a seven-day grace period — no late marks are
-lost until Dec 1.
+one day). Exception: Proj3 has a grace period — no late marks are lost until
+Dec 1.
 
 **Demo scheduling:** Demos are scheduled with your tutor. You are entitled to
 have your demos run during normal working hours (9 AM to 5 PM, Monday to

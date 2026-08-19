@@ -19,7 +19,9 @@
 **Links:** [Home](../../../README.md) · [Project 2](../2/proj2.md) ·
 [Poster rules](../1/poster.md) · [Policies](../lect/policies.md)
 
-**Due:** see the [schedule](../../../README.md).
+**Due:** see the [schedule](../../../README.md). Submission is
+online, over Thanksgiving break — and no late marks are lost until
+Dec 1.
 **Hand in:**
 
 1. One PDF to Moodle: your poster, plus the URLs of (a) the Project 2 repo
