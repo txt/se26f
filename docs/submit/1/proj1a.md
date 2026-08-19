@@ -37,8 +37,7 @@ are, what matters, and what to read next.
 
 ## Goal
 
-This is not a survey of the field. You study one specific thing, deeply.
-
+ 
 Take one prior project. Understand it. Reverse engineer its high-level design
 as use cases. Design tests. Show that your tests cover that design. Then judge
 the tests the project already had.
