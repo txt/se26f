@@ -16,6 +16,9 @@
 
 # Project 1b: Requirements
 
+**In one line:** using LLM assistance, develop requirements for an
+extension to a project.
+
 **Links:** [Home](../../../README.md) · [Project 1a](proj1a.md) ·
 [Poster rules](poster.md) · [Use case format](usecases0.md) ·
 [Prior projects](https://drive.google.com/drive/u/2/folders/1dGGQNCWC3BakD-nUZn5vPecPdm0KAhXA)
@@ -42,7 +45,18 @@ want.
    (the thing you build), the **so what** (the benefits).
 4. Make one poster that sells it. Full requirements: [poster.md](poster.md).
 
-Use an LLM as your analyst. But you steer. It brainstorms; you decide.
+Use **at least three different LLMs** as rival analysts — plus a
+fourth running locally (Ollama-class) if you can. They brainstorm
+and contradict each other; you adjudicate. At minimum, run prompt 1
+(market survey) and prompt 10 (red team) on every model. The rule
+for rivals: **a competing product counts only if two models name it,
+or one model gives a live URL** — cross-model checking is your
+hallucinated-competitor filter.
+
+On cost: free tiers exist for all the big vendors; the local fourth
+is best-effort — no marks lost for its absence, one honest sentence
+on why. Repeat only the designated prompts and your keepers across
+models, not every interaction.
 
 ## Twelve starter prompts
 
@@ -52,7 +66,9 @@ guessing. In every prompt, also state the hard constraint: **we have one
 month to build AND test this new thing.** An LLM that does not know the
 budget will design you a two-year product. **Warning: these are not
 enough.** They are starters. The higher scores go to teams that invent
-better prompts of their own. Be creative.
+better prompts of their own. Be creative. Run each keeper prompt on
+all your models: agreement is cheap confirmation; disagreement is
+where the marks are.
 
 **1. Map the competition.**
 
@@ -287,7 +303,7 @@ areas. Exciting, but professional. It must show:
 | D1 | Market survey: 3+ rival products, and the gap none of them fill. |
 | D2 | Mission statement: why / what / so what, plus stakeholders. The *so what* must include one measurable claim — metric, threshold, baseline — that Project 2's M0 eval will test. |
 | D3 | Milestones: before / now / future, 3–5 each, clear goals. Plus the support material (regulations, standards, licenses) your design must respect, with sources. |
-| D5 | Prompt report: the LLM outputs that were **wrong**, and how you caught each one; plus "the most useful prompts were..." and "the least useful prompts were..." — with the why. Zero caught errors reads as zero checking. |
+| D5 | Prompt report: per model, the outputs that were **wrong**, and how you caught each one; "the most useful prompts were..." and "the least useful prompts were..." — with the why; the prompt × model comparison for the market survey and red team, including which rivals survived the two-model rule; one strengths/weaknesses line per model; and the local-model result (or the one sentence on why none ran). Zero caught errors reads as zero checking. |
 
 **PDF 2 — the poster** ([requirements](poster.md)):
 
@@ -320,10 +336,14 @@ Score each deliverable D1–D5:
 
 Fast checks for the marker:
 
-- D1: are the rivals real? Is the gap real, or invented?
+- D1: are the rivals real? Is the gap real, or invented? Did the
+  two-model rule (or a live URL) confirm each rival?
 - D3: ambitious but codeable? Dull milestones lose marks. Impossible ones too.
 - D4: after 15 seconds, do you know what the project is? Would the tech stack
   make a student pick this project?
 - D5: real caught-error stories, with evidence? Prompts beyond the twelve
-  starters? Real reflection, or padding?
+  starters? Real reflection, or padding? Evidence of three or more
+  models actually used (transcripts or screenshots, not claims)?
+  Disagreements shown? "All models agreed on everything" reads as one
+  model used three times.
 - Format: ACM two-column LaTeX? More than four pages? If not, cap all scores at 1.

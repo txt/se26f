@@ -16,6 +16,9 @@
 
 # Project 1a: Testing
 
+**In one line:** using LLMs, extract test cases from the artifacts
+of a prior project.
+
 **Links:** [Home](../../../README.md) · [Project 1b](proj1b.md) ·
 [Poster rules](poster.md) · [Use case format](usecases0.md) ·
 [Prior projects](https://drive.google.com/drive/u/2/folders/1dGGQNCWC3BakD-nUZn5vPecPdm0KAhXA)
@@ -27,8 +30,15 @@ Keep it short: say what you did, show the evidence, stop.
 ## How to start
 
 1. Check out a repo of prior code: fork one past project, clone your fork.
-2. Give your LLM access to all of it — e.g. fire up Claude Code in that
-   directory.
+2. Give **at least three different LLMs** access to all of it — e.g.
+   Claude Code, Gemini CLI, and Codex/Copilot, each fired up in that
+   directory. If you can, add a fourth running locally (Ollama-class).
+
+On cost: free tiers exist for all the big vendors, and the local
+model costs nothing but disk. The local fourth is best-effort — no
+marks lost for its absence, one honest sentence on why it is absent.
+You repeat only the designated steps and your keeper prompts across
+models, not every interaction — otherwise the month does not fit.
 
 The point: you now own a large space of artifacts from prior work — code,
 docs, tests, commit history. You cannot read it all. Your LLM can. Use it as
@@ -37,7 +47,6 @@ are, what matters, and what to read next.
 
 ## Goal
 
- 
 Take one prior project. Understand it. Reverse engineer its high-level design
 as use cases. Design tests. Show that your tests cover that design. Then judge
 the tests the project already had.
@@ -63,8 +72,12 @@ the health of that software, as-is. But you must try to run it.
 
 ## What to do
 
+(For pasts 3,5,6,7 you will need to do a little technical writing. Use the
+latex format described below.)
+
 Do the steps in order. First form your own view of the design (steps 1–6).
-Only then judge their tests (step 7).
+Only then judge their tests (step 7). Steps 2 and 7 are LLM-heavy:
+run them with **each** of your models, then reconcile in step 8.
 
 1. Select one prior project (see the sample posters above). Fork it. Build
    it. Try to run it. If it will not run, pick again — now, not next week.
@@ -80,6 +93,12 @@ Only then judge their tests (step 7).
    This shows your tests cover the reverse-engineered design.
 7. Now look at the tests the project already has. Comment: do those tests
    cover the use cases? Where are they blind?
+8. Cross-model comparison. Run your keeper prompts on every LLM
+   (three or more; plus the local fourth if you have one). Make a
+   table: prompt × model → verdict. Where models disagree, say which
+   one you believed and what evidence settled it. Disagreement is
+   data: a use case only one model found is either a gem or a
+   hallucination, and you must say which.
 
 **Expect some failures.** Old code has bugs, and code rots. A failing test on
 a real fault is a finding, not a mistake. Report it with pride, and explain
@@ -103,6 +122,8 @@ Ten prompts that can give insight. Note the pattern in all of them: give the
 LLM a role, paste real evidence, demand a fixed output format, and forbid
 guessing. **Warning: these ten are not enough.** They are starters. The higher
 scores go to teams that invent better prompts of their own. Be creative.
+Run each keeper prompt on all your models: agreement is cheap
+confirmation; disagreement is where the marks are.
 
 **1. First contact with the repo.**
 
@@ -273,7 +294,7 @@ Then, for each change you made:
 | D2 | 20 use cases, in the [usecases0.md](usecases0.md) format. |
 | D3 | Tests: code link, samples of raw test output, and a results table (test / why we tried it / expected / what happened). Failures are fine — explain them. |
 | D4 | Traceability table: your tests ↔ use cases. Plus your comment on the project's own tests: do they cover the use cases? Where are they blind? |
-| D5 | Prompt notes. A very simple document — a half-page bullet list is fine: the LLM outputs that were **wrong**, and how you caught each one; plus which prompts earned their keep, which did not, one line of why each. Zero caught errors reads as zero checking. |
+| D5 | Prompt notes. A very simple document — a half-page bullet list is fine: per model, the outputs that were **wrong**, and how you caught each one; which prompts earned their keep, which did not, one line of why each; the step-8 prompt × model table; one strengths/weaknesses line per model **on this repo specifically**; and the local-model result (or the one sentence on why none ran). Zero caught errors reads as zero checking. |
 
 ## The demo video
 
@@ -313,5 +334,8 @@ Fast checks for the marker:
 - D4: does every use case have at least one test? Gaps explained? Honest
   verdict on the project's own tests?
 - D5: real caught-error stories, with evidence? Prompts beyond the ten
-  starters? Real reflection, or padding?
+  starters? Real reflection, or padding? Evidence of three or more
+  models actually used (transcripts or screenshots, not claims)?
+  Disagreements shown? "All models agreed on everything" reads as one
+  model used three times.
 - Format: ACM two-column LaTeX? If not, cap all scores at 1.
