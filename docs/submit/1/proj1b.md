@@ -45,13 +45,16 @@ want.
    (the thing you build), the **so what** (the benefits).
 4. Make one poster that sells it. Full requirements: [poster.md](poster.md).
 
-Use **at least three different LLMs** as rival analysts — plus a
-fourth running locally (Ollama-class) if you can. They brainstorm
-and contradict each other; you adjudicate. At minimum, run prompt 1
-(market survey) and prompt 10 (red team) on every model. The rule
-for rivals: **a competing product counts only if two models name it,
-or one model gives a live URL** — cross-model checking is your
-hallucinated-competitor filter.
+Use **at least three different LLMs** as independent analysts —
+plus a fourth running locally (Ollama-class) if you can. They
+brainstorm and contradict each other; you adjudicate. At minimum,
+run prompt 1 (market survey) and prompt 10 (red team) on every
+model. The rule for the market survey: **a competing product counts
+only if two of your LLMs name it, or one gives a live URL** —
+cross-model checking is your hallucinated-competitor filter.
+(Two senses of competition here, keep them straight: competing
+PRODUCTS are what the survey hunts; your LLMs are just multiple
+analysts hunting them.)
 
 On cost: free tiers exist for all the big vendors; the local fourth
 is best-effort — no marks lost for its absence, one honest sentence
@@ -303,13 +306,18 @@ areas. Exciting, but professional. It must show:
 | D1 | Market survey: 3+ rival products, and the gap none of them fill. |
 | D2 | Mission statement: why / what / so what, plus stakeholders. The *so what* must include one measurable claim — metric, threshold, baseline — that Project 2's M0 eval will test. |
 | D3 | Milestones: before / now / future, 3–5 each, clear goals. Plus the support material (regulations, standards, licenses) your design must respect, with sources. |
-| D5 | Prompt report: per model, the outputs that were **wrong**, and how you caught each one; "the most useful prompts were..." and "the least useful prompts were..." — with the why; the prompt × model comparison for the market survey and red team, including which rivals survived the two-model rule; one strengths/weaknesses line per model; and the local-model result (or the one sentence on why none ran). Zero caught errors reads as zero checking. |
+| D5 | Prompt report: per model, the outputs that were **wrong**, and how you caught each one; "the most useful prompts were..." and "the least useful prompts were..." — with the why; the prompt × model comparison for the market survey and red team, including which competitor products survived the two-model rule; one strengths/weaknesses line per model; and the local-model result (or the one sentence on why none ran). Zero caught errors reads as zero checking. |
 
 **PDF 2 — the poster** ([requirements](poster.md)):
 
 | # | Deliverable |
 |---|---|
 | D4 | Poster quality: sells the project in 15 seconds; all required parts on the page. |
+
+(Yes, the poster repeats D2's mission statement and D3's milestones.
+That is intended: the report *states* them, the poster *sells* them.
+The two must agree — a poster that contradicts its own report loses
+marks on both.)
 
 ## Report format
 
@@ -336,8 +344,8 @@ Score each deliverable D1–D5:
 
 Fast checks for the marker:
 
-- D1: are the rivals real? Is the gap real, or invented? Did the
-  two-model rule (or a live URL) confirm each rival?
+- D1: are the rival products real? Is the gap real, or invented? Did
+  the two-model rule (or a live URL) confirm each one?
 - D3: ambitious but codeable? Dull milestones lose marks. Impossible ones too.
 - D4: after 15 seconds, do you know what the project is? Would the tech stack
   make a student pick this project?
