@@ -23,7 +23,7 @@ See [policies](docs/lect/policies.md) for grading.
 
 | 📅 Date | 🎓 Lecture | 🛠️ Submission <br>(due start of class) | 🎤 Talks: teams A–Q <br>(15 min each, ≤4/night) | 📝 Review |
 |:-------------:|:----------:|:---------------------------:|:---------:|:---------:|
-| Aug 19 | [basics](docs/lect/n01.md) <br> 🚀 **[project](docs/submit/project.md)** | | | |
+| Aug 19 | [basics](docs/lect/n01.md) + [git101](docs/lect/git101.md) <br> 🚀 **[project](docs/submit/project.md)** | | | |
 | Aug 26 | [useCaseTesting](docs/lect/n02.md) | | | |
 | Sep 02 | [requirements](docs/lect/n03.md) | **Proj1a: [testing](docs/submit/1/proj1a.md)** | | |
 | Sep 09 | [architecture](docs/lect/n04.md) | | | |
