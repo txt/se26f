@@ -19,6 +19,10 @@
 **In one line:** using LLM assistance, develop requirements for an
 extension to a project.
 
+**One term, defined now:** a **rival** is a competing software
+product already on the market — never one of your LLMs. Your LLMs
+are analysts; rivals are what they hunt.
+
 **Links:** [Home](../../../README.md) · [Project 1a](proj1a.md) ·
 [Poster rules](poster.md) · [Use case format](usecases0.md) ·
 [Prior projects](https://drive.google.com/drive/u/2/folders/1dGGQNCWC3BakD-nUZn5vPecPdm0KAhXA)
@@ -51,10 +55,7 @@ brainstorm and contradict each other; you adjudicate. At minimum,
 run prompt 1 (market survey) and prompt 10 (red team) on every
 model. The rule for the market survey: **a competing product counts
 only if two of your LLMs name it, or one gives a live URL** —
-cross-model checking is your hallucinated-competitor filter.
-(Two senses of competition here, keep them straight: competing
-PRODUCTS are what the survey hunts; your LLMs are just multiple
-analysts hunting them.)
+cross-model checking is your hallucinated-rival filter.
 
 On cost: free tiers exist for all the big vendors; the local fourth
 is best-effort — no marks lost for its absence, one honest sentence
