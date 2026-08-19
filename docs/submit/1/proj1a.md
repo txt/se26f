@@ -318,7 +318,8 @@ passes and failures both. Put the video link in your report. The video is
 ## Rubric
 
 Score each deliverable D1–D5. Your report mark = the five D-scores
-summed, divided by 3 (so 15/3 = **5 marks max**).
+summed, divided by 7.5 (so 15/7.5 = **2 report marks max**; the demo
+video is the other 3 of this project's 5).
 
 | Score | Meaning |
 |---|---|
