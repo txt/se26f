@@ -301,9 +301,32 @@ Then, for each change you made:
 ## The demo video
 
 There is no live demo for Project 1a. Instead, make a short video (2–5
-minutes) of the software running. Show real runs: your tests executing,
-passes and failures both. Put the video link in your report. The video is
-3 of the 5 marks.
+minutes) of the software running. Put the video link in your report.
+The video is 3 of the 5 marks.
+
+What the marker wants to see, in order:
+
+1. **The software runs.** Ten seconds of it doing its main thing.
+2. **Your tests execute.** Real `pytest` output scrolling, not a
+   screenshot of green.
+3. **A pass AND a failure.** Show a failing test, then explain it in
+   one sentence. A video with no failures reads as a video that is
+   hiding something.
+4. **One use case, end to end.** Pick your best one; walk it live.
+
+Craft rules, learned the hard way:
+
+- **Big fonts.** Bump the terminal to 18pt+ before recording. If the
+  marker squints, you lose.
+- **Script it first.** Write five bullet points, do one practice run.
+  Unscripted videos run long and ramble.
+- **2–5 minutes means 2–5 minutes.** Short and dense beats long and
+  padded — same rule as the report.
+- **Don't over-produce.** Screen capture plus your voice is plenty
+  (QuickTime, OBS, or any screen recorder). No title cards, no music.
+- **Narrate the failure.** The sentence "this test fails because the
+  upstream API changed — that's code rot, documented in section 3" is
+  the strongest fifteen seconds you can record.
 
 ## Report format
 
