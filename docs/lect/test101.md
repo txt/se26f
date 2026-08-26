@@ -95,41 +95,6 @@ def eg__sym(): # test = tiny named demo, self-checking, greppable
   s = SYM(["a","a","b"]); assert abs(s.ent() - 0.918) < 0.01
 ```
 
-### Finding the classes (skim now, use in Proj1a)
-
-True equivalence ("same input class ⟺ same behavior") is
-undecidable, so approximate with a surrogate signature, then
-refine:
-
-| source | signature | tool |
-|---|---|---|
-| spec | one choice per input category | category-partition (Ostrand & Balcer) |
-| code | path condition | concolic/symbolic exec (KLEE); or a branch vector |
-| behavior | coverage bitmap or output vector | AFL-style feedback; clustering |
-
-(The spec row, unpacked: a *category* is an input dimension the
-spec says matters — here HIRE, WHEN, tmax. Its *choices* are the
-few interesting cases — HIRE ∈ {0, some, max}; tmax ∈ {before the
-hire lands, mid, past the crossover}. An input's signature is the
-tuple of choices it makes, one per category; same tuple = same
-class.)
-
-For config-vector inputs the behavior route is the practical one:
-two configs are equivalent if they produce the same signature —
-not if they are numerically near. The refinement loop (the part
-people skip):
-
-```python
-def classes(pool, sig, k=2):
-  D = {}                       # signature -> [inputs]
-  for x in pool: D.setdefault(sig(x), []).append(x)
-  for s, xs in D.items():      # trust, then verify
-    probe = shuffle(xs)[:k]    # 2 reps, not 1
-    if len(set(map(oracle, probe))) > 1:
-      yield from classes(xs, finer(sig))   # class was wrong: split
-    else: yield probe[0]
-```
-
 ## 1. Case study: from diapers to Brooks' Law ▪▪▪▪▪▪▪▪▪▪▪▪
 
 *(~14 min.)*
