@@ -21,6 +21,7 @@
 **Links:** [Home](../../README.md) ·
 [live code: sd0.py](https://github.com/txt/se26f/blob/main/docs/lect/brooks/sd0.py) ·
 [test_brooks.py](https://github.com/txt/se26f/blob/main/docs/lect/brooks/test_brooks.py) ·
+[forrester.py](https://github.com/txt/se26f/blob/main/docs/lect/brooks/forrester.py) ·
 [useCaseTesting](n02.md) · [Proj1a](../submit/1/proj1a.md)
 
 One 50-minute pass: twelve heuristics, one case study, one set of
@@ -206,33 +207,47 @@ crossover is a #2 relation over the horizon knob; the
 false-refute test is a #4 edge (and a #9 regression: a known
 blind spot, pinned).
 
-## 2. Forrester's rules ▪▪▪▪▪
+## 2. Forrester's rules — as a harness ▪▪▪▪▪▪▪
 
-*(~5 min.)* Testing simulations is old wisdom. Forrester & Senge
-("Tests for building confidence in system dynamics models",
-1980) gave the canonical checklist — much of it is our
-heuristics wearing 1980s clothes:
+*(~7 min.)* Testing simulations is old wisdom: Forrester & Senge,
+"Tests for building confidence in system dynamics models" (1980).
+Their semantics are slippery in prose — so we make them
+executable. [forrester.py](brooks/forrester.py) runs the rules
+against any sd0-style model:
 
-1. **Boundary adequacy** — is everything that drives the
-   behavior inside the model?
-2. **Structure verification** — does each equation match
-   something real (n² channels really is how meetings grow)?
-3. **Dimensional consistency** — units balance in every
-   equation.
-4. **Parameter verification** — every constant means something
-   measurable (0.1/tick maturation ≈ a ten-tick
-   apprenticeship).
-5. **Extreme conditions** — zero staff must mean zero work; a
-   burned-down backlog must stop producing (that is the
-   `min(prod, u.R)`).
-6. **Behavior reproduction** — does it reproduce the known story
-   (the late-project dip)?
-7. **Surprise behavior** — when the model does something odd
-   (the crossover), is that a bug, or a discovery?
-8. **Sensitivity** — which parameters flip the verdict? Those
-   are the ones to measure carefully in the real world.
-9. **Policy sensitivity** — does the recommendation survive
-   reasonable parameter changes? (Ours does not survive tmax.)
+| F&S rule | mechanized as |
+|---|---|
+| 2 structure verification | stocks move over a run; inputs (the ctrl) hold still |
+| 2 (accounting) | conservation: `W+R` always 1000; `D+N` constant, +HIRE after the hire |
+| 5 extreme conditions | patch the world, assert a first-principles law: no devs → no work; no backlog → no work; hire at the last tick → gap 0 |
+| 6 behavior reproduction | `rq()` retells the known story at the default horizon |
+| 7 surprise behavior | sweep a knob, report every verdict flip — bug, or discovery? |
+| 8/9 sensitivity | nudge every stock ±25%; report which nudges flip the verdict |
+
+```
+$ python3 forrester.py
+PASS  F&S 2 structure ... (7 checks)
+F&S 7 surprise: flips at [(10,20,refute->confirm),(70,80,confirm->refute)]
+F&S 8/9 sensitivity: verdict flipped by [('WHEN',0.75),('WHEN',1.25)]
+exit=0
+```
+
+Two things the harness found that prose review missed:
+
+- **Conservation is piecewise.** "D+N is constant" is false during
+  a hire — the first draft of the check failed, and fixing it
+  forced us to state the law precisely: constant, *plus HIRE,
+  after WHEN*. Executable semantics debug the specification.
+- **The WHEN sensitivity flip is a model fragility, not physics.**
+  Nudge WHEN by ±25% and the verdict flips — because
+  `t == u.WHEN` with WHEN=7.5 never fires on integer ticks: the
+  hire silently vanishes. A float-equality bug, caught by rule 8.
+
+And the rules that do NOT mechanize teach the boundary of the
+method: **1 boundary adequacy, 3 dimensional consistency, 4
+parameter meaning, and matching real project data** all need a
+human who knows the world. Run what can be run; know what you
+still owe.
 
 ## 3. Mechanics: Python, pytest, CI ▪▪▪▪▪▪▪▪▪▪
 
