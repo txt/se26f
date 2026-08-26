@@ -75,6 +75,37 @@ description: Use when editing any markdown in this course repo (README, docs/lec
   PDF to Moodle. Length: 1a has NO minimum ("short and dense beats
   long and padded"); 1b must be more than four pages.
 
+## Lectures: N2 and the brooks code
+
+- docs/lect/n02.md = ONE merged lecture (use cases + prompting +
+  testing; README cell: useCasesPromptsTests). Spine: use cases ->
+  twenty prompting heuristics (timm's 16 + fixed-format,
+  never-accept-claimed-execution, prompts-are-code, cross-examine;
+  grouped contract/bounding/before/after/trust) -> prompting-the-
+  use-cases -> fault-vs-failure + oracle problem (the hinge) ->
+  twelve testing heuristics -> diapers->brooks case study -> Ex1 ->
+  Forrester-as-harness -> mechanics (engine/pytest/make test/7-line
+  yaml) -> Ex2 -> before-next-class -> explore. ~90 min of material;
+  live cuts marked by the (dot) budgets. prompt101.md and test101.md
+  were merged INTO n02 and deleted — do not recreate them.
+- docs/lect/brooks/ = live code: sd0.py (timm's canonical simulator,
+  VERBATIM — bounded [now,lo,hi] stocks, binary verdict; sweep flips
+  confirm->refute ~tmax=71, false refute at tmax=10),
+  diapers.py (wash loop: s rejoins q; BUY sweep 70/40/0; timm's
+  box-and-pipe diagram in docstring AND n02),
+  test_brooks.py (8 tests; runs under own engine with CLI knobs and
+  exit=#fails, AND under pytest), forrester.py (F&S 1980 as a
+  harness; found: conservation is piecewise, WHEN=7.5 float-equality
+  fragility), Makefile (test, forrester rules).
+- The eps-neutral verdict band is deliberately ABSENT from sd0 —
+  it is n02 Exercise 2. Do not "fix" it.
+- Demo-video rubric (marker-wants list + craft rules) lives in
+  proj1a, not in any lecture.
+- Lecture-tut naming: git101 is the only surviving *101 page.
+- Heuristic question format (quizzes/exams): (a) low-Bloom recall
+  first, (b) high-Bloom bug-hunt prompt, THEN the code fence;
+  monitor-short.
+
 ## Style
 
 - Plain words, short sentences, no buzzwords. Rubrics say how marks are
