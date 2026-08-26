@@ -24,8 +24,10 @@
 [forrester.py](https://github.com/txt/se26f/blob/main/docs/lect/brooks/forrester.py) ·
 [useCaseTesting](n02.md) · [Proj1a](../submit/1/proj1a.md)
 
-One 50-minute pass: twelve heuristics, one case study, one set of
-mechanics, two exercises. Anything under *explore in your own
+This lecture picks up where [prompt101](prompt101.md) ends: there
+we prompted the Brooks model into existence and half-trusted it;
+here we earn the trust. One 50-minute pass: twelve heuristics, one
+case study, one set of mechanics, two exercises. Anything under *explore in your own
 time* ships with the notes, not the clock.
 
 ## 0. Twelve heuristics for writing software tests ▪▪▪▪▪▪▪▪▪▪
