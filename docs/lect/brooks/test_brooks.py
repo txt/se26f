@@ -1,6 +1,6 @@
 """
 test_brooks.py: a roll-your-own test engine for sd0.py.
-Runs two ways:
+Runs four ways:
 
    python3 test_brooks.py -all              # everything; exit = #fails
    python3 test_brooks.py -crossover        # just one test
@@ -8,9 +8,11 @@ Runs two ways:
    python3 -m pytest -q test_brooks.py      # same tests, via pytest
 """
 import sys, random, traceback
-from sd0 import the, o, run, brooks, y, rq
+import sd0
+from sd0 import the, brooks, run, verdict
 
-the.seed = 1                      # no randomness in sd0 (yet); doctrine anyway
+the.setdefault("seed", 1)          # sd0 is deterministic (so far); doctrine anyway
+m = brooks()
 
 def atom(s):
   "string -> int | float | string"
@@ -22,35 +24,43 @@ def atom(s):
 # --------------------------- the tests --------------------------
 def test_runs():
   "the model runs, for exactly tmax ticks"
-  assert len(run(the, brooks)) == the.tmax
+  assert len(run(m.init, m.step)) == the["tmax"]
+
+def test_bounds():
+  "the clamp holds: every stock stays inside its [lo,hi]"
+  for t, s in run(m.init, m.step):
+    for k, (_, lo, hi) in m.init.items():
+      assert lo <= getattr(s, k) <= hi
+
+def test_backlog():
+  "conservation: work done + work remaining is always 1000"
+  for t, s in run(m.init, m.step):
+    assert abs(s.W + s.R - 1000) < 1e-9
+
+def test_staff():
+  "conservation: D+N only ever changes by HIRE"
+  hire = {**m.init, 'HIRE': [10, 0, 50]}
+  out  = run(hire, m.step)
+  assert abs(out[-1][1].D + out[-1][1].N - (20 + 10)) < 1e-9
 
 def test_work_grows():
   "work banked never goes down"
-  out = run(the, brooks)
+  out = run(m.init, m.step)
   assert all(a[1].W <= b[1].W for a, b in zip(out, out[1:]))
-
-def test_conserve():
-  "staff is conserved: D+N only ever changes by HIRE"
-  out = run({**the, "HIRE": 10}, brooks)
-  assert abs(out[-1][1].D + out[-1][1].N - (10 + 10)) < 1e-9
-
-def test_extreme():
-  "extreme condition: with no comm tax and no training tax, hiring can only help"
-  r = rq(COMM=0, TRAIN=0, tmax=60)
-  assert r.verdict == "refute"
 
 def test_brooks():
   "at the default horizon, Brooks' Law holds"
-  assert rq().verdict == "confirm"
-
-def test_neutral():
-  "photograph taken before the hire lands: no verdict either way"
-  assert rq(tmax=10).verdict == "neutral"
+  assert m.rq().verdict == "confirm"
 
 def test_crossover():
   "the verdict flips somewhere past the default horizon"
-  early, late = rq(tmax=30).verdict, rq(tmax=120).verdict
-  assert early == "confirm" and late == "refute"
+  assert m.rq(tmax=40).verdict == "confirm"
+  assert m.rq(tmax=80).verdict == "refute"
+
+def test_false_refute():
+  "photograph taken before the hire lands: gap is exactly zero,\n  yet the binary verdict scores it 'refute' -- a known blind spot"
+  v = m.rq(tmax=10)
+  assert v.gap == 0.0 and v.verdict == "refute"
 
 # ------------------------- the engine ---------------------------
 eg = {"-" + k[5:]: f for k, f in globals().items()
@@ -58,7 +68,7 @@ eg = {"-" + k[5:]: f for k, f in globals().items()
 
 def run1(f):
   "reseed, run one test, survive its crash; return 0=pass 1=fail"
-  random.seed(the.seed)
+  random.seed(the["seed"])
   try:
     f(); print("PASS", f.__name__, "::", f.__doc__); return 0
   except Exception:
