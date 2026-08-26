@@ -1,8 +1,17 @@
 """
 diapers.py: the gentlest possible compartmental model.
 
-  q ──▶ [ C:clean ] ──r──▶ [ D:dirty ] ──s──▶ ⊘
-         buy 70/Sat   use 8/day    dump Sat (miss t=27)
+q   +-----+  r  +-----+
+---->|  C  |---->|  D  |--> s
+ ^   +-----+     +-+---+
+ |                 |
+ +-----------------+
+
+C = stock of clean diapers
+D = stock of dirty diapers
+q = inflow of clean diapers
+r = flow of clean diapers to dirty diapers
+s = out-flow of dirty diapers
 
 One baby, one weekly shop, one forgotten laundry day.
 """
