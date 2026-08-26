@@ -342,4 +342,7 @@ Fast checks for the marker:
   models actually used (transcripts or screenshots, not claims)?
   Disagreements shown? "All models agreed on everything" reads as one
   model used three times.
+- Fork history: commits from every member, small and steady?
+  (git101's promise, checked here.) One giant midnight commit, or a
+  member with no commits, loses marks.
 - Format: ACM two-column LaTeX? If not, cap all scores at 1.

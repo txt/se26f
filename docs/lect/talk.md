@@ -23,6 +23,11 @@ talk** (see the [schedule](../../README.md) for your slot). Each is
 15 minutes and worth 7 marks. Talks are graded live, as they happen
 — every row below is decidable the moment it occurs.
 
+Logistics: teams and their letters (A–Q) are fixed by Aug 26.
+Talk slots follow the letters on the schedule. Teams A–D talk
+first (Sep 16), so they must have picked their tool — and told the
+lecturer — by Sep 09; every later team, one week before its slot.
+
 ## The tool talk (7 marks)
 
 Teach us a tool. Not a sales pitch — a working session.
