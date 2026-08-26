@@ -102,9 +102,16 @@ refine:
 
 | source | signature | tool |
 |---|---|---|
-| spec | category × choice tuples | category-partition (Ostrand & Balcer) |
+| spec | one choice per input category | category-partition (Ostrand & Balcer) |
 | code | path condition | concolic/symbolic exec (KLEE); or a branch vector |
 | behavior | coverage bitmap or output vector | AFL-style feedback; clustering |
+
+(The spec row, unpacked: a *category* is an input dimension the
+spec says matters — here HIRE, WHEN, tmax. Its *choices* are the
+few interesting cases — HIRE ∈ {0, some, max}; tmax ∈ {before the
+hire lands, mid, past the crossover}. An input's signature is the
+tuple of choices it makes, one per category; same tuple = same
+class.)
 
 For config-vector inputs the behavior route is the practical one:
 two configs are equivalent if they produce the same signature —
