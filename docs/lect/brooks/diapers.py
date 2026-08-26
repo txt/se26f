@@ -13,7 +13,8 @@ q = inflow of clean diapers
 r = flow of clean diapers to dirty diapers
 s = out-flow of dirty diapers
 
-One baby, one weekly shop, one forgotten laundry day.
+One baby, one weekly shop, one weekly wash (dirty loops
+back to clean), one forgotten laundry day.
 """
 from sd0 import the, run, o
 
@@ -28,9 +29,11 @@ def diapers():
   def step(dt,t,u,v):
     v.C += dt*(u.q - u.r)               # clean: bought minus used
     v.D += dt*(u.r - u.s)               # dirty: used minus dumped
-    v.q  = u.BUY if saturday(t) else 0  # flows are state too:
-    v.s  = u.D   if saturday(t) else 0  #   set now, felt NEXT tick
-    if t == 27: v.s = 0                 # the forgotten Saturday
+    v.q  = (u.BUY if saturday(t) else 0) \
+           + u.s                        # the loop: washed rejoin clean
+    v.s  = u.D if saturday(t) else 0    # flows are state too:
+    if t == 27: v.s = 0                 #   set now, felt NEXT tick
+                                        # ...and the forgotten Saturday
   def y(out):
     "higher = better: minus the days caught short"
     return -sum(1 for t,s in out if s.C <= 0)
@@ -43,6 +46,6 @@ def diapers():
 
 if __name__ == "__main__":
   m = diapers()
-  for buy in (70, 56, 40):
+  for buy in (70, 40, 0):
     bg = {**m.init, "BUY": [buy, 0, 100]}
     print("BUY =", buy, m.rq(bg=bg, tmax=35))

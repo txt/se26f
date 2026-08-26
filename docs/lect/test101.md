@@ -121,11 +121,13 @@ s = out-flow of dirty diapers
 
 ```python
 def step(dt,t,u,v):
-  v.C += dt*(u.q - u.r)               # clean: bought minus used
-  v.D += dt*(u.r - u.s)               # dirty: used minus dumped
-  v.q  = u.BUY if saturday(t) else 0  # flows are state too:
-  v.s  = u.D   if saturday(t) else 0  #   set now, felt NEXT tick
-  if t == 27: v.s = 0                 # the forgotten Saturday
+  v.C += dt*(u.q - u.r)               # clean: arrived minus used
+  v.D += dt*(u.r - u.s)               # dirty: used minus washed
+  v.q  = (u.BUY if saturday(t) else 0) \
+         + u.s                        # the loop: washed rejoin clean
+  v.s  = u.D if saturday(t) else 0    # flows are state too:
+  if t == 27: v.s = 0                 #   set now, felt NEXT tick
+                                      # ...and the forgotten Saturday
 ```
 
 Three ideas, each reused all lecture:
@@ -141,14 +143,18 @@ Three ideas, each reused all lecture:
 
 ```
 BUY = 70  o{ran_out: False, peak_D: 100, y: 0}
-BUY = 56  o{ran_out: False, peak_D: 100, y: 0}
-BUY = 40  o{ran_out: True,  peak_D: 100, y: -4}
+BUY = 40  o{ran_out: False, peak_D: 100, y: 0}
+BUY =  0  o{ran_out: True,  peak_D: 100, y: -3}
 ```
 
-Note `peak_D=100` everywhere: the dirty pile hits its clamp —
-that saturation is the forgotten Saturday's fingerprint (two
-weeks of accumulation, 112, squashed to the bound). A clamp
-keeps stocks legal AND can hide evidence. Remember that.
+Two lessons in that output. The wash loop makes the household
+sustainable at BUY=0 — dirty rejoins clean, week after week —
+until the ONE forgotten Saturday breaks the cycle and the family
+is caught short for three days: feedback loops are robust to
+steady load and fragile to missed beats. And `peak_D=100`
+everywhere is the dirty pile hitting its clamp (two weeks of
+accumulation, 112, squashed to the bound): a clamp keeps stocks
+legal AND can hide evidence. Remember both.
 
 ### Now with stakes: Brooks' Law in 69 lines
 
@@ -157,6 +163,23 @@ keeps stocks legal AND can hide evidence. Remember that.
 compartmental simulator that can ask if that is true: a
 24-line engine (`o`, `run`, `verdict` — states are stocks with
 `[now, lo, hi]` bounds, clamped every tick) plus one model.
+
+The vocabulary, before the code. Four stocks:
+
+- `D` = experienced devs; `N` = newbies (unproductive, and they
+  cost mentor time); `W` = work done; `R` = work remaining
+  (`W + R = 1000`, always).
+
+Two inputs — the state of the world, not the physics:
+
+- `HIRE` = how many newbies arrive; `WHEN` = the tick they land.
+
+Three derived flows, recomputed every tick:
+
+- `comm` = the n² communication tax on the veterans;
+  `train` = mentor time stolen by newbies; `prod` = the
+  veterans' net output after both taxes.
+
 The model, every line commented:
 
 ```python
