@@ -27,30 +27,100 @@ One 50-minute pass: twelve heuristics, one case study, one set of
 mechanics, two exercises. Anything marked *explore on your own
 time* ships with the notes but not the clock.
 
-## 0. Twelve test-design heuristics ▪▪▪▪▪▪▪▪
+## 0. Twelve heuristics for writing software tests ▪▪▪▪▪▪▪▪▪▪
 
-*(~8 min.)* Before any code: what is even worth testing? Twelve
-generic answers. Keep the list beside you for Exercise 1.
+*(~10 min.)* Before any code: what is even worth testing? Keep
+this list beside you for Exercise 1.
 
-1. **Boundaries.** Test at, just below, and just above every edge.
-2. **Zero, one, many.** Empty input, single input, lots of input.
-3. **Round trips.** Do, then undo: `(a+b)-b == a`.
-4. **Invariants.** Things that must hold after ANY operation
-   (totals conserved, counts non-negative, output sorted).
-5. **Extreme conditions.** Set a parameter to 0 or huge; predict
-   the answer from first principles; check it.
-6. **Known answers.** Tiny cases you can compute by hand.
-7. **A second opinion.** Another implementation, or a formula,
-   as the oracle.
-8. **Golden runs.** Fix the seed, bless one output, diff forever
-   after.
-9. **Error paths.** The extensions of your use cases — most real
-   requirements hide there.
-10. **Monotonicity / direction.** More load never speeds things
-    up; work-done never decreases.
-11. **Same-seed determinism.** Two runs, same seed, byte-equal.
-12. **Crash-free floor.** At absolute minimum: it ran, on every
-    input class you claim to accept.
+1. **No oracle, no test.** If you can't state what "correct"
+   means, you're running code, not testing it.
+2. **When the exact answer is unknowable, test relations, not
+   values.** Metamorphic: shuffle rows → same score ±ε; double
+   the budget → cost never worse. Essential for
+   stochastic/optimizer/ML code.
+3. **Partition, then probe twice.** Cluster inputs by behavior
+   signature (coverage bitmap, output vector), not numeric
+   nearness. Sample 2 per class — disagreement means the
+   partition is wrong; split on the feature that separated them.
+   A class probed once is a hypothesis, not a partition.
+4. **Order the budget: breadth → edges → mass.**
+   - Breadth across classes first — one rep per class, max-min
+     distance apart (adaptive random testing). Diversity buys
+     more bug-detection per test than depth.
+   - Then boundaries between adjacent classes — pairs differing
+     in one condition. Most defects are off-by-one at partition
+     edges, and those inputs belong to neither class cleanly.
+   - Then weight by size(class) × risk(class) — big classes are
+     common paths, small classes are usually the weird ones.
+   - (Invert the first two only for mature code: fresh code
+     fails mid-class, mature code fails at edges.)
+5. **Assert invariants, not internals.** Tests coupled to
+   structure die at the first refactor.
+6. **One failure reason per test.** A test that can fail three
+   ways diagnoses nothing.
+7. **Fast or ignored.** Whole unit suite under ~10s, or people
+   stop running it.
+8. **Seed everything, print the seed.** Failure output should be
+   a paste-able repro.
+9. **Bug report → regression test → then fix.** The test is the
+   proof the bug was real. Flaky is a defect in the test:
+   quarantine, fix, or delete — never retry-loop.
+10. **Coverage is a floor, not a target.** 100% coverage of weak
+    assertions tests nothing.
+11. **Every knob on the command line, defaulted from the
+    docstring.** One config object (`the`), one parse, no hidden
+    globals. Tests then differ only in flags — and a failing CI
+    run is a copy-paste-able command line. Corollary: the test
+    runner is just another flag; exit status = number of
+    failures. (Section 3's engine is this heuristic, executable.)
+12. **Parallelism is a for loop you didn't write.** Tests are
+    the embarrassingly parallel case — independent,
+    side-effect-free, seed-carried. Don't build a framework;
+    shell out:
+
+    ```bash
+    seq 20 | xargs -P8 -I{} python3 test_brooks.py -seed {} -all
+    ```
+
+    Two rules make it safe: each test owns its temp dir, and
+    each carries its own seed. Break either and you've bought
+    flakiness that only appears at `-P8`. (11 and 12 are the
+    same heuristic seen twice: once a whole test configuration
+    is one command line, `xargs` already knows how to run it.)
+
+The shape of a test, in one line:
+
+```python
+def eg__sym(): # test = tiny named demo, self-checking, greppable
+  s = SYM(["a","a","b"]); assert abs(s.ent() - 0.918) < 0.01
+```
+
+### Finding the classes (skim now, use in Proj1a)
+
+True equivalence ("same input class ⟺ same behavior") is
+undecidable, so approximate with a surrogate signature and refine:
+
+| source | signature | tool |
+|---|---|---|
+| spec | category × choice tuples | category-partition (Ostrand & Balcer) |
+| code | path condition | concolic/symbolic exec (KLEE); or a branch vector |
+| behavior | coverage bitmap or output vector | AFL-style feedback; clustering |
+
+For config-vector inputs the behavior route is the practical one:
+two configs are equivalent if they produce the same signature —
+not if they're numerically near. The refinement loop (the part
+people skip):
+
+```python
+def classes(pool, sig, k=2):
+  D = {}                       # signature -> [inputs]
+  for x in pool: D.setdefault(sig(x), []).append(x)
+  for s, xs in D.items():      # trust, then verify
+    probe = shuffle(xs)[:k]    # 2 reps, not 1
+    if len(set(map(oracle, probe))) > 1:
+      yield from classes(xs, finer(sig))   # class was wrong: split
+    else: yield probe[0]
+```
 
 ## 1. Case study: Brooks' Law in 70 lines ▪▪▪▪▪▪▪▪▪▪▪▪
 
@@ -108,9 +178,11 @@ score that 0.0 as a confirmation of nothing.
 lines of simulator. Write down five tests — name, one line each,
 tagged with the heuristic it uses. Do not write code yet. (Then
 compare with the seven in
-[test_brooks.py](brooks/test_brooks.py): conservation is #4,
-extreme-conditions is #5, monotone work is #10, the crossover is
-the case study itself.)
+[test_brooks.py](brooks/test_brooks.py): conservation is #5
+invariants; monotone work and the zero-tax extreme are #2
+relations; the too-early-photograph neutral is a #4 edge; the
+seed-and-exit-status engine is #8 and #11; the crossover is the
+case study itself.)
 
 ## 2. Forrester's rules ▪▪▪▪▪
 
@@ -231,7 +303,10 @@ test: ## run all tests; exit nonzero on any failure
 
 `make test` can be pytest, this engine, a Lua suite, a diff of
 golden files — anything that exits 0 on green. That is why seven
-lines of yaml test any language ever.
+lines of yaml test any language ever. And because heuristic #11
+made every configuration one command line, heuristic #12 is free
+here too: `xargs -P8` fans the same commands across cores, no
+framework required.
 
 ## Exercise 2: extend and wire ▪▪▪▪▪
 
