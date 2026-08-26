@@ -130,10 +130,56 @@ def classes(pool, sig, k=2):
     else: yield probe[0]
 ```
 
-## 1. Case study: Brooks' Law in 69 lines ▪▪▪▪▪▪▪▪▪▪▪▪
+## 1. Case study: from diapers to Brooks' Law ▪▪▪▪▪▪▪▪▪▪▪▪
 
-*(~12 min.)* "Adding staff to a late software project makes it
-later" (Brooks, 1975). [sd0.py](brooks/sd0.py) is the smallest
+*(~14 min.)*
+
+### First, a bedtime story: diapers
+
+A compartmental model is stocks (boxes) and flows (pipes),
+ticked forward by a clock. The gentlest possible one
+([diapers.py](brooks/diapers.py)):
+
+```
+  q ──▶ [ C:clean ] ──r──▶ [ D:dirty ] ──s──▶ ⊘
+         buy 70/Sat   use 8/day    dump Sat (miss t=27)
+```
+
+```python
+def step(dt,t,u,v):
+  v.C += dt*(u.q - u.r)               # clean: bought minus used
+  v.D += dt*(u.r - u.s)               # dirty: used minus dumped
+  v.q  = u.BUY if saturday(t) else 0  # flows are state too:
+  v.s  = u.D   if saturday(t) else 0  #   set now, felt NEXT tick
+  if t == 27: v.s = 0                 # the forgotten Saturday
+```
+
+Three ideas, each reused all lecture:
+
+- **Stocks vs flows.** C and D are levels; q, r, s are rates.
+  Every model in this family is "levels change by rates × dt".
+- **The clock is part of the model.** Flows set at tick t are
+  felt at t+1 — a one-tick lag, visible if you print the trace.
+- **y and rq read the trace.** A run is just data; a score
+  (`y`: minus the days caught short) and a question (`rq`: did
+  we ever run out? how high did the pile get?) are functions
+  over it:
+
+```
+BUY = 70  o{ran_out: False, peak_D: 100, y: 0}
+BUY = 56  o{ran_out: False, peak_D: 100, y: 0}
+BUY = 40  o{ran_out: True,  peak_D: 100, y: -4}
+```
+
+Note `peak_D=100` everywhere: the dirty pile hits its clamp —
+that saturation is the forgotten Saturday's fingerprint (two
+weeks of accumulation, 112, squashed to the bound). A clamp
+keeps stocks legal AND can hide evidence. Remember that.
+
+### Now with stakes: Brooks' Law in 69 lines
+
+"Adding staff to a late software project makes it later"
+(Brooks, 1975). [sd0.py](brooks/sd0.py) is the smallest
 compartmental simulator that can ask if that is true: a
 24-line engine (`o`, `run`, `verdict` — states are stocks with
 `[now, lo, hi]` bounds, clamped every tick) plus one model.
