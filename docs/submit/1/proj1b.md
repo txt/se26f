@@ -337,19 +337,28 @@ marks on both.)
 
 ## The four dimensions (announced Aug 26)
 
-Markers read this project through four class-derived dimensions
-(built, via repertory grids, from your own poster reviews):
+Four class-derived dimensions (built, via repertory grids, from
+your own poster reviews):
 
-1. **Presentation** — does the poster/report sell it in 15
-   seconds?
+1. **Presentation** — does it sell in 15 seconds?
 2. **Engineering evidence** — tests, coverage, runs shown, not
    claimed.
 3. **Audience & market** — who is this for, and is that stated
    and plausible?
 4. **Originality & impact** — what here is new, and who benefits?
 
-Marks and components stay as printed above; these dimensions are
-how the quality rows are interpreted.
+How they are used in scoring: marks and components stay as
+printed, but when the marker scores a row, the mapped dimension
+is the question they ask — and a borderline score resolves on
+that question:
+
+| deliverable | scored by asking |
+|---|---|
+| D1 market survey | audience & market: are the rivals and the gap real for a named audience? |
+| D2 mission statement | originality & impact: what is new, who benefits — plus a plausible audience |
+| D3 milestones + support material | engineering evidence: could each milestone be built AND checked? |
+| D4 poster | presentation: sold in 15 seconds? |
+| D5 prompt report | engineering evidence: caught errors shown, not claimed |
 
 ## Rubric
 
