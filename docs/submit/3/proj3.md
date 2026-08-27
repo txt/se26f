@@ -100,12 +100,12 @@ what you inherited, what you added, what could come next.
 
 ## Marks (21 total)
 
-| Marks | For |
-|---|---|
-| 5 | Live demo: does it run, is the delta visible |
-| 10 | Extension quality: old code respected, old tests still pass, the delta since the fork point is clear, their design understood |
-| 4 | Milestones: four or more new ones, major, done |
-| 2 | Poster |
+| Marks | For | Dimension (the marker's question) |
+|---|---|---|
+| 5 | Live demo: does it run, is the delta visible | presentation + engineering evidence |
+| 10 | Extension quality: old code respected, old tests still pass, the delta since the fork point is clear, their design understood | engineering evidence + originality & impact |
+| 4 | Milestones: four or more new ones, major, done | originality & impact: major, not touch-ups |
+| 2 | Poster | presentation + audience & market |
 
 No repo rubric for Project 3. The Project 2 rubric already shaped the
 repo; the tutor checks only the delta.
@@ -114,29 +114,16 @@ Also: each student completes a short individual questionnaire on group
 work. The link comes via Discord.
 
 
+
 ## The four dimensions (announced Aug 26)
 
-Four class-derived dimensions (built, via repertory grids, from
-your own poster reviews):
-
-1. **Presentation** — does it sell in 15 seconds?
-2. **Engineering evidence** — tests, coverage, runs shown, not
-   claimed.
-3. **Audience & market** — who is this for, and is that stated
-   and plausible?
-4. **Originality & impact** — what here is new, and who benefits?
-
-How they are used in scoring: marks and components stay as
-printed, but when the marker scores a row, the mapped dimension
-is the question they ask — and a borderline score resolves on
-that question:
-
-| marks row | scored by asking |
-|---|---|
-| live demo (5) | presentation + engineering evidence: is the delta visible, live? |
-| extension quality (10) | engineering evidence + originality & impact: old tests pass, and the new work matters |
-| milestones (4) | originality & impact: major, not touch-ups |
-| poster (2) | presentation + audience & market |
+Class-derived (via repertory grids, from your own poster
+reviews): **presentation** (sold in 15 seconds?), **engineering
+evidence** (tests and runs shown, not claimed), **audience &
+market** (who is this for, and is that plausible?),
+**originality & impact** (what is new, who benefits?). Marks
+stay as printed; the dimension column in the marks table above is the
+question the marker asks — a borderline score resolves on it.
 
 ## Ways to lose marks
 

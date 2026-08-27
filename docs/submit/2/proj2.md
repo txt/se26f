@@ -205,40 +205,27 @@ next, why this repo is the one to inherit.
 
 ## Marks (19 total)
 
-| Marks | For |
-|---|---|
-| 5 | Live demo: how major, how impressive, does it run |
-| 8 | Repo rubric: self-assessment confirmed by spot-checks |
-| 4 | Milestones: four or more, major, done. M0 (the eval) must be one of them |
-| 2 | Poster |
+| Marks | For | Dimension (the marker's question) |
+|---|---|---|
+| 5 | Live demo: how major, how impressive, does it run | engineering evidence + presentation |
+| 8 | Repo rubric: self-assessment confirmed by spot-checks | engineering evidence: every self-score openable |
+| 4 | Milestones: four or more, major, done. M0 (the eval) must be one of them | originality & impact + engineering evidence |
+| 2 | Poster | presentation + audience & market |
 
 Also: each student completes a short individual questionnaire on group
 work. The link comes via Discord.
 
 
+
 ## The four dimensions (announced Aug 26)
 
-Four class-derived dimensions (built, via repertory grids, from
-your own poster reviews):
-
-1. **Presentation** — does it sell in 15 seconds?
-2. **Engineering evidence** — tests, coverage, runs shown, not
-   claimed.
-3. **Audience & market** — who is this for, and is that stated
-   and plausible?
-4. **Originality & impact** — what here is new, and who benefits?
-
-How they are used in scoring: marks and components stay as
-printed, but when the marker scores a row, the mapped dimension
-is the question they ask — and a borderline score resolves on
-that question:
-
-| marks row | scored by asking |
-|---|---|
-| live demo (5) | engineering evidence + presentation: does it run, and does the run convince? |
-| repo rubric (8) | engineering evidence: every self-score backed by something the tutor can open |
-| milestones incl. M0 (4) | originality & impact + engineering evidence: do the milestones matter, and did the eval run? |
-| poster (2) | presentation + audience & market |
+Class-derived (via repertory grids, from your own poster
+reviews): **presentation** (sold in 15 seconds?), **engineering
+evidence** (tests and runs shown, not claimed), **audience &
+market** (who is this for, and is that plausible?),
+**originality & impact** (what is new, who benefits?). Marks
+stay as printed; the dimension column in the marks table above is the
+question the marker asks — a borderline score resolves on it.
 
 ## Ways to lose marks
 

@@ -304,18 +304,18 @@ areas. Exciting, but professional. It must show:
 
 **PDF 1 — the report**, containing:
 
-| # | Deliverable |
-|---|---|
-| D1 | Market survey: 3+ rival products, and the gap none of them fill. |
-| D2 | Mission statement: why / what / so what, plus stakeholders. The *so what* must include one measurable claim — metric, threshold, baseline — that Project 2's M0 eval will test. |
-| D3 | Milestones: before / now / future, 3–5 each, clear goals. Plus the support material (regulations, standards, licenses) your design must respect, with sources. |
-| D5 | Prompt report: per model, the outputs that were **wrong**, and how you caught each one; "the most useful prompts were..." and "the least useful prompts were..." — with the why; the prompt × model comparison for the market survey and red team, including which competitor products survived the two-model rule; one strengths/weaknesses line per model; and the local-model result (or the one sentence on why none ran). Zero caught errors reads as zero checking. |
+| # | Deliverable | Dimension (the marker's question) |
+|---|---|---|
+| D1 | Market survey: 3+ rival products, and the gap none of them fill. | audience & market: real rivals, real gap, for a named audience? |
+| D2 | Mission statement: why / what / so what, plus stakeholders. The *so what* must include one measurable claim — metric, threshold, baseline — that Project 2's M0 eval will test. | originality & impact: what is new, who benefits? |
+| D3 | Milestones: before / now / future, 3–5 each, clear goals. Plus the support material (regulations, standards, licenses) your design must respect, with sources. | engineering evidence: could each be built AND checked? |
+| D5 | Prompt report: per model, the outputs that were **wrong**, and how you caught each one; "the most useful prompts were..." and "the least useful prompts were..." — with the why; the prompt × model comparison for the market survey and red team, including which competitor products survived the two-model rule; one strengths/weaknesses line per model; and the local-model result (or the one sentence on why none ran). Zero caught errors reads as zero checking. | engineering evidence: caught errors shown, not claimed |
 
 **PDF 2 — the poster** ([requirements](poster.md)):
 
-| # | Deliverable |
-|---|---|
-| D4 | Poster quality: sells the project in 15 seconds; all required parts on the page. |
+| # | Deliverable | Dimension (the marker's question) |
+|---|---|---|
+| D4 | Poster quality: sells the project in 15 seconds; all required parts on the page. | presentation (+ audience & market) |
 
 (Yes, the poster repeats D2's mission statement and D3's milestones.
 That is intended: the report *states* them, the poster *sells* them.
@@ -335,30 +335,16 @@ marks on both.)
 - Compile to PDF. Submit to Moodle.
 
 
+
 ## The four dimensions (announced Aug 26)
 
-Four class-derived dimensions (built, via repertory grids, from
-your own poster reviews):
-
-1. **Presentation** — does it sell in 15 seconds?
-2. **Engineering evidence** — tests, coverage, runs shown, not
-   claimed.
-3. **Audience & market** — who is this for, and is that stated
-   and plausible?
-4. **Originality & impact** — what here is new, and who benefits?
-
-How they are used in scoring: marks and components stay as
-printed, but when the marker scores a row, the mapped dimension
-is the question they ask — and a borderline score resolves on
-that question:
-
-| deliverable | scored by asking |
-|---|---|
-| D1 market survey | audience & market: are the rivals and the gap real for a named audience? |
-| D2 mission statement | originality & impact: what is new, who benefits — plus a plausible audience |
-| D3 milestones + support material | engineering evidence: could each milestone be built AND checked? |
-| D4 poster | presentation: sold in 15 seconds? |
-| D5 prompt report | engineering evidence: caught errors shown, not claimed |
+Class-derived (via repertory grids, from your own poster
+reviews): **presentation** (sold in 15 seconds?), **engineering
+evidence** (tests and runs shown, not claimed), **audience &
+market** (who is this for, and is that plausible?),
+**originality & impact** (what is new, who benefits?). Marks
+stay as printed; the dimension column in the hand-in tables above is the
+question the marker asks — a borderline score resolves on it.
 
 ## Rubric
 
