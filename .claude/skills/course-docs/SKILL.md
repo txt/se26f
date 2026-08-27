@@ -104,7 +104,26 @@ description: Use when editing any markdown in this course repo (README, docs/lec
 - Lecture-tut naming: git101 is the only surviving *101 page.
 - Heuristic question format (quizzes/exams): (a) low-Bloom recall
   first, (b) high-Bloom bug-hunt prompt, THEN the code fence;
-  monitor-short.
+  monitor-short (or a stated ~10-min budget), answers at bottom.
+- Question-generation rules (distilled from timm's critiques —
+  check EVERY generated question against these):
+  1. Answer as asked: if (a) says "define X", the answer's first
+     sentence defines X; examples come after.
+  2. Every term a question uses is defined in the question, the
+     course notes, or common knowledge — no harness-internal
+     jargon (no "signature", "y0/y1", "category x choice").
+  3. Test the concept; the artifact is scenery. Never require
+     recall of a file's internals — one scenario sentence
+     replaces them.
+  4. Show, then ask: hand them the artifact, ask about the
+     load-bearing line/token. Never ask students to write back
+     boilerplate they were given (e.g. yaml).
+  5. Only tools they have met (no make; no pytest before taught).
+  6. One causal ask per sub-question; compound (b)s get flagged
+     "makes no sense" — split or cut.
+  7. Fact-check every mechanism claim before it enters a question
+     (e.g. Actions run AFTER push; pre-commit/pre-push hooks are
+     local).
 
 ## Style
 
