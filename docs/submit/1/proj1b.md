@@ -334,6 +334,23 @@ marks on both.)
 - The report must be more than four pages.
 - Compile to PDF. Submit to Moodle.
 
+
+## The four dimensions (announced Aug 26)
+
+Markers read this project through four class-derived dimensions
+(built, via repertory grids, from your own poster reviews):
+
+1. **Presentation** — does the poster/report sell it in 15
+   seconds?
+2. **Engineering evidence** — tests, coverage, runs shown, not
+   claimed.
+3. **Audience & market** — who is this for, and is that stated
+   and plausible?
+4. **Originality & impact** — what here is new, and who benefits?
+
+Marks and components stay as printed above; these dimensions are
+how the quality rows are interpreted.
+
 ## Rubric
 
 Score each deliverable D1–D5. Your mark = the five D-scores summed,

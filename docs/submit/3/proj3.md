@@ -113,6 +113,23 @@ repo; the tutor checks only the delta.
 Also: each student completes a short individual questionnaire on group
 work. The link comes via Discord.
 
+
+## The four dimensions (announced Aug 26)
+
+Markers read this project through four class-derived dimensions
+(built, via repertory grids, from your own poster reviews):
+
+1. **Presentation** — does the poster/report sell it in 15
+   seconds?
+2. **Engineering evidence** — tests, coverage, runs shown, not
+   claimed.
+3. **Audience & market** — who is this for, and is that stated
+   and plausible?
+4. **Originality & impact** — what here is new, and who benefits?
+
+Marks and components stay as printed above; these dimensions are
+how the quality rows are interpreted.
+
 ## Ways to lose marks
 
 - An unimpressive extension: Project 2 plus a few small touches. The new
