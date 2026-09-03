@@ -23,22 +23,22 @@ See [policies](docs/lect/policies.md) for grading.
 
 <div align=center>
 
-| 📅 Date | 🎓 Lecture | 🛠️ Submission <br>(due start of class) | 🎤 Talks: teams A–Q <br>(15 min each, ≤4/night) | 📝 Review |
+| 📅 Date | 🎓 Lecture | 🛠️ Submission <br>(due start of class) | 🎤 Talks: teams 1–12 <br>(15 min each, ≤4/night) | 📝 Review |
 |:-------------:|:----------:|:---------------------------:|:---------:|:---------:|
 | Aug 19 | [basics](docs/lect/n01.md) + [git101](docs/lect/git101.md) <br> 🚀 **[project](docs/submit/project.md)** | | | [w1](docs/lect/w1.md) |
 | Aug 26 | [useCasesPromptsTests](docs/lect/n02.md) | | | [w2](docs/lect/w2.md) |
 | Sep 02 | [requirements](docs/lect/n03.md) | **Proj1a: [testing](docs/submit/1/proj1a.md)** | | |
 | Sep 09 | [architecture](docs/lect/n04.md) | | | |
-| Sep 16 | testingDeeper | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | [tool](docs/lect/talk.md#the-tool-talk-7-marks) [A](#)·[B](#)·[C](#)·[D](#) | |
-| Sep 23 | patternsQuality | | [tool](docs/lect/talk.md#the-tool-talk-7-marks) [E](#)·[F](#)·[G](#)·[H](#) | |
-| Sep 30 | processConfig | | [tool](docs/lect/talk.md#the-tool-talk-7-marks) [I](#)·[J](#)·[K](#)·[L](#) | |
-| Oct 07 | proj2checkpoint | | [tool](docs/lect/talk.md#the-tool-talk-7-marks) [M](#)·[N](#)·[O](#)·[P](#) | |
+| Sep 16 | testingDeeper | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [1](#)·[2](#)·[3](#) | |
+| Sep 23 | patternsQuality | | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [4](#)·[5](#)·[6](#) | |
+| Sep 30 | processConfig | | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [7](#)·[8](#)·[9](#) | |
+| Oct 07 | proj2checkpoint | | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [10](#)·[11](#)·[12](#) | |
 | Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ · proj3preview | | no talks | |
-| Oct 21 | maintenance | **Proj2: [build](docs/submit/2/proj2.md)** | [tool](docs/lect/talk.md#the-tool-talk-7-marks) [Q](#) · [task](docs/lect/talk.md#the-task-talk-7-marks) [A](#)·[B](#)·[C](#) | |
-| Oct 28 | debugging | | [task](docs/lect/talk.md#the-task-talk-7-marks) [D](#)·[E](#)·[F](#)·[G](#) | |
-| Nov 04 | aiForSE | | [task](docs/lect/talk.md#the-task-talk-7-marks) [H](#)·[I](#)·[J](#)·[K](#) | |
-| Nov 11 | securityLawEthics | | [task](docs/lect/talk.md#the-task-talk-7-marks) [L](#)·[M](#)·[N](#)·[O](#) | |
-| Nov 18 | nonFunctionalsWrap | | [task](docs/lect/talk.md#the-task-talk-7-marks) [P](#)·[Q](#) | |
+| Oct 21 | maintenance | **Proj2: [build](docs/submit/2/proj2.md)** | [task](docs/lect/talk.md#the-task-talk-7-marks): [1](#)·[2](#) | |
+| Oct 28 | debugging | | [task](docs/lect/talk.md#the-task-talk-7-marks): [3](#)·[4](#)·[5](#) | |
+| Nov 04 | aiForSE | | [task](docs/lect/talk.md#the-task-talk-7-marks): [6](#)·[7](#)·[8](#)| |
+| Nov 11 | securityLawEthics | | [task](docs/lect/talk.md#the-task-talk-7-marks): [9](#)·[10](#)·[11](#) | |
+| Nov 18 | nonFunctionalsWrap | | [task](docs/lect/talk.md#the-task-talk-7-marks): [12](#) | |
 | 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: [maintain](docs/submit/3/proj3.md)** (submit online; no late marks till Dec 1) | | |
 | 🟥 ${\color{#ff9999}\textsf{Dec 07 (Mon) — Final exam, 3:30–6:00 PM, 1021 EB2}}$ | | | | |
 </div>
