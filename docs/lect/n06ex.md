@@ -19,10 +19,11 @@
 
 # N6 Exercise: One Spec, Rival Systems
 
-Teams of ~3. 30 minutes. Hand in one sheet: your weighting row,
-your derived design (boxes and arrows, ~6 boxes), your receipt
-(the two minuses you accepted), and one LLM hallucination you
-caught.
+Homework, with your team, before next class (~40 quiet minutes).
+Bring one sheet: your weighting row, your derived design (boxes
+and arrows, ~6 boxes), your receipt (the two minuses you
+accepted), and one LLM hallucination you caught. Sheets go up
+side by side at the top of next lecture.
 
 ## The one-page spec (same for everyone)
 
@@ -46,10 +47,10 @@ And the trade-off sheet — you cannot have all six; weight them:
 | G5 debuggability (one person can trace one order end-to-end) | |
 | G6 partial failure (payments down ≠ ordering down) | |
 
-## Part 1: weight, then derive (10 min)
+## Part 1: weight, then derive
 
-Your instructor assigns each team a PRIORITY PROFILE (or pick one,
-teams must differ):
+Your priority profile was assigned in class (teams differ on
+purpose):
 
 - **Team profile A**: G1, G5 high; G3 low. (The seed-stage bet)
 - **Team profile B**: G3, G6 high; G1 low. (The we-got-funded bet)
@@ -67,7 +68,7 @@ If your derivation surprises you, good — argue from the columns,
 not the fashion. Draw it: ~6 boxes, arrows labeled with WHAT
 crosses them (data, events, money).
 
-## Part 2: the receipt (5 min)
+## Part 2: the receipt
 
 Shaw's law: every design is a purchase. Write the receipt — the
 two goals your design scores WORST on, and the concrete symptom
@@ -75,7 +76,7 @@ two goals your design scores WORST on, and the concrete symptom
 we have not built"). A design with no admitted minuses is a design
 nobody analyzed.
 
-## Part 3: LLM as opposing counsel (10 min)
+## Part 3: LLM as opposing counsel
 
 N1 prompt pattern (role + evidence + format + no-guess). Paste your
 weights, your boxes, your receipt:
@@ -94,9 +95,9 @@ At least one hallucinated or vague trade-off goes on your sheet.
 (N3's rule, standing: verify citations. The table argues back; you
 still preside.)
 
-## Part 4: the reveal (5 min, whole class)
+## Part 4: the reveal (in class, next week)
 
-Teams show sheets. The point appears by comparison: SAME spec,
+Sheets go up side by side. The point appears by comparison: SAME spec,
 different weights, different — defensible — systems. There was
 never one right answer; there was only ever the trade-off sheet.
 Ask: which minuses did every team accept without noticing? That

@@ -19,9 +19,9 @@
 
 # N5 Exercise: Test the Tests
 
-Teams of ~3. 25 minutes. Be ready to report: your table from
-Part 2, your disagreement input from Part 3, and your one-sentence
-verdict.
+Homework, with your team, before next class (~30 quiet minutes).
+Next week you report, three minutes: your table from Part 2, your
+disagreement input from Part 3, and your one-sentence verdict.
 
 The setup: a startup ships this pricing function, and their LLM
 wrote them a test suite. It is green. Coverage is 100%. Management
