@@ -19,8 +19,9 @@
 
 # N5 Exercise: Test the Tests
 
-Teams of ~3. 25 minutes. Hand in one sheet: your table from Part 2,
-your disagreement input from Part 3, and your one-sentence verdict.
+Teams of ~3. 25 minutes. Be ready to report: your table from
+Part 2, your disagreement input from Part 3, and your one-sentence
+verdict.
 
 The setup: a startup ships this pricing function, and their LLM
 wrote them a test suite. It is green. Coverage is 100%. Management
@@ -99,3 +100,54 @@ management about their green, 100%-covered, LLM-written suite?
 Ask your LLM to write five MORE tests for `price`. Run them (in
 your head) against M1-M5. Did the machine's tests raise the
 mutation score, or just the coverage?
+
+---
+
+## Tutor's answer key
+
+**Part 1 (coverage).** The claim holds: test_big_order takes
+branch 1 true / branch 2 false; test_coupon takes 1-false /
+2-true; test_no_negative drives `max` to its 0 arm, the others to
+its total arm. All lines, all branch outcomes visited. (Sharp
+teams may note the untested INTERACTION big-order+coupon — the
+same du-path lesson as lecture segment 2; praise it, it previews
+Part 3.)
+
+**Part 2 (mutation).** Only M5 dies. Score 1/5 = 20%, against
+~100% coverage.
+
+| # | verdict | why | a killing test |
+|---|---|---|---|
+| M1 `>=100` | SURVIVES | behavior differs only at total=100 exactly; no test there | `assert price(100,"") == 100` |
+| M2 `*0.5` | SURVIVES | price(200,"")=100, still `< 200` — assertion too weak | `assert price(200,"") == 180` |
+| M3 `-50` | SURVIVES | price(50,"SAVE5")=0, still `< 50`; the max() clamp hides the damage | `assert price(50,"SAVE5") == 45` |
+| M4 `>10` | SURVIVES | price(50,"SAVE5") becomes 40, still `< 50` | `assert price(50,"") == 50` |
+| M5 drop max | KILLED | price(2,"SAVE5") = -3, fails `>= 0` | (test_no_negative) |
+
+The disease, one sentence: inequality assertions check direction,
+not amount — they pass for the right answer and for a thousand
+wrong ones. Exact-value assertions (== 180, == 45) kill M2-M4
+immediately.
+
+**Part 3 (differential).** Any total in (100, 105] with the
+coupon disagrees. E.g. total=104: `price` = 104*0.9 - 5 = 88.60;
+`price2` = (104-5)=99, not > 100, so 99.00. Also total=105:
+89.50 vs 100.00. Neither is "right": the spec never fixed the
+order of discount and coupon — an E2 ambiguity (N3) surfaced by a
+diff, no oracle required. The fuzzer loop:
+
+```python
+for _ in range(1000):
+    t, c = random.uniform(0,300), random.choice(["","SAVE5"])
+    assert price(t,c) == price2(t,c), (t,c)
+```
+
+**Verdict to expect:** "Green and 100% covered means the tests
+ran the code, not that they checked it: mutation score 20%, and
+one diff found a requirements bug. Coverage is a smoke alarm, not
+a certificate."
+
+**Early finishers:** typical LLM tests assert types, non-nullness
+and directions — coverage rises, M1-M4 usually still survive.
+The point lands harder when the machine's forty tests move the
+score not at all.
