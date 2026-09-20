@@ -28,7 +28,7 @@ See [policies](docs/lect/policies.md) for grading.
 | Aug 19 | [basics](docs/lect/n01.md) + [git101](docs/lect/git101.md) <br> 🚀 **[project](docs/submit/project.md)** | | | [w1](docs/lect/w1.md) |
 | Aug 26 | [useCasesPromptsTests](docs/lect/n02.md) | | | [w2](docs/lect/w2.md) |
 | Sep 02 | [requirements](docs/lect/n03.md) | **Proj1a: [testing](docs/submit/1/proj1a.md)** | | [w3](docs/lect/w3.md) |
-| Sep 09 | [architecture](docs/lect/n04.md) | | | |
+| Sep 09 | [architecture](docs/lect/n04.md) | | | [w4](docs/lect/w4.md) |
 | Sep 16 | [testingDeeper](docs/lect/n05.md) | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [1](#)·[2](#)·[3](#) | |
 | Sep 23 | [patternsQuality](docs/lect/n06.md) + [closures](docs/lect/closures.md) | | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [4](#)·[5](#)·[6](#) | |
 | Sep 30 | processConfig | | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [7](#)·[8](#)·[9](#) | |
