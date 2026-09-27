@@ -506,7 +506,193 @@ section 5: a value, plus the rest of the work.
 
 ---
 
-## 11. Case study: JavaScript in ten days
+## 11. One idea, many lectures
+
+Every principle from earlier weeks has a one-line version once
+bodies are values. Not an analogy — the same mechanism.
+
+### 11.1 Open-closed: closed to edits, open to behavior
+
+Bertrand Meyer's rule (N4): a module should be closed for source
+change and open for extension. `sorted(rows, key=...)` is that, in
+one argument. The engine below is *finished*; new behavior arrives
+without touching it:
+
+```python
+SCORERS = {}                       # the engine's one extension point
+
+def scorer(name):                  # registration, as a decorator
+    def add(f): SCORERS[name] = f; return f
+    return add
+
+@scorer("cheapest")
+def _(row): return row["cost"]
+
+@scorer("safest")
+def _(row): return row["risk"]
+
+def best(rows, how):               # never edited again
+    return min(rows, key=SCORERS[how])
+
+rows = [{"id": "a", "cost": 9, "risk": 1},
+        {"id": "b", "cost": 3, "risk": 7},
+        {"id": "c", "cost": 5, "risk": 2}]
+
+print(best(rows, "cheapest")["id"], best(rows, "safest")["id"])   # b a
+```
+
+Now add a third policy, in a different file, after shipping:
+
+```python
+@scorer("balanced")
+def _(row): return row["cost"] + row["risk"]
+
+print(best(rows, "balanced")["id"])   # c
+print(sorted(SCORERS))                # ['balanced', 'cheapest', 'safest']
+```
+
+No `if` ladder, no subclass, no edit to `best`. Compare with the
+alternative: an `elif` per policy inside `best`, which is a source
+change every time, in the most-tested function you own.
+
+### 11.2 Visitor: one traversal, many operations
+
+Visitor (N6) exists because walking a nested structure is hard and
+you do not want to rewrite the walk per operation. The 23-pattern
+version needs an interface, an `accept` method on every node type,
+and a class per operation. The body version needs one function and
+one argument:
+
+```python
+def walk(node, visit):
+    if isinstance(node, dict): return {k: walk(v, visit) for k, v in node.items()}
+    if isinstance(node, list): return [walk(v, visit) for v in node]
+    return visit(node)
+
+doc = {"a": 1, "b": [2, 3], "c": {"d": 4}}
+
+print(walk(doc, lambda x: x * 10))   # {'a': 10, 'b': [20, 30], 'c': {'d': 40}}
+print(walk(doc, str))                # {'a': '1', 'b': ['2', '3'], 'c': {'d': '4'}}
+
+total = []
+walk(doc, total.append)
+print(sum(total))                    # 10
+```
+
+Three operations, one walk, zero new classes. The structure knows
+traversal; the visitor knows meaning; neither knows the other. That
+is Visitor's actual point, and the ceremony was never the point.
+
+### 11.3 Separation of concerns: put policy at the seam
+
+Split a system, and something has to cross the gap. If the crossing
+is a **function**, you can wrap it — and a wrapper is a proxy:
+
+```python
+def logged(f, log):
+    def wrapper(*a, **k):
+        log(f"call {f.__name__}{a}")
+        out = f(*a, **k)
+        log(f"got  {out}")
+        return out
+    return wrapper
+
+def fetch(uid): return {"id": uid, "name": "Ada"}
+
+safe_fetch = logged(fetch, print)
+safe_fetch(7)
+# call fetch(7,)
+# got  {'id': 7, 'name': 'Ada'}
+```
+
+Neither side changed. `fetch` does not know it is watched; the
+caller does not know either. Swap `logged` for `cached`, `retried`,
+`rate_limited`, `authorized`, or `timed` and you have inserted an
+operational concern at the boundary without touching business code.
+That single move is Proxy, Decorator, Adapter, and most of what a
+"middleware" stack is.
+
+Test doubles fall out of the same seam. Pass the dependency in, and
+the test controls time:
+
+```python
+import time
+def is_expired(token, now=time.time): return now() > token["exp"]
+
+tok = {"exp": 1000}
+print(is_expired(tok, now=lambda: 999))    # False
+print(is_expired(tok, now=lambda: 1001))   # True
+```
+
+Design for test (N4) is not a testing technique. It is a decision
+about which arguments your functions take.
+
+### 11.4 Single source of truth: a broker that makes the checkers
+
+Duplicated rules rot at different speeds. So keep the knowledge in
+one place, and let that place **manufacture** the checks that other
+layers run:
+
+```python
+class Rules:                          # the ONE place that knows
+    def __init__(self, min_age=18): self.min_age = min_age
+
+    def person(self):                 # hands out a constraint
+        lo = self.min_age             # captured now
+        def check(rec):
+            errs = []
+            if not rec.get("name"):    errs.append("name required")
+            if rec.get("age", 0) < lo: errs.append(f"age must be >= {lo}")
+            return errs
+        return check
+
+broker = Rules()
+ui, api, db = broker.person(), broker.person(), broker.person()
+
+rec = {"name": "Kid", "age": 12}
+print(ui(rec), api(rec), db(rec))
+# ['age must be >= 18'] ['age must be >= 18'] ['age must be >= 18']
+```
+
+Three layers, three copies of the *rule as a function*, one copy of
+the *knowledge*. Change the policy once:
+
+```python
+broker.min_age = 10
+ui, api, db = broker.person(), broker.person(), broker.person()
+print(ui(rec), api(rec), db(rec))     # [] [] []
+```
+
+The UI, the API, and the database layer all changed behavior, and
+none of their source changed. Now note what the constraint *is*: a
+requirement (N3) written as executable code. One artifact serves as
+specification, validator, and test oracle. That is why
+property-based testing (N5) reads like a requirements document.
+
+### 11.5 The rest of the map
+
+| Earlier lecture | The idea | The body version |
+|---|---|---|
+| N4 information hiding | Parnas: hide what changes | a closure's state has no name outside it |
+| N4 dependency inversion | depend on abstractions | depend on a function type, the narrowest interface there is |
+| N4 low coupling | fewer, thinner links | one call signature instead of a shared class |
+| N4 event-driven | producers, consumers, a bus | the bus is a dict of lists of handlers |
+| N4 microkernel | core plus plugins | a plugin is a registered body (§11.1) |
+| N4 pipe and filter | stages over a stream | each filter a body; laziness makes it a pipe (§5) |
+| N6 Strategy, Command | swappable behavior, queued action | a function; a queued function |
+| N6 Observer | notify the interested | a list of callbacks |
+| N6 Template Method | fixed skeleton, variable steps | pass the varying steps in |
+| N5 property-based tests | laws, not examples | the law is a predicate you hand the runner |
+| N5 mutation testing | break the code, see if tests notice | the mutations rewrite bodies |
+| N3 requirements | write the constraint down | write it as a predicate, and run it (§11.4) |
+| Agents, tool use | give a model something to call | a described function, shipped across a boundary |
+
+One sentence for the whole table: **when behavior is a value, most
+design questions become questions about who holds which function.**
+
+---
+
+## 12. Case study: JavaScript in ten days
 
 Brendan Eich wrote the first JavaScript in about ten days, in May
 1995. Ten days is not enough time to invent a language. It was
@@ -535,7 +721,7 @@ reason.
 
 ---
 
-## 12. Where to go next (read at home)
+## 13. Where to go next (read at home)
 
 1. **Continuations in your own stack.** Read how `async/await`
    desugars in your language. Then describe a race condition in
@@ -572,7 +758,13 @@ reason.
 6. **Hit the ceiling.** Write a recursive sum over a list of
    100,000 items. Report the error. Then name the machine from
    section 2 that would run it.
-7. **Spot the sugar.** Name one construct in your stack that you
+7. **Kill an if-ladder.** Find one `if`/`elif` chain in your proj2
+   repo that selects behavior. Replace it with a registry of bodies
+   (§11.1). Then add a new behavior without editing the engine.
+8. **Move a rule to a broker.** Pick one constraint your project
+   checks in two places. Rewrite it as one broker that hands out the
+   checker (§11.4). Delete the duplicate.
+9. **Spot the sugar.** Name one construct in your stack that you
    cannot desugar. Bring it to class.
 
 ## References
@@ -590,3 +782,5 @@ reason.
 7. Norvig, [Lispy](http://norvig.com/lispy.html), 2010. A working
    Lisp in ~30 lines of Python.
 8. Eich, "A Brief History of JavaScript", 2010.
+9. Meyer, *Object-Oriented Software Construction*, 1988. The
+   open-closed principle, stated as a rule about source code.
