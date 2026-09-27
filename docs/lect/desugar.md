@@ -83,7 +83,7 @@ Everything you call "how a computer works" follows from those two:
 Note what the stack is: **one frame per call, released on return**.
 That convention is not even in the 1945 memo. It arrived in the
 1950s, when Algol wanted recursion (Samelson and Bauer). Fortran
-had no stack, so it had no recursion until Fortran 90.
+ had no recursion until Fortran 90.
 
 So when you picture "the computer", you picture one design from one
 memo, plus one 1950s patch. Other designs exist. They ship today,
