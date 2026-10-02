@@ -37,7 +37,7 @@ See [policies](docs/lect/policies.md) for grading.
 | Oct 21 | maintenance | **Proj2: [build](docs/submit/2/proj2.md)** | [task](docs/lect/talk.md#the-task-talk-7-marks): [1](#)·[2](#) | |
 | Oct 28 | debugging | | [task](docs/lect/talk.md#the-task-talk-7-marks): [3](#)·[4](#)·[5](#) | |
 | Nov 04 | aiForSE | | [task](docs/lect/talk.md#the-task-talk-7-marks): [6](#)·[7](#)·[8](#)| |
-| Nov 11 | securityLawEthics | | [task](docs/lect/talk.md#the-task-talk-7-marks): [9](#)·[10](#)·[11](#) | |
+| Nov 11 | securityLawEthics | | [task](docs/lect/talk.md#the-task-talk-7-marks): [9](#)·[10](#)·[11](#) | [w7](docs/lect/w7.md)  |
 | Nov 18 | nonFunctionalsWrap | | [task](docs/lect/talk.md#the-task-talk-7-marks): [12](#) | |
 | 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: [maintain](docs/submit/3/proj3.md)** (submit online; no late marks till Dec 1) | | |
 | 🟥 ${\color{#ff9999}\textsf{Dec 07 (Mon) — Final exam, 3:30–6:00 PM, 1021 EB2}}$ | | | | |

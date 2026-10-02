@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>diapers.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>diapers.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      <p>diapers.py: the gentlest possible compartmental model.</p>
+<p>q   +-----+  r  +-----+
+----&gt;|  C  |----&gt;|  D  |&ndash;&gt; s
+ ^   +-----+     +-+&mdash;+
+ |                 |
+ +-----------------+</p>
+<p>C = stock of clean diapers
+D = stock of dirty diapers
+q = inflow of clean diapers
+r = flow of clean diapers to dirty diapers
+s = out-flow of dirty diapers</p>
+<p>One baby, one weekly shop, one weekly wash (dirty loops
+back to clean), one forgotten laundry day.</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sd0</span><span class="w"> </span><span class="kn">import</span> <span class="n">the</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">o</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">saturday</span><span class="p">(</span><span class="n">t</span><span class="p">):</span> <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">6</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">diapers</span><span class="p">():</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      <p>C=clean stock, D=dirty stock; q,r,s = the three flows;
+BUY = input: how big is the Saturday shopping trip?</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="n">init</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span> <span class="n">D</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span>
+              <span class="n">q</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span> <span class="n">r</span><span class="o">=</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span>
+              <span class="n">BUY</span><span class="o">=</span><span class="p">[</span><span class="mi">70</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">C</span> <span class="o">+=</span> <span class="n">dt</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">q</span> <span class="o">-</span> <span class="n">u</span><span class="o">.</span><span class="n">r</span><span class="p">)</span>               <span class="c1"># clean: bought minus used</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">D</span> <span class="o">+=</span> <span class="n">dt</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">r</span> <span class="o">-</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>               <span class="c1"># dirty: used minus dumped</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">q</span>  <span class="o">=</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">BUY</span> <span class="k">if</span> <span class="n">saturday</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span> \
+           <span class="o">+</span> <span class="n">u</span><span class="o">.</span><span class="n">s</span>                        <span class="c1"># the loop: washed rejoin clean</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">s</span>  <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">D</span> <span class="k">if</span> <span class="n">saturday</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">else</span> <span class="mi">0</span>    <span class="c1"># flows are state too:</span>
+    <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="mi">27</span><span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>                 <span class="c1">#   set now, felt NEXT tick</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-5'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      <p>&hellip;and the forgotten Saturday</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="k">def</span><span class="w"> </span><span class="nf">y</span><span class="p">(</span><span class="n">out</span><span class="p">):</span>
+    <span class="s2">&quot;higher = better: minus the days caught short&quot;</span>
+    <span class="k">return</span> <span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="n">out</span> <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">C</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="k">def</span><span class="w"> </span><span class="nf">rq</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+    <span class="s2">&quot;did we ever run out, and how high did the pile get?&quot;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">run</span><span class="p">(</span><span class="n">init</span> <span class="k">if</span> <span class="n">bg</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">bg</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">o</span><span class="p">(</span><span class="n">ran_out</span><span class="o">=</span><span class="nb">any</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">C</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="n">out</span><span class="p">),</span>
+             <span class="n">peak_D</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">D</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="n">out</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">(</span><span class="n">out</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">o</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="n">init</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">rq</span><span class="o">=</span><span class="n">rq</span><span class="p">,</span> <span class="n">ctrl</span><span class="o">=</span><span class="s2">&quot;BUY&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+  <span class="n">m</span> <span class="o">=</span> <span class="n">diapers</span><span class="p">()</span>
+  <span class="k">for</span> <span class="n">buy</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="n">bg</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">m</span><span class="o">.</span><span class="n">init</span><span class="p">,</span> <span class="s2">&quot;BUY&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">buy</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">]}</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;BUY =&quot;</span><span class="p">,</span> <span class="n">buy</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">rq</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="n">bg</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="mi">35</span><span class="p">))</span>
+
+</pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>sd0.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>sd0.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      <p>sd0.py: smallest compartmental simulator + brooks. UPPER=input, lower=param.</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span><span class="n">the</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">dt</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">class</span><span class="w"> </span><span class="nc">o</span><span class="p">:</span>
+  <span class="s2">&quot;js-style object. i, not self.&quot;</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="o">**</span><span class="n">d</span><span class="p">):</span> <span class="n">i</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">d</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="k">return</span> <span class="s2">&quot;o&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="n">init</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+  <span class="s2">&quot;init={k:[now,lo,hi]}. returns [(t,state)]. clamps every var to its bounds.&quot;</span>
+  <span class="n">d</span>  <span class="o">=</span> <span class="n">the</span> <span class="o">|</span> <span class="n">kw</span>
+  <span class="n">u</span>  <span class="o">=</span> <span class="n">o</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">init</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
+  <span class="n">out</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="p">[],</span> <span class="mi">0</span>
+  <span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;tmax&quot;</span><span class="p">]:</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">o</span><span class="p">(</span><span class="o">**</span><span class="n">u</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>                            <span class="c1"># v = next state, u = now</span>
+    <span class="n">step</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;dt&quot;</span><span class="p">],</span> <span class="n">t</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,(</span><span class="n">_</span><span class="p">,</span><span class="n">lo</span><span class="p">,</span><span class="n">hi</span><span class="p">)</span> <span class="ow">in</span> <span class="n">init</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+      <span class="nb">setattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">k</span><span class="p">))))</span>
+    <span class="n">out</span> <span class="o">+=</span> <span class="p">[(</span><span class="n">t</span><span class="p">,</span><span class="n">v</span><span class="p">)];</span> <span class="n">t</span><span class="p">,</span><span class="n">u</span> <span class="o">=</span> <span class="n">t</span><span class="o">+</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;dt&quot;</span><span class="p">],</span> <span class="n">v</span>
+  <span class="k">return</span> <span class="n">out</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-5'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">verdict</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">want</span><span class="p">):</span>
+  <span class="s2">&quot;want=&#39;down&#39; means treatment should lower y.&quot;</span>
+  <span class="n">gap</span> <span class="o">=</span> <span class="n">y1</span> <span class="o">-</span> <span class="n">y0</span>
+  <span class="n">ok</span>  <span class="o">=</span> <span class="n">gap</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">want</span><span class="o">==</span><span class="s2">&quot;down&quot;</span> <span class="k">else</span> <span class="n">gap</span> <span class="o">&gt;</span> <span class="mi">0</span>
+  <span class="k">return</span> <span class="n">o</span><span class="p">(</span><span class="n">y0</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">y0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">y1</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">gap</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">gap</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+           <span class="n">verdict</span><span class="o">=</span><span class="s2">&quot;confirm&quot;</span> <span class="k">if</span> <span class="n">ok</span> <span class="k">else</span> <span class="s2">&quot;refute&quot;</span><span class="p">,</span> <span class="n">rq</span><span class="o">=</span><span class="n">txt</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      <p>--------------------------------------------------------------- brooks -------</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">brooks</span><span class="p">():</span>
+  <span class="s2">&quot;Brooks&#39; Law: adding people to a late project makes it later.&quot;</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-7'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-7'>#</a>
+      </div>
+      <p>D=experienced devs, N=newbies, W=work done, R=work remaining (all stocks).
+HIRE=how many newbies arrive at t=WHEN (inputs: state of the world).</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="n">init</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="mi">20</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span> <span class="s1">&#39;N&#39;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span> <span class="s1">&#39;W&#39;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span> <span class="s1">&#39;R&#39;</span><span class="p">:[</span><span class="mi">1000</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span>
+          <span class="s1">&#39;HIRE&#39;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">],</span> <span class="s1">&#39;WHEN&#39;</span><span class="p">:[</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">]}</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-8'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-8'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+    <span class="n">comm</span>  <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">D</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">D</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="mf">0.0002</span>              <span class="c1"># n^2 talk cost, grows with team</span>
+    <span class="n">train</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">N</span> <span class="o">*</span> <span class="mf">0.2</span>                           <span class="c1"># each newbie steals mentor time</span>
+    <span class="n">prod</span>  <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">D</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">comm</span><span class="o">-</span><span class="n">train</span><span class="p">))</span> <span class="o">*</span> <span class="mf">0.5</span>    <span class="c1"># net output of the veterans</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">R</span>   <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">R</span> <span class="o">-</span> <span class="n">dt</span><span class="o">*</span><span class="nb">min</span><span class="p">(</span><span class="n">prod</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>             <span class="c1"># burn down the backlog</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">W</span>   <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">W</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="nb">min</span><span class="p">(</span><span class="n">prod</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">R</span><span class="p">)</span>             <span class="c1"># ..and bank it as work done</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">N</span>   <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">N</span> <span class="o">-</span> <span class="n">dt</span><span class="o">*</span><span class="mf">0.1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">N</span> <span class="o">+</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">HIRE</span> <span class="k">if</span> <span class="n">t</span><span class="o">==</span><span class="n">u</span><span class="o">.</span><span class="n">WHEN</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># hire once, then age</span>
+    <span class="n">v</span><span class="o">.</span><span class="n">D</span>   <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">D</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="mf">0.1</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">N</span>                    <span class="c1"># 10%/tick of newbies turn veteran</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-9'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-9'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="k">def</span><span class="w"> </span><span class="nf">y</span><span class="p">(</span><span class="n">out</span><span class="p">):</span>
+    <span class="s2">&quot;score a run. higher=better. work banked by tmax, so slower =&gt; smaller y.&quot;</span>
+    <span class="k">return</span> <span class="n">out</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">W</span>                         <span class="c1"># last row, its W stock</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-10'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-10'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre>  <span class="k">def</span><span class="w"> </span><span class="nf">rq</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+    <span class="s2">&quot;the experiment: same world, one knob moved. HIRE is ctrl. kw = run opts.&quot;</span>
+    <span class="n">bi</span>    <span class="o">=</span> <span class="n">init</span> <span class="k">if</span> <span class="n">bg</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">bg</span>          <span class="c1"># bg = calibrated background, if any</span>
+    <span class="n">base</span>  <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">bi</span><span class="p">,</span> <span class="s1">&#39;HIRE&#39;</span><span class="p">:[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">]}</span>            <span class="c1"># rx0: nobody added</span>
+    <span class="n">treat</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">bi</span><span class="p">,</span> <span class="s1">&#39;HIRE&#39;</span><span class="p">:[</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">]}</span>            <span class="c1"># rx1: 10 added at WHEN</span>
+    <span class="k">return</span> <span class="n">verdict</span><span class="p">(</span><span class="s2">&quot;adding staff makes it later&quot;</span><span class="p">,</span>   <span class="c1"># Brooks predicts..</span>
+                   <span class="n">y</span><span class="p">(</span><span class="n">run</span><span class="p">(</span><span class="n">base</span> <span class="p">,</span><span class="n">step</span><span class="p">,</span><span class="o">**</span><span class="n">kw</span><span class="p">)),</span>         <span class="c1"># ..y under no hiring</span>
+                   <span class="n">y</span><span class="p">(</span><span class="n">run</span><span class="p">(</span><span class="n">treat</span><span class="p">,</span><span class="n">step</span><span class="p">,</span><span class="o">**</span><span class="n">kw</span><span class="p">)),</span> <span class="s2">&quot;down&quot;</span><span class="p">)</span> <span class="c1"># ..beats y under hiring</span>
+
+  <span class="k">return</span> <span class="n">o</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="n">init</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">rq</span><span class="o">=</span><span class="n">rq</span><span class="p">,</span> <span class="n">ctrl</span><span class="o">=</span><span class="s2">&quot;HIRE&quot;</span><span class="p">)</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-11'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-11'>#</a>
+      </div>
+      <p>--------------------------------------------------------------- main ---------</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+  <span class="n">m</span> <span class="o">=</span> <span class="n">brooks</span><span class="p">()</span>
+  <span class="k">for</span> <span class="n">tmax</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">):</span>              <span class="c1"># horizon sweep: when does it flip?</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">rq</span><span class="p">(</span><span class="n">tmax</span><span class="o">=</span><span class="n">tmax</span><span class="p">)</span>                         <span class="c1"># one verdict per horizon</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;tmax=</span><span class="si">{</span><span class="n">tmax</span><span class="si">:</span><span class="s2">3</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+</pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>
