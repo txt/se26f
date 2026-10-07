@@ -588,13 +588,37 @@ block. Loops are the same trick — collections own iteration:
 #(1 2 3 4) collect: [ :x | x * 2 ]     "-> (2 4 6 8)"
 ```
 
+So a **new kind of iterator is trivial** — it is just a method.
+Here is one Smalltalk does not ship: walk consecutive pairs.
+
+```smalltalk
+Collection >> pairsDo: aBlock
+    "run aBlock on each consecutive pair of elements"
+    | prev |
+    prev := nil.
+    self do: [ :x |
+        prev ifNotNil: [ aBlock value: prev value: x ].
+        prev := x ]
+
+#(3 7 12 20) pairsDo: [ :a :b | Transcript show: (b - a) printString ]
+"-> 4 5 8"
+```
+
+Note who owns what. The collection owns traversal — **data is
+primary**; callers hand in a block — **control is a peripheral
+detail** you pass as an argument. That is inversion of control as
+the language's default posture, not a framework trick. Compare
+Python, where a new iterator means the generator/`__iter__`
+protocol, or classic Java, where it means writing an `Iterator`
+class: machinery for what is, here, four lines.
+
 Since control flow is library code, **the language extends from
-inside itself**: write a `retryThreeTimes:` method and it looks
-exactly as built-in as `ifTrue:`. Python seals `if`; Smalltalk
-seals almost nothing. You have met the descendants — Ruby blocks,
+inside itself**: `pairsDo:` and `retryThreeTimes:` look exactly
+as built-in as `ifTrue:`. Python seals `if`; Smalltalk seals
+almost nothing. You have met the descendants — Ruby blocks,
 Rust's `iterator.filter()` chains, every fluent API — and the
-closures lecture already priced the move: inversion of control,
-less boilerplate, harder stack traces.
+closures lecture already priced the move: less boilerplate,
+harder stack traces.
 
 ---
 
