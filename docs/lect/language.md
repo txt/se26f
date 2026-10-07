@@ -19,7 +19,7 @@
 # Language Comparisons: One Idea, Many Tongues
 
 **Links:** [Home](../../README.md) · [Desugaring](desugar.md) ·
-[Closures](closures.md) · [N6 patterns](n06.md)
+[Closures](closures.md) · [patterns](n06.md)
 
 [Desugaring](desugar.md) showed that every language melts down to
 the same core: a variable, a function, a call. So why are there
@@ -38,7 +38,7 @@ the language already made for its author.
 
 ---
 
-## 0. Why bother, in the LLM age (10 min) ▪▪▪▪
+## 0. Why bother, in the LLM age
 
 Your LLM writes passable code in every language in this lecture.
 So why study them? Because in 2026, **reviewing code is the power
@@ -80,7 +80,7 @@ you cannot tell the LLM's habits from the language's requirements
 
 ---
 
-## 1. The map: three axes of difference (5 min) ▪▪
+## 1. The map: three axes of difference
 
 [Desugaring](desugar.md) gave you the floor: Church's lambda
 calculus, 1930s, three constructs. [Closures](closures.md) gave
@@ -98,14 +98,14 @@ And one diagonal axis across all three: **general-purpose vs
 domain-specific** — how much of the problem the language already
 knows (§5, §6).
 
-Keep the N6 rule in hand all night: *no design is best; every
+Keep the [patterns lecture](n06.md) rule in hand all night: *no design is best; every
 design is a purchase.* That was true of architectures and
 patterns. It is truest of languages, because a language is the
 purchase you make before all the others.
 
 ---
 
-## 2. Dispatch: Python dunders, Lua metamethods (20 min) ▪▪▪▪▪▪▪▪
+## 2. Dispatch: Python dunders, Lua metamethods
 
 Start with code you know. Python classes can overload operators
 with **dunder methods** (double-underscore, "magic" methods):
@@ -221,7 +221,7 @@ else. When you review code in a new language, your first question
 is now: *which hooks does this language expose, and is this
 codebase using them or abusing them?*
 
-**Try it** (5 min, in pairs): without running it, predict what
+**Try it** (in pairs): without running it, predict what
 `Wallet.new(50) + 20` does in the Lua version. Then check the
 `__add` body. What would you add so a plain number works on
 either side? (Python has the same problem; its answer is
@@ -229,7 +229,7 @@ either side? (Python has the same problem; its answer is
 
 ---
 
-## 3. Checking: the typing ladder, JS → TypeScript → Rust (20 min) ▪▪▪▪▪▪▪▪
+## 3. Checking: the typing ladder, JS → TypeScript → Rust
 
 Same axis, three rungs. The question each rung answers
 differently: **when do you find out you were wrong?**
@@ -321,7 +321,7 @@ parse tree and lets types flow up it:
 
 This is the deal in one picture: a static checker proves
 properties of **all** executions without running any of them.
-Tests (N2) sample some runs; types cover every run — for the
+Tests (the [prompts-and-tests lecture](n02.md)) sample some runs; types cover every run — for the
 narrow class of errors types can see.
 
 ### Rung 3: Rust — make the illegal unrepresentable
@@ -405,11 +405,11 @@ it changed, not what magic it added.
 
 ---
 
-## 4. Control: two paradigm outliers, two small tastes (15 min) ▪▪▪▪▪▪
+## 4. Control: two paradigm outliers, two small tastes
 
 Everything so far — Python, Lua, JS, TS, Rust — is imperative:
 you give steps, the machine takes them. Two languages refuse that
-deal entirely. Five minutes each; the point is the contrast, not
+deal entirely. The point is the contrast, not
 the syntax.
 
 ### Taste 1: Prolog — state facts, let the machine search
@@ -511,7 +511,7 @@ boilerplate, harder stack traces).
 
 ---
 
-## 5. Minimalism: why awk wins (10 min) ▪▪▪▪
+## 5. Minimalism: why awk wins
 
 From two big paradigms to one tiny language. **awk** (1977;
 `gawk` is the GNU version) processes text streams. Its entire
@@ -555,12 +555,11 @@ in that domain approach the size of their own specification. Your
 backpack question from §0, turned practical: before importing the
 3.1-million-package ecosystem, ask what the twenty-line version
 fails to do. Sometimes the answer is "nothing I need this month"
-— and then you own all the code you run, and (N1's aislop
-evidence in reverse) there is less of it to rot.
+— and then you own all the code you run, and (the [first lecture](n01.md)'s aislopevidence in reverse) there is less of it to rot.
 
 ---
 
-## 6. The far end of the axis: DSLs and the elbow test (10 min) ▪▪▪▪
+## 6. The far end of the axis: DSLs and the elbow test
 
 awk is domain-specific but still general-purpose-ish. Push the
 axis to its end: the **domain-specific language (DSL)** — a
@@ -585,7 +584,7 @@ Two flavors:
 | **Internal** | bend a host language until code reads domain-like | pytest fixtures, Rails routes, the model below |
 
 Internal is far cheaper, and you have already written one. Recall
-N2's diapers simulator. Its heart:
+the [prompts-and-tests lecture](n02.md)'s diapers simulator. Its heart:
 
 ```python
 class Diapers(Model):
@@ -610,7 +609,7 @@ argue with it. That is the elbow test passing, in Python, with no
 parser written.
 
 Engine/rules is the same cut you have been making all month:
-N4's microkernel (core + plug-ins), N6's open-closed registries,
+the [architecture lecture](n04.md)'s microkernel (core + plug-ins), the [patterns lecture](n06.md)'s open-closed registries,
 the desugaring lecture's shipped-rule brokers. A DSL is that
 architecture taken one step further: *the plug-in layer gets so
 clean that non-programmers own it.* And because the rules are
@@ -625,7 +624,7 @@ others extend", this is the standard to beat.
 
 ---
 
-## 7. Close: the comparison habit (5 min) ▪▪
+## 7. Close: the comparison habit
 
 Six languages, one spine:
 
@@ -640,7 +639,7 @@ Six languages, one spine:
 | Smalltalk | everything, even `if`, is a message | nothing is sealed, so nothing is guaranteed |
 | awk | know one domain completely | leave the domain and it fights you |
 
-The habit to take away is the Shaw move (N6) applied one level
+The habit to take away is the Shaw move (the [patterns lecture](n06.md)) applied one level
 down: same spec, rival languages, read the trade-offs off the
 diff — then choose on the columns, not the fashion. In the LLM
 age this is no longer optional culture. The model will happily
@@ -667,7 +666,7 @@ started writing the first draft.
 3. **Ask your LLM for the same function in two languages** (e.g.
    your §3 `add` in Python and Rust). Diff them. List two things
    the LLM did that the *language* required, and one thing that
-   was just the LLM's habit. (This is the N2 cross-examination
+   was just the LLM's habit. (This is the [prompts-and-tests lecture](n02.md) cross-examination
    move, aimed at code.)
 4. **Elbow-test your project.** Find the one file in your proj2
    repo a domain expert (a non-programmer who knows your app's
@@ -737,4 +736,4 @@ and the single change you would make first.
    1988 (2nd ed. 2023).
 8. Norvig, P., "Design Patterns in Dynamic Programming", 1996 —
    why 16 of 23 patterns shrink when the language changes (the
-   bridge between this lecture and [N6](n06.md)).
+   bridge between this lecture and the [patterns lecture](n06.md)).
