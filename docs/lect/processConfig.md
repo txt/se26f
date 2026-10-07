@@ -20,32 +20,30 @@
 # N7: Process + Config Mgmt
 
 **Links:** [Home](../../README.md) · [Project 2](../submit/project.md) ·
-[git101](git101.md) · [N5 testing](n05.md) · [N6 patterns](n06.md)
+[git101](git101.md) · [N5 testing](n05.md) ·
+[previous lecture](n06.md)
 
-Build month, week two. You asked for "git beyond push and pull".
-Tonight delivers that — but wrapped in the bigger idea it belongs
-to. **Process** is the set of rules a team runs by: who may change
-what, when work is reviewed, when it ships. **Configuration
-management** is the machinery that remembers and enforces those
-rules: version control, branches, protections, and the pipelines
-that test every change. Process is the law; config management is
-the police.
+You asked for "git beyond push and pull". Tonight: that, plus the
+idea behind it. **Process** is the rules a team runs by: who
+changes what, when work is reviewed, when it ships. **Config
+management** is the machinery that enforces those rules: branches,
+protections, CI pipelines. Process is the law; config management
+is the police.
 
-N6 taught that every design is a purchase. Same for process: every
-rule you adopt buys you something (safety, speed, evidence) and
-bills you for it (delay, ceremony, merge pain). Tonight: the
-classic purchases, what they cost, and the exact process a
-four-person team with coding agents should run for proj2 — where,
-recall from N5, the marks are for HISTORY: CI green from day one,
-pull requests moving, commits from every member.
+The [previous lecture](n06.md) said every design is a purchase.
+Every process rule is too: it buys safety, speed, or evidence, and
+bills you in delay and merge pain. Tonight we price the classic
+choices, then set the process a four-person team with coding
+agents should run for proj2 — where marks come from history: CI
+green early, pull requests moving, commits from everyone.
 
-The 2026 twist: LLM agents write branches faster than you can read
-them. That does not make process optional. It makes process the
-only thing standing between you and a repo full of confident slop.
+One 2026 fact: agents write branches faster than you can read
+them. Process is what stands between you and a repo full of
+confident slop.
 
 ---
 
-## 0. Waterfall vs Agile (15 min) ▪▪▪▪▪▪
+## 0. Waterfall vs Agile
 
 Two extremes of process. One emphasizes planning and control, the
 other adaptation and feedback.
@@ -79,7 +77,8 @@ Warning signs:
   signed-off stages; testing at the end reveals flaws that were
   cheap to fix in month two and ruinous in month nine.
 - Agile failing: endless churn; an architecture collapsing under
-  too many fast changes (N6's smells, at team scale).
+  too many fast changes (the [previous lecture](n06.md)'s code
+  smells, at team scale).
 
 ![image](https://github.com/txt/se23/assets/29195/78ceea76-1e54-44fa-9cbd-b333870545b2)
 
@@ -91,13 +90,14 @@ they put on it.
 
 ---
 
-## 1. Release cycles: short vs long (10 min) ▪▪▪▪
+## 1. Release cycles: short vs long
 
 Release cadence is the same trade-off wearing a calendar.
 
 **Short cycles**: frequent updates, quick feedback, customers see
 progress often. Danger: rushed code, technical debt piling up
-(your DEBT.md from N6 exists to track exactly this), APIs breaking
+(your DEBT.md from the [previous lecture](n06.md) exists to track
+exactly this), APIs breaking
 under users' feet.
 
 **Long cycles**: years between major versions; big integrated
@@ -133,7 +133,7 @@ it on stage.
 
 ---
 
-## 2. Branching: Git Flow vs commit-to-main (10 min) ▪▪▪▪
+## 2. Branching: Git Flow vs commit-to-main
 
 Version control strategy is process made executable. Two classic
 camps:
@@ -174,7 +174,7 @@ industrial teams actually run.
 
 ---
 
-## 3. Branching in the agent era (10 min) ▪▪▪▪
+## 3. Branching in the agent era
 
 Here is what changed since those two camps formed: coding agents
 made branches nearly free to *produce*. One prompt, one worktree,
@@ -198,7 +198,8 @@ What agents change about branching practice:
    bandwidth.
 2. **Branch lifetime must shrink.** A human can rebase a stale
    branch thoughtfully; an agent asked to fix conflicts will
-   happily regenerate half the file (N6: duplicated code is the
+   happily regenerate half the file ([previous
+   lecture](n06.md): duplicated code is the
    smell LLMs mass-produce). Merge small, merge often, delete the
    branch after merging.
 3. **CI becomes the first reviewer.** Do not spend human eyes on a
@@ -218,7 +219,7 @@ the diff. An agent that grades its own work converges on slop.
 
 ---
 
-## 4. Team boundaries (7 min) ▪▪▪
+## 4. Team boundaries
 
 Who may change what?
 
@@ -247,6 +248,30 @@ Warning signs:
   pester count (N4's one-question architecture check) goes through
   the roof.
 
+Linux is the famous zero-boundaries example — anyone may send a
+patch for any file. But open does not mean unmanaged. The kernel
+community's own process guide (first published by the Linux
+Foundation) walks every patch through six named lifecycle stages:
+
+1. **Design** — the real requirements, and how the patch will meet
+   them, laid out first — in public, before code.
+2. **Early review** — the patch goes to the subsystem mailing
+   list; developers on that list reply with comments.
+3. **Wider review** — a subsystem maintainer accepts the patch
+   into their tree and the `linux-next` tree, where the whole
+   community can test it.
+4. **Merging into the mainline** — the maintainer forwards it to
+   Torvalds' repository during the two-week merge window that
+   opens each cycle.
+5. **Stable release** — the patch ships to real users, and bug
+   reports arrive at a new scale.
+6. **Long-term maintenance** — the author stays responsible for
+   the code long after it merges.
+
+So the openness sits inside a hard pipeline: anyone may write, but
+layered review decides what lands. That is section 3's
+review-bandwidth lesson, run at planetary scale.
+
 For four people: zero boundaries for reading and reviewing —
 anyone reviews anything — but one *owner* per module for writing
 (git101 rule 1: one directory, one owner). That is Conway's law
@@ -255,7 +280,7 @@ interfaces are where the pestering is allowed.
 
 ---
 
-## 5. CI/CD basics (15 min) ▪▪▪▪▪▪
+## 5. CI/CD basics
 
 Three terms, often blurred, worth keeping sharp:
 
@@ -317,7 +342,7 @@ Rules of CI hygiene, learned expensively everywhere:
 
 ---
 
-## 6. Branch protection + code review as process (15 min) ▪▪▪▪▪▪
+## 6. Branch protection + code review as process
 
 CI makes failure visible. **Branch protection** makes the rules
 mechanical: settings on the server that constrain what may land on
@@ -337,7 +362,7 @@ physics. "We always review" is a hope; a protected branch is a
 fact. And it is tutor-visible fact: a blocked merge in your
 history proves the process ran.
 
-**Live exercise (10 min of this section).** Volunteer team, on
+**Live exercise.** Volunteer team, on
 screen: add the protection rule to your proj2 repo; open a PR from
 a branch with a deliberately failing test; watch the merge button
 lock; fix the test; watch it unlock; teammate approves; merge.
@@ -354,7 +379,8 @@ it is a pipeline stage with known mechanics:
 - **Review the behavior, not the formatting.** A linter in CI
   argues about style so humans do not have to. Human eyes go where
   machines cannot: wrong requirement, missing test, hidden
-  coupling (N4), a pattern wearing a costume (N6).
+  coupling (N4), a pattern wearing a costume ([previous
+  lecture](n06.md)).
 - **Author prepares the review.** PR description says what changed
   and why, points at the risky part, links the issue. A reviewer
   spending ten minutes reconstructing intent is process waste.
@@ -366,7 +392,7 @@ it is a pipeline stage with known mechanics:
 
 ---
 
-## 7. Strange but sensible process decisions (5 min) ▪▪
+## 7. Strange but sensible process decisions
 
 When you reach industry you will meet process that looks insane.
 Some of it is. Some of it survives for reasons nobody wrote down:
