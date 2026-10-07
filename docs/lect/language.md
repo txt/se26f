@@ -227,6 +227,55 @@ codebase using them or abusing them?*
 either side? (Python has the same problem; its answer is
 `__radd__`.)
 
+### The reflected-dunder trick: a pipeline language in ten lines
+
+`__radd__` has a whole family: every binary operator has a
+reflected twin (`__ror__`, `__rmul__`, ...). The rule: for
+`x op y`, Python asks `x`'s dunder first; if `x`'s type returns
+`NotImplemented` — or does not know `op` for that operand — Python
+retries with `y`'s *reflected* dunder, operands swapped. Built for
+mixed arithmetic. But read it as a hook: **the right-hand object
+gets to define what an operator means, even when the left-hand
+object is a built-in you cannot edit.**
+
+That one rule is enough to bolt a Unix-style pipeline language
+onto Python:
+
+```python
+class Pipe:
+    def __init__(self, f): self.f = f
+    def __ror__(self, x):  return self.f(x)              # x | p
+    def __call__(self, *args):
+        return Pipe(lambda x: self.f(x, *args))          # p(args)
+
+@Pipe
+def where(xs, ok): return [x for x in xs if ok(x)]
+@Pipe
+def select(xs, f): return [f(x) for x in xs]
+@Pipe
+def total(xs):     return sum(xs)
+
+[1, 2, 3, 4] | where(lambda x: x % 2 == 0) \
+             | select(lambda x: x * x)     \
+             | total                               # 20
+```
+
+Trace the first `|`. The left operand is a plain list; `list` has
+no idea what `|` means against a `Pipe`. Python falls back to
+`Pipe.__ror__`, and our code runs — with the list handed to us as
+`x`. Each stage returns a plain value, so the next `|` repeats
+the trick, left to right, exactly like a shell pipeline. Ten
+lines, no new syntax, and built-ins we never touched now speak a
+small functional language. (Hold that thought: §5's awk is the
+same idea — data flowing left to right through filters — grown
+into a whole language, and §6 will name what we just built: an
+internal DSL.)
+
+The dispatch lesson in it: single dispatch asks only the left
+operand, and this trick works *because* the fallback asks the
+right one. It is the narrowest possible taste of the next idea —
+what if every call asked all its arguments, all the time?
+
 ### Multiple dispatch: Julia and CLOS
 
 Notice what the Try-it exposed. `w + 20` desugars to
