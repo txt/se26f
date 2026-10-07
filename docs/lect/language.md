@@ -227,6 +227,78 @@ codebase using them or abusing them?*
 either side? (Python has the same problem; its answer is
 `__radd__`.)
 
+### Multiple dispatch: Julia and CLOS
+
+Notice what the Try-it exposed. `w + 20` desugars to
+`type(w).__add__(w, 20)` — the method is chosen by the type of
+the **first** argument only. That is **single dispatch**, and
+Python, Lua, Java, and C++ all share it. `__radd__` exists
+because single dispatch cannot see the right-hand type; it is a
+patch, not a design.
+
+Some problems genuinely need the method chosen by **all** the
+argument types at once. The classic: collisions in a simulation.
+What happens depends on *both* parties —
+
+| | hits Asteroid | hits Ship |
+|---|---|---|
+| **Asteroid** | merge into one bigger rock | ship takes damage |
+| **Ship** | ship takes damage | both explode |
+
+**Julia** (a numerical language built on this idea) calls the
+answer **multiple dispatch**: a function is a family of methods,
+and a call picks the method matching the concrete types of every
+argument:
+
+```julia
+abstract type Body end
+struct Asteroid <: Body; size::Float64 end
+struct Ship     <: Body; hp::Float64   end
+
+collide(a::Asteroid, b::Asteroid) = Asteroid(a.size + b.size)
+collide(a::Ship,     b::Asteroid) = Ship(a.hp - b.size)
+collide(a::Asteroid, b::Ship)     = collide(b, a)
+collide(a::Ship,     b::Ship)     = "both explode"
+
+collide(Ship(100.0), Asteroid(30.0))   # picks method 2: Ship(70.0)
+```
+
+Four methods, one name; the pair of types at the call site picks
+the row and column of that table. Adding a new body type means
+adding methods, touching no existing code — the open-closed rule
+from the [patterns lecture](n06.md), delivered by the dispatcher
+itself. Julia's arithmetic runs on the same machinery: `+` is one
+function with hundreds of methods, and `int + float` selects on
+both sides — no `__radd__` anywhere.
+
+**CLOS** (the Common Lisp Object System, 1980s) did it first.
+Methods belong to *generic functions*, not to classes:
+
+```lisp
+(defclass asteroid () ((size :initarg :size)))
+(defclass ship     () ((hp   :initarg :hp)))
+
+(defmethod collide ((a ship) (b asteroid))
+  (decf (slot-value a 'hp) (slot-value b 'size)))
+(defmethod collide ((a asteroid) (b ship))
+  (collide b a))
+```
+
+How do single-dispatch languages cope? The visitor pattern from
+the [patterns lecture](n06.md) *is* the workaround: two chained
+single dispatches faking one double dispatch, at the price of a
+class-per-case and edits in two places per new type. One
+language's design pattern is another language's built-in — the
+Norvig point from the readings, live.
+
+**Price it.** Multiple dispatch buys you the collision table and
+extensibility in both directions. The bill: you can no longer
+look at one class and read everything it does — behavior lives
+in the generic functions, spread across files. Single dispatch
+keeps behavior findable under the class; multiple dispatch keeps
+it honest when two types genuinely share the decision. No design
+is best; every design is a purchase.
+
 ---
 
 ## 3. Checking: the typing ladder, JS → TypeScript → Rust
