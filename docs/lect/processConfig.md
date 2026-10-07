@@ -17,10 +17,10 @@
 <img src="https://raw.githubusercontent.com/txt/se26f/refs/heads/main/etc/img/se26f.png">
 
 
-# N7: Process + Config Mgmt
+# Process + Config Mgmt
 
 **Links:** [Home](../../README.md) · [Project 2](../submit/project.md) ·
-[git101](git101.md) · [N5 testing](n05.md) ·
+[git101](git101.md) · [testing](n05.md) ·
 [previous lecture](n06.md)
 
 You asked for "git beyond push and pull". Tonight: that, plus the
@@ -245,7 +245,8 @@ Warning signs:
 - Zero boundaries failing: missing tools, config chaos, two people
   silently rewriting the same module.
 - Specialized failing: progress stalls on cross-dependencies; the
-  pester count (N4's one-question architecture check) goes through
+  pester count (the [architecture lecture](n04.md)'s one-question
+  check) goes through
   the roof.
 
 Linux is the famous zero-boundaries example — anyone may send a
@@ -294,7 +295,8 @@ Three terms, often blurred, worth keeping sharp:
 
 Proj2 requires the first; understand all three.
 
-You met the machinery in N2. GitHub Actions knows nothing about
+You met the machinery in the [prompts-and-tests
+lecture](n02.md). GitHub Actions knows nothing about
 your project except one number — the exit code of a command. Zero
 means green; anything else means red:
 
@@ -333,7 +335,8 @@ Rules of CI hygiene, learned expensively everywhere:
 1. Red main is a stop-the-line event. Whoever broke it fixes or
    reverts within the hour; everyone else stops pulling.
 2. Keep the pipeline fast — under ten minutes, or people stop
-   waiting for it and start ignoring it (N5's budgeted-testing
+   waiting for it and start ignoring it (the [testing
+   lecture](n05.md)'s budgeted-testing
    lesson: prioritize, and quarantine flaky tests rather than
    letting them train the team that red means nothing).
 3. A red run on a *branch* is not shame; it is the system working.
@@ -379,13 +382,14 @@ it is a pipeline stage with known mechanics:
 - **Review the behavior, not the formatting.** A linter in CI
   argues about style so humans do not have to. Human eyes go where
   machines cannot: wrong requirement, missing test, hidden
-  coupling (N4), a pattern wearing a costume ([previous
-  lecture](n06.md)).
+  coupling (the [architecture lecture](n04.md)), a pattern wearing
+  a costume (the [previous lecture](n06.md)).
 - **Author prepares the review.** PR description says what changed
   and why, points at the risky part, links the issue. A reviewer
   spending ten minutes reconstructing intent is process waste.
-- **Agent code gets the same gate, applied harder.** The N2 rule —
-  never accept claimed execution — is now team law: the PR shows
+- **Agent code gets the same gate, applied harder.** The
+  [prompts-and-tests lecture](n02.md)'s rule — never accept
+  claimed execution — is now team law: the PR shows
   the tests running in CI, or the PR waits. Reviewing agent output
   is a skill your projects grade: the D5 prompt reports reward
   caught LLM errors, and review is where you catch them.
@@ -431,7 +435,8 @@ not just defect hunting.
 
 ## Before next class
 
-N8 (Oct 07) opens with a live repo triage — a volunteer team's
+Next class (Oct 07) opens with a live repo triage — a volunteer
+team's
 proj2 repo on screen, read the way a tutor reads it. Arrive with:
 
 1. Branch protection on your proj2 main: PR required, one
