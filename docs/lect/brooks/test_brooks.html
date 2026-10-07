@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>test_brooks.py</title>
+  <link rel="stylesheet" href="pycco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <div class='section'>
+    <div class='docs'><h1>test_brooks.py</h1></div>
+  </div>
+  <div class='clearall'>
+  <div class='section' id='section-0'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-0'>#</a>
+      </div>
+      <p>test_brooks.py: a roll-your-own test engine for sd0.py.
+Runs four ways:</p>
+<p>python3 test_brooks.py -all              # everything; exit = #fails
+   python3 test_brooks.py -crossover        # just one test
+   python3 test_brooks.py -tmax 80 -brooks  # change a knob, then test
+   python3 -m pytest -q test_brooks.py      # same tests, via pytest</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">random</span><span class="o">,</span><span class="w"> </span><span class="nn">traceback</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sd0</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sd0</span><span class="w"> </span><span class="kn">import</span> <span class="n">the</span><span class="p">,</span> <span class="n">brooks</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">verdict</span>
+
+<span class="n">the</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;seed&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>          <span class="c1"># sd0 is deterministic (so far); doctrine anyway</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">brooks</span><span class="p">()</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-1'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-1'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">atom</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+  <span class="s2">&quot;string -&gt; int | float | string&quot;</span>
+  <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span> <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="k">pass</span>
+  <span class="k">return</span> <span class="n">s</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-2'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-2'>#</a>
+      </div>
+      <p>--------------------------- the tests --------------------------</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">test_runs</span><span class="p">():</span>
+  <span class="s2">&quot;the model runs, for exactly tmax ticks&quot;</span>
+  <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">run</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">init</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">step</span><span class="p">))</span> <span class="o">==</span> <span class="n">the</span><span class="p">[</span><span class="s2">&quot;tmax&quot;</span><span class="p">]</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-3'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-3'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">test_bounds</span><span class="p">():</span>
+  <span class="s2">&quot;the clamp holds: every stock stays inside its [lo,hi]&quot;</span>
+  <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">run</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">init</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">step</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">)</span> <span class="ow">in</span> <span class="n">m</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+      <span class="k">assert</span> <span class="n">lo</span> <span class="o">&lt;=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">hi</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-4'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-4'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">test_backlog</span><span class="p">():</span>
+  <span class="s2">&quot;conservation: work done + work remaining is always 1000&quot;</span>
+  <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">run</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">init</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">step</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">W</span> <span class="o">+</span> <span class="n">s</span><span class="o">.</span><span class="n">R</span> <span class="o">-</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-9</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-5'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-5'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">test_staff</span><span class="p">():</span>
+  <span class="s2">&quot;conservation: D+N only ever changes by HIRE&quot;</span>
+  <span class="n">hire</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">m</span><span class="o">.</span><span class="n">init</span><span class="p">,</span> <span class="s1">&#39;HIRE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">]}</span>
+  <span class="n">out</span>  <span class="o">=</span> <span class="n">run</span><span class="p">(</span><span class="n">hire</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">step</span><span class="p">)</span>
+  <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">D</span> <span class="o">+</span> <span class="n">out</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">N</span> <span class="o">-</span> <span class="p">(</span><span class="mi">20</span> <span class="o">+</span> <span class="mi">10</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mf">1e-9</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-6'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-6'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">test_work_grows</span><span class="p">():</span>
+  <span class="s2">&quot;work banked never goes down&quot;</span>
+  <span class="n">out</span> <span class="o">=</span> <span class="n">run</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">init</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">step</span><span class="p">)</span>
+  <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">W</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">W</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">out</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-7'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-7'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">test_brooks</span><span class="p">():</span>
+  <span class="s2">&quot;at the default horizon, Brooks&#39; Law holds&quot;</span>
+  <span class="k">assert</span> <span class="n">m</span><span class="o">.</span><span class="n">rq</span><span class="p">()</span><span class="o">.</span><span class="n">verdict</span> <span class="o">==</span> <span class="s2">&quot;confirm&quot;</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-8'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-8'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">test_crossover</span><span class="p">():</span>
+  <span class="s2">&quot;the verdict flips somewhere past the default horizon&quot;</span>
+  <span class="k">assert</span> <span class="n">m</span><span class="o">.</span><span class="n">rq</span><span class="p">(</span><span class="n">tmax</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span><span class="o">.</span><span class="n">verdict</span> <span class="o">==</span> <span class="s2">&quot;confirm&quot;</span>
+  <span class="k">assert</span> <span class="n">m</span><span class="o">.</span><span class="n">rq</span><span class="p">(</span><span class="n">tmax</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="o">.</span><span class="n">verdict</span> <span class="o">==</span> <span class="s2">&quot;refute&quot;</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-9'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-9'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">test_false_refute</span><span class="p">():</span>
+  <span class="s2">&quot;photograph taken before the hire lands: gap is exactly zero,</span><span class="se">\n</span><span class="s2">  yet the binary verdict scores it &#39;refute&#39; -- a known blind spot&quot;</span>
+  <span class="n">v</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">rq</span><span class="p">(</span><span class="n">tmax</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+  <span class="k">assert</span> <span class="n">v</span><span class="o">.</span><span class="n">gap</span> <span class="o">==</span> <span class="mf">0.0</span> <span class="ow">and</span> <span class="n">v</span><span class="o">.</span><span class="n">verdict</span> <span class="o">==</span> <span class="s2">&quot;refute&quot;</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-10'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-10'>#</a>
+      </div>
+      <p>------------------------- the engine ---------------------------</p>
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="n">eg</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="n">k</span><span class="p">[</span><span class="mi">5</span><span class="p">:]:</span> <span class="n">f</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+      <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;test_&quot;</span><span class="p">)}</span></pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+  <div class='section' id='section-11'>
+    <div class='docs'>
+      <div class='octowrap'>
+        <a class='octothorpe' href='#section-11'>#</a>
+      </div>
+      
+    </div>
+    <div class='code'>
+      <div class="highlight"><pre><span class="k">def</span><span class="w"> </span><span class="nf">run1</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+  <span class="s2">&quot;reseed, run one test, survive its crash; return 0=pass 1=fail&quot;</span>
+  <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">the</span><span class="p">[</span><span class="s2">&quot;seed&quot;</span><span class="p">])</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span><span class="p">();</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PASS&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="s2">&quot;::&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">);</span> <span class="k">return</span> <span class="mi">0</span>
+  <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FAIL&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="s2">&quot;::&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">);</span> <span class="k">return</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+  <span class="n">fails</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;-all&quot;</span><span class="p">:</span>
+      <span class="n">fails</span> <span class="o">+=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">run1</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">eg</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="n">f</span> <span class="o">:=</span> <span class="n">eg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+      <span class="n">fails</span> <span class="o">+=</span> <span class="n">run1</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">k</span> <span class="o">:=</span> <span class="n">s</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">))</span> <span class="ow">in</span> <span class="n">the</span><span class="p">:</span>
+      <span class="n">the</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">atom</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+  <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">fails</span><span class="p">)</span>                  <span class="c1"># the only thing CI will ever see</span>
+
+</pre></div>
+    </div>
+  </div>
+  <div class='clearall'></div>
+</div>
+</body>

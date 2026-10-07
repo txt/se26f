@@ -4,7 +4,7 @@ GIT_ROOT := $(shell git rev-parse --show-toplevel 2>/dev/null)
 help: ## show help.
 	@gawk -f $(GIT_ROOT)/sh/makehelp.awk $(MAKEFILE_LIST)
 
-.PHONY: sh
+.PHONY: sh html
 sh: ## run my shell
 	@-bash --init-file $(GIT_ROOT)/sh/ell -i
 
@@ -13,3 +13,12 @@ push: ## save to cloud
 
 mds: ## save all to Github
 	@$(GIT_ROOT)/sh/headers $(GIT_ROOT)
+
+html: ## all *.py in this dir ==> *.html (pycco)
+	@$(MAKE) --no-print-directory $(patsubst %.py,%.html,$(wildcard *.py))
+
+%.html: %.py ## one .py ==> .html (pycco)
+	@pycco -d $(dir $@) $< >/dev/null
+	@grep -q '^p { text-align: right; }' $(dir $@)pycco.css 2>/dev/null || \
+	  echo 'p { text-align: right; }' >> $(dir $@)pycco.css
+	@echo "$@"
