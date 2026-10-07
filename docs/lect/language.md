@@ -555,7 +555,8 @@ in that domain approach the size of their own specification. Your
 backpack question from §0, turned practical: before importing the
 3.1-million-package ecosystem, ask what the twenty-line version
 fails to do. Sometimes the answer is "nothing I need this month"
-— and then you own all the code you run, and (the [first lecture](n01.md)'s aislopevidence in reverse) there is less of it to rot.
+— and then you own all the code you run, and (the [first lecture](n01.md)'s aislop
+evidence in reverse) there is less of it to rot.
 
 ---
 
