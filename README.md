@@ -32,9 +32,9 @@ See [policies](docs/lect/policies.md) for grading.
 | Sep 16 | [testingDeeper](docs/lect/n05.md) | **Proj1b: [requirements](docs/submit/1/proj1b.md)** | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [1](#)·[2](#)·[3](#) |[w5](docs/lect/w5.md) |
 | Sep 23 | [patternsQuality](docs/lect/n06.md) + [closures](docs/lect/closures.md) +  [desugar](docs/lect/desugar.md)  +  [python201](docs/lect/python201.md)  | | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [4](#)·[5](#)·[6](#) | [w6](docs/lect/w6.md) |
 | Sep 30 | [processConfig](docs/lect/processConfig.md) + [language](docs/lect/language.md) | | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [7](#)·[8](#)·[9](#) | |
-| Oct 07 | proj2checkpoint | | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [10](#)·[11](#)·[12](#) | |
+| Oct 07 | proj2checkpoint | | [tool](docs/lect/talk.md#the-tool-talk-7-marks): [10](#)·[11](#)·[12](#) | [w8](docs/lect/w8.md) |
 | Oct 14 | 🟥 ${\color{#ff9999}\textsf{Mid-term exam}}$ · proj3preview | | no talks | |
-| Oct 21 | [maintenance](docs/lect/n10.md) | **Proj2: [build](docs/submit/2/proj2.md)** | [task](docs/lect/talk.md#the-task-talk-7-marks): [1](#)·[2](#) | |
+| Oct 21 | [maintenance](docs/lect/n10.md) | **Proj2: [build](docs/submit/2/proj2.md)** | [task](docs/lect/talk.md#the-task-talk-7-marks): [1](#)·[2](#) | [w9](docs/lect/w9.md) |
 | Oct 28 | [debugging](docs/lect/n11.md) | | [task](docs/lect/talk.md#the-task-talk-7-marks): [3](#)·[4](#)·[5](#) | |
 | Nov 04 | aiForSE | | [task](docs/lect/talk.md#the-task-talk-7-marks): [6](#)·[7](#)·[8](#)| |
 | Nov 11 | securityLawEthics | | [task](docs/lect/talk.md#the-task-talk-7-marks): [9](#)·[10](#)·[11](#) | [w7](docs/lect/w7.md)  |
