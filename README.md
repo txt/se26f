@@ -37,7 +37,7 @@ See [policies](docs/lect/policies.md) for grading.
 | Oct 21 | [maintenance](docs/lect/n10.md) | **Proj2: [build](docs/submit/2/proj2.md)** | [task](docs/lect/talk.md#the-task-talk-7-marks): [1](#)·[2](#) | [w9](docs/lect/w9.md) |
 | Oct 28 | [debugging](docs/lect/n11.md) | | [task](docs/lect/talk.md#the-task-talk-7-marks): [3](#)·[4](#)·[5](#) | [w10](docs/lect/w10.md) |
 | Nov 04 | [aiForSE](docs/lect/n12.md) | | [task](docs/lect/talk.md#the-task-talk-7-marks): [6](#)·[7](#)·[8](#)| |
-| Nov 11 | [securityLawEthics](docs/lect/n13.md) | | [task](docs/lect/talk.md#the-task-talk-7-marks): [9](#)·[10](#)·[11](#) | |
+| Nov 11 | [open?](https://ncsu.software/tmp/pdfs/26oss.pdf) <br> [securityLawEthics](docs/lect/n13.md) | | [task](docs/lect/talk.md#the-task-talk-7-marks): [9](#)·[10](#)·[11](#) | |
 | Nov 18 | nonFunctionalsWrap | | [task](docs/lect/talk.md#the-task-talk-7-marks): [12](#) | |
 | 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: [maintain](docs/submit/3/proj3.md)** (submit online; no late marks till Dec 1) | | |
 | 🟥 ${\color{#ff9999}\textsf{Dec 07 (Mon) — Final exam, 3:30–6:00 PM, 1021 EB2}}$ | | | | |
