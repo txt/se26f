@@ -19,8 +19,8 @@
 
 # Fairness
 
-These notes expand [N13 §3](n13.md). Same style: short sentences,
-one meaning per term.
+These notes expand [N13 §2.5](n13.md). Same style: short
+sentences, one meaning per term.
 
 ## Terms used in these notes
 
