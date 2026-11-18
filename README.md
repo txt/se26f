@@ -40,5 +40,5 @@ See [policies](docs/lect/policies.md) for grading.
 | Nov 11 | [open?](https://timm.fyi/26oss.pdf) <br> [securityLawEthics](docs/lect/n13.md) | | [task](docs/lect/talk.md#the-task-talk-7-marks): [9](#)·[10](#)·[11](#) | [w12](docs/lect/w12.md) |
 | Nov 18 | nonFunctionalsWrap | | [task](docs/lect/talk.md#the-task-talk-7-marks): [12](#) | |
 | 🟩 ${\color{green}\textsf{Nov 25 — Thanksgiving break, no class}}$ | | **Proj3: [maintain](docs/submit/3/proj3.md)** (submit online; no late marks till Dec 1) | | |
-| 🟥 ${\color{#ff9999}\textsf{Dec 07 (Mon) — Final exam, 3:30–6:00 PM, 1021 EB2}}$ | | | | |
+| 🟥 {\color{#ff9999} {Dec 07 (Mon) — Final exam, 3:30–6:00 PM, 1021 EB2| | | | |
 </div>
